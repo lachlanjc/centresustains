@@ -1,22 +1,21 @@
 import {
+  useColorMode,
   Box,
   Container,
   IconButton,
-  Image,
   NavLink,
-  Text,
-  useColorMode
+  Text
 } from 'theme-ui'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { ArrowLeft, Moon } from 'react-feather'
+import { Moon } from 'react-feather'
 
 const linkEffect = {
-  fontSize: 1,
   borderRadius: 'circle',
   transition: 'box-shadow .125s ease-in-out',
   ':hover,:focus': {
-    color: 'blue',
+    color: 'primary',
     boxShadow: '0 0 0 2px',
     outline: 'none'
   }
@@ -34,19 +33,6 @@ const NavButton = ({ sx, ...props }) => (
       ...sx
     }}
   />
-)
-
-const BackButton = ({ to = '/', text = 'Back' }) => (
-  <Link href={to} passHref>
-    <NavButton
-      as="a"
-      title={to === '/' ? 'Back to homepage' : 'Back'}
-      sx={{ color: 'primary', pr: 2, svg: { mr: 2 } }}
-    >
-      <ArrowLeft />
-      {text}
-    </NavButton>
-  </Link>
 )
 
 export const ColorSwitcher = props => {
@@ -67,14 +53,15 @@ const Nav = () => {
   const { pathname } = useRouter()
   const home = pathname === '/'
   if (home) return null
-  const [mode] = useColorMode()
   return (
-    <Box as="nav" colorMode={mode} sx={{ bg: 'sheet', py: 3, zIndex: 4 }}>
+    <Box as="nav" sx={{ bg: 'sheet', py: 3, zIndex: 4 }}>
       <Container
         sx={{
           display: 'flex',
           alignItems: 'center',
           a: {
+            ...linkEffect,
+            fontSize: 1,
             color: 'secondary',
             textDecoration: 'none',
             mr: [3, 4]
@@ -92,15 +79,19 @@ const Nav = () => {
               fontWeight: 'bold'
             }}
           >
-            <Image src="/icon-flat.svg" width={64} sx={{ mr: 3 }} />
-            Home
+            <Image
+              src="/SCR-Seondary-Tree-Color-Logo.png"
+              alt="Sustainable Centre Region logo"
+              width={64}
+              height={64}
+            />
           </NavLink>
         </Link>
         <Link href="/forum" passHref>
-          <NavLink sx={{ ...linkEffect, px: 2, py: 1 }}>Forum</NavLink>
+          <NavLink px={2}>Forum</NavLink>
         </Link>
         <Link href="/climate" passHref>
-          <NavLink sx={{ ...linkEffect, px: 2, py: 1 }}>Climate</NavLink>
+          <NavLink px={2}>Climate</NavLink>
         </Link>
         <ColorSwitcher />
       </Container>
