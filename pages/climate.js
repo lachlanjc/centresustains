@@ -5,7 +5,7 @@ import BGImg from '../components/bg-img'
 
 const ClimatePage = () => (
   <>
-    <Box as="header" sx={{ position: 'relative' }}>
+    <Box as="header" sx={{ position: 'relative', bg: 'secondary' }}>
       <BGImg src="/photos/fog.jpg" alt="Fog over a meadow with a sunlit tree" width={3072} height={2048} />
       <Container variant="copy" sx={{ pt: [5, 6], pb: [4, 5], textAlign: 'center', color: 'white', textShadow: 'text' }}>
         <Heading as="h1" variant="title" color="inherit">

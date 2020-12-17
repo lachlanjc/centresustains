@@ -4,7 +4,6 @@ import {
   Container,
   IconButton,
   NavLink,
-  Text
 } from 'theme-ui'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -53,8 +52,11 @@ const Nav = () => {
   const { pathname } = useRouter()
   const home = pathname === '/'
   if (home) return null
+  const [colorMode] = useColorMode()
   return (
-    <Box as="nav" sx={{ bg: 'sheet', py: 3, zIndex: 4 }}>
+    <Box as="nav"
+      variant={'cards.translucent' + (colorMode === 'dark' ? 'Dark' : '')}
+      sx={{ position: 'absolute', top: 0, left: 0, right: 0, py: 2, zIndex: 4 }}>
       <Container
         sx={{
           display: 'flex',
@@ -82,16 +84,19 @@ const Nav = () => {
             <Image
               src="/SCR-Seondary-Tree-Color-Logo.png"
               alt="Sustainable Centre Region logo"
-              width={64}
-              height={64}
+              width={48}
+              height={48}
             />
           </NavLink>
         </Link>
         <Link href="/forum" passHref>
           <NavLink px={2}>Forum</NavLink>
         </Link>
+        <Link href="/about" passHref>
+          <NavLink px={2}>About Us</NavLink>
+        </Link>
         <Link href="/climate" passHref>
-          <NavLink px={2}>Climate</NavLink>
+          <NavLink px={2}>Learn</NavLink>
         </Link>
         <ColorSwitcher />
       </Container>
