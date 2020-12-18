@@ -1,10 +1,4 @@
-import {
-  useColorMode,
-  Box,
-  Container,
-  IconButton,
-  NavLink,
-} from 'theme-ui'
+import { useColorMode, Box, Container, IconButton, NavLink } from 'theme-ui'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
@@ -54,9 +48,11 @@ const Nav = () => {
   if (home) return null
   const [colorMode] = useColorMode()
   return (
-    <Box as="nav"
+    <Box
+      as="nav"
       variant={'cards.translucent' + (colorMode === 'dark' ? 'Dark' : '')}
-      sx={{ position: 'absolute', top: 0, left: 0, right: 0, py: 2, zIndex: 4 }}>
+      sx={{ position: 'absolute', top: 0, left: 0, right: 0, py: 2, zIndex: 4 }}
+    >
       <Container
         sx={{
           display: 'flex',

@@ -1,36 +1,52 @@
 import { Box, Container, Heading, Text } from 'theme-ui'
-import About from '../components/about.mdx'
-import Nav from '../components/nav'
+import BGImg from '../components/bg-img'
 import CTA from '../components/cta'
 
 const HomePage = () => (
   <>
-    <Nav />
-    <Box as="section" sx={{ bg: 'sheet', py: [4, 5] }}>
-      <Container
-        sx={{
-          position: 'relative',
-          strong: { color: 'accent' },
-          '> p': { fontSize: [2, 3], maxWidth: 'copyPlus', my: [2, 3] }
-        }}
+    <Box
+      as="header"
+      sx={{
+        bg: 'sheet',
+        color: 'white',
+        textShadow: 'text',
+        lineHeight: 'body',
+        position: 'relative',
+        pt: [5, 6],
+        pb: 4,
+        textAlign: 'center'
+      }}
+    >
+      <BGImg
+        src="/photos/leaves_pano.jpg"
+        alt="Fog over a meadow with a sunlit tree"
+        width={9926}
+        height={4256}
+        gradient="rgba(0,0,0,0.125), rgba(0,0,0,0.375)"
+      />
+      <Heading
+        as="h1"
+        variant="layout.container"
+        sx={{ variant: 'text.ultratitle', color: 'inherit' }}
       >
-        <About />
-      </Container>
+        Centre County is planning bold climate action.
+      </Heading>
+      <Text as="p" variant="layout.copy" sx={{ variant: 'text.lead' }}>
+        Take our survey on the climate action you care about in our community.
+      </Text>
+      <CTA
+        primary={['/about', 'About us']}
+        secondary={['/climate', 'Learn more']}
+        sx={{ mt: [3, 4], px: 3, justifyContent: 'center' }}
+      />
     </Box>
     <Container
       id="projects"
       as="article"
       sx={{ py: [3, 4], mt: [3, 4], mb: [5, 6] }}
     >
-      <Heading sx={{ variant: 'text.title', fontSize: [4, 5] }}>
-        Highlighted projects
-      </Heading>
-      <Text sx={{ fontSize: [2, 3], my: [3, 4], maxWidth: 'copyPlus' }}></Text>
-      <CTA
-        primary={['/judges', 'Meet the judges']}
-        secondary={['/projects', 'See all projects']}
-        sx={{ mt: [3, 4] }}
-      />
+      <Heading as="h1" sx={{ variant: 'text.title', fontSize: [4, 5] }} />
+      <Text sx={{ fontSize: [2, 3], my: [3, 4], maxWidth: 'copyPlus' }} />
     </Container>
   </>
 )

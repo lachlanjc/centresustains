@@ -4,8 +4,8 @@ import { isEmpty, reverse } from 'lodash'
 
 const CTA = ({ primary = [], secondary = {}, sx = {} }) => {
   const [colorMode] = useColorMode()
-  let colors = ['blue', 'cyan']
-  if (colorMode === 'dark') colors = reverse(colors)
+  let colors = ['pink', 'aqua']
+  // if (colorMode === 'dark') colors = reverse(colors)
   return (
     <Flex
       sx={{
