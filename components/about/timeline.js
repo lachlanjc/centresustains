@@ -24,7 +24,7 @@ const Timeline = () => (
       flexDirection: 'column',
       lineHeight: 1.125,
       position: 'relative',
-      mb: 3,
+      mb: [3, 4],
       ':before': {
         backgroundImage: theme => `linear-gradient(
           to bottom,
@@ -43,27 +43,27 @@ const Timeline = () => (
     }}
   >
     <Step
-      name="Group created"
-      duration="2016"
+      name="Sustainability Planner hired, compiles emissions inventory for base year 2016"
+      duration="2018"
       color="indigo"
     />
     <Step
-      name="Pam does XYZ"
-      duration="March 2018"
+      name="Technical Advisory Group (TAG) formed"
+      duration="2019"
       color="purple"
     />
     <Step
-      name="GHG inventory for 2016 completed"
-      duration="June 2019"
+      name="TAG holds 5 sessions with 70 subject experts on best practices"
+      duration="May–Dec 2020"
       color="azure"
     />
     <Step
-      name="Survey of community"
-      duration="January 2021"
+      name="Community stakeholder survey"
+      duration="Feb–Mar 2021"
       color="aqua"
     />
     <Step
-      name="Public Forum"
+      name="Community climate forum event"
       duration="April 2021"
       color="green"
     />
