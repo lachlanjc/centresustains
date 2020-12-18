@@ -6,7 +6,7 @@ const Layout = props => (
   <Grid
     columns={['64px 1fr', '96px 1fr']}
     gap={3}
-    sx={{ py: 3, img: { borderRadius: 'circle' }, p: { my: 0 } }}
+    sx={{ py: [3, 4], img: { borderRadius: 'circle' }, '> p': { my: 0 } }}
     {...props}
   />
 )

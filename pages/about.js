@@ -12,7 +12,7 @@ const ClimatePage = () => (
     </Box>
     */}
     <Container variant="copy" as={BaseStyles} sx={{ pt: [5, 6], fontSize: 2, ul: { fontSize: 2 }, '> p:first-of-type': { variant: 'text.lead' } }}>
-      <Heading as="h1" variant="title" color="pink" pb={3}>
+      <Heading as="h1" variant="title" color="pink">
         About us
       </Heading>
       <Content />
