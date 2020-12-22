@@ -10,9 +10,9 @@ const Step = ({ name, duration, color = 'primary' }) => (
       zIndex: 1
     }}
   >
-    <Box sx={{ p: 2, borderRadius: 'circle', bg: color, mr: [3, 4] }} />
+    <Box sx={{ p: 2, borderRadius: 'circle', bg: color, mr: [3, 4] }} aria-hidden />
     <Box>
-      <Text sx={{ color: 'muted', fontSize: 1, mb: 1 }} children={duration} />
+      <Text sx={{ color: 'muted', display: 'block', fontSize: 1, pb: 1 }} children={duration} />
       <Text as="div" sx={{ color: 'text', fontSize: [2, 3] }} children={name} />
     </Box>
   </Flex>

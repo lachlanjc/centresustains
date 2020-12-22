@@ -1,0 +1,48 @@
+import { Container } from 'theme-ui'
+import Image from 'next/image'
+
+<Container
+  as="article"
+  variant="story"
+  sx={{
+    'h1, a': { color: 'azure' },
+    ul: {
+      listStyle: 'none',
+      pl: 0,
+      mt: 2,
+      mb: 4,
+      display: 'grid',
+      gridGap: 3,
+      gridTemplateColumns: [null, 'repeat(2, 1fr)'],
+      li: { variant: 'cards.secondary' },
+    },
+  }}
+>
+
+# Progress
+
+## See our local work on sustainability in Centre County, PA.
+
+## Emissions inventory
+
+In 2019, we completed a full inventory of greenhouse gas emissions in Centre Region, using 2016 as a base year.
+
+- **[<Image src="/progress/ghg_summary.jpg" width={500} height={647} alt="Summary report thumbnail" /> Inventory Summary](/progress/ghg_summary.pdf)**
+- **[<Image src="/progress/ghg_report.jpg" width={500} height={647} alt="Full report thumbnail" /> Full Report](/progress/ghg_report.pdf)**
+
+## Municipal actions
+
+The following municipalities have passed resolutions committing to develop a strategy to achieve net zero greenhouse gas emissions.
+
+- [State College Borough 1229](https://www.crcog.net/vertical/sites/%257B6AD7E2DC-ECE4-41CD-B8E1-BAC6A6336348%257D/uploads/RES_1229_SCB_Committment_to_Developing_and_Implementing_A_Strategy_To_Achieve_Net_Zero_Greenhouse_Gas_Emissions_And_100_Percent_Rene.pdf)
+- [Ferguson Township 2017-14](https://www.crcog.net/vertical/sites/%257B6AD7E2DC-ECE4-41CD-B8E1-BAC6A6336348%257D/uploads/Ferguson_Township_Resolution_Net_Zero_2050.pdf)
+- [Harris Township 17-13](https://www.crcog.net/vertical/sites/%257B6AD7E2DC-ECE4-41CD-B8E1-BAC6A6336348%257D/uploads/Harris_Township_Resolution_17-13_Greenhouse_Gas_Emissions_Aug_2017.pdf)
+
+## Local press
+
+- **[How Centre County feels effects of climate change, and what local leaders are doing about it](https://www.centredaily.com/news/local/community/article247401845.html)**
+  Centre Daily Times, December 2020
+- **[Global carbon emissions dropped with the pandemic, but is it enough to make a difference?](https://centredaily.com/news/local/article247531850.html)**
+  Centre Daily Times, December 2020
+
+</Container>

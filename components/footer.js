@@ -7,13 +7,13 @@ const Footer = () => (
     sx={{
       py: 4,
       bg: 'sunken',
-      color: 'secondary',
+      color: 'secondary'
     }}
   >
     <Container
       variant="narrow"
       sx={{
-      textAlign: 'center',
+        textAlign: 'center',
         p: { mt: 3 },
         a: { color: 'primary' }
       }}

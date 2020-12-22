@@ -1,9 +1,9 @@
-import { Box, Text, Container, Grid, Heading, BaseStyles } from 'theme-ui'
+import { Box, Text, Container, Grid, Heading } from 'theme-ui'
 import Photo from '../components/photo'
 import BGImg from '../components/bg-img'
 import Content from '../components/about/content.mdx'
 
-const ClimatePage = () => (
+const AboutPage = () => (
   <>
     {/*
     <Box as="header" bg="card">
@@ -11,13 +11,17 @@ const ClimatePage = () => (
       </Container>
     </Box>
     */}
-    <Container variant="copy" as={BaseStyles} sx={{ pt: [5, 6], fontSize: 2, ul: { fontSize: 2 }, '> p:first-of-type': { variant: 'text.lead' } }}>
-      <Heading as="h1" variant="title" color="pink">
-        About us
-      </Heading>
+    <Container
+      variant="story"
+      as="article"
+      sx={{
+        h1: { color: 'pink' },
+        ul: { fontSize: 2 }
+      }}
+    >
       <Content />
     </Container>
   </>
 )
 
-export default ClimatePage
+export default AboutPage

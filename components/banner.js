@@ -89,7 +89,8 @@ const Banner = () => (
             br: { display: [null, null, 'none'] }
           }}
         >
-          #Build<span>For</span>
+          #Build
+          <span>For</span>
           <br />
           COVID19
         </Text>
