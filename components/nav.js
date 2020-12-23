@@ -2,7 +2,7 @@ import { useColorMode, Box, Container, IconButton, NavLink } from 'theme-ui'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { Moon } from 'react-feather'
+import { Moon } from 'react-bootstrap-icons'
 
 const linkEffect = {
   borderRadius: 'circle',
@@ -19,9 +19,8 @@ const NavButton = ({ sx, ...props }) => (
     {...props}
     sx={{
       ...linkEffect,
-      display: 'inline-flex',
-      alignItems: 'flex-end',
       width: 'auto',
+      flexShrink: 0,
       svg: { stroke: 'currentColor' },
       ...sx
     }}

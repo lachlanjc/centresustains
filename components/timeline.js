@@ -1,6 +1,6 @@
 import { Flex, Box, Text } from 'theme-ui'
 
-const Step = ({ name, duration, color = 'primary' }) => (
+export const TimelineStep = ({ name, duration, color = 'primary' }) => (
   <Flex
     sx={{
       alignItems: 'center',
@@ -18,8 +18,9 @@ const Step = ({ name, duration, color = 'primary' }) => (
   </Flex>
 )
 
-const Timeline = () => (
+export const Timeline = (props) => (
   <Flex
+    {...props}
     sx={{
       flexDirection: 'column',
       lineHeight: 1.125,
@@ -39,35 +40,8 @@ const Timeline = () => (
         ml: '6px',
         position: 'absolute',
         zIndex: 0
-      }
+      },
+      ...props.sx
     }}
-  >
-    <Step
-      name="Sustainability Planner hired, compiles emissions inventory for base year 2016"
-      duration="2018"
-      color="indigo"
-    />
-    <Step
-      name="Technical Advisory Group (TAG) formed"
-      duration="2019"
-      color="purple"
-    />
-    <Step
-      name="TAG holds 5 sessions with 70 subject experts on best practices"
-      duration="May–Dec 2020"
-      color="azure"
-    />
-    <Step
-      name="Community stakeholder survey"
-      duration="Feb–Mar 2021"
-      color="aqua"
-    />
-    <Step
-      name="Community climate forum event"
-      duration="April 2021"
-      color="green"
-    />
-  </Flex>
+  />
 )
-
-export default Timeline

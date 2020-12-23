@@ -1,10 +1,4 @@
 @font-face {
-  font-family: 'Cheee';
-  src: url('/fonts/Cheee-Sticky.otf') format('opentype');
-  font-weight: 400;
-}
-
-@font-face {
   font-family: 'ClearfaceStd';
   src: url('/fonts/ClearfaceStd-Regular.otf') format('opentype');
   font-weight: 400;

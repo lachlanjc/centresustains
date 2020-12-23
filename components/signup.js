@@ -10,7 +10,7 @@ import {
   Spinner,
   Alert
 } from 'theme-ui'
-import { AlertTriangle, Send } from 'react-feather'
+import { Mailbox2, ExclamationTriangle } from 'react-bootstrap-icons'
 
 const Loading = () => (
   <Spinner
@@ -50,9 +50,9 @@ const Signup = () => {
     }
   }
   return (
-    <Card sx={{ maxWidth: 'narrowPlus', mx: 'auto', mt: [3, 4] }}>
-      <Heading as="h2" variant="subheadline" sx={{ mb: 1 }}>
-        Want to get emails?
+    <Card variant="sunken" sx={{ maxWidth: 'narrowPlus', mx: 'auto', my: [3, 4] }}>
+      <Heading as="h2" variant="subheadline" color="primary">
+        Get an email when event registration opens
       </Heading>
       <Grid
         as="form"
@@ -63,7 +63,7 @@ const Signup = () => {
           gridTemplateColumns: [null, '1fr auto'],
           textAlign: 'left',
           alignItems: 'end',
-          input: { bg: 'sunken' }
+          input: { bg: 'elevated' }
         }}
       >
         <div>
@@ -78,12 +78,12 @@ const Signup = () => {
           />
         </div>
         <Button type="submit" sx={{ mt: [2, 0] }}>
-          {submitting ? <Loading /> : 'Sign Up'}
+          {submitting ? <Loading /> : 'Sign up'}
         </Button>
       </Grid>
       {error && (
         <Alert variant="primary" sx={{ mt: [2, 3] }}>
-          <AlertTriangle />
+          <ExclamationTriangle />
           <Text sx={{ ml: 2 }}>
             {error.toString()}
           </Text>
@@ -91,9 +91,12 @@ const Signup = () => {
       )}
       {done && (
         <Alert variant="primary" sx={{ bg: 'green', mt: [2, 3] }}>
-          <Send />
+          <Mailbox2 />
           <Text sx={{ ml: 2 }}>Signed up!</Text>
         </Alert>
+      )}
+      {!done && !error && (
+        <Text as="p" variant="caption" mt={2}>No unrelated emails, no spam, no ads.</Text>
       )}
     </Card>
   )

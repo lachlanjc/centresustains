@@ -1,20 +1,32 @@
 import { Box, Text, Container, Grid, Heading } from 'theme-ui'
 import Image from 'next/image'
-import Photo from '../components/photo'
 import BGImg from '../components/bg-img'
 
-const ClimatePage = () => (
+const Section = props => (
   <Box
-    as="main"
-    sx={{
-      h2: {
-        fontFamily: 'accent',
-        fontWeight: 'body',
-        letterSpacing: 'headline',
-        lineHeight: 'title'
-      }
-    }}
+    as="section"
+    {...props}
+    sx={{ ':nth-of-type(even)': { bg: 'card' }, ...props.sx }}
+  />
+)
+const SectionHeader = ({ color, title, subtitle, ...props }) => (
+  <Box
+    as="header"
+    {...props}
+    id={title.toLowerCase()}
+    sx={{ p: [4, 5], ...props.sx }}
   >
+    <Heading as="h2" variant="title" color={color}>
+      {title}
+    </Heading>
+    {subtitle && <Text as="p" variant="subtitle">
+      {subtitle}
+    </Text>}
+  </Box>
+)
+
+const ClimatePage = () => (
+  <>
     <Box as="header" sx={{ position: 'relative', bg: 'muted' }}>
       <BGImg
         src="/photos/fog.jpg"
@@ -25,7 +37,7 @@ const ClimatePage = () => (
       <Container
         variant="copy"
         sx={{
-          pt: [5, 6],
+          pt: 6,
           pb: [4, 5],
           textAlign: 'center',
           color: 'white',
@@ -41,12 +53,8 @@ const ClimatePage = () => (
         </Text>
       </Container>
     </Box>
-    <Box as="section">
-      <Box as="header" p={[3, 4, 5]}>
-        <Heading as="h2" variant="title" color="green">
-          Forests
-        </Heading>
-      </Box>
+    <Section>
+      <SectionHeader title="Forests" color="green" />
       <Grid columns={[null, 3]} gap={[2, 3]}>
         <Image
           src="/photos/forest_spring.jpg"
@@ -67,26 +75,18 @@ const ClimatePage = () => (
           height={2868}
         />
       </Grid>
-    </Box>
-    <Box as="section" bg="sunken">
-      <Box as="header" p={[3, 4, 5]}>
-        <Heading as="h2" variant="title" color="brown">
-          Wildlife
-        </Heading>
-      </Box>
+    </Section>
+    <Section>
+      <SectionHeader title="Wildlife" color="brown" />
       <Image
         src="/photos/deer.jpg"
         alt="Deer crouching on the forest floor"
         width={3504}
         height={2336}
       />
-    </Box>
-    <Box as="section">
-      <Box as="header" p={[3, 4, 5]}>
-        <Heading as="h2" variant="title" color="secondary">
-          Roads
-        </Heading>
-      </Box>
+    </Section>
+    <Section>
+      <SectionHeader title="Roads" color="secondary" />
       <Grid columns={[null, 3]} gap={[2, 3]}>
         <Image
           src="/photos/roads_2.jpg"
@@ -107,26 +107,18 @@ const ClimatePage = () => (
           height={3504}
         />
       </Grid>
-    </Box>
-    <Box as="section" bg="sunken">
-      <Box as="header" p={[3, 4, 5]}>
-        <Heading as="h2" variant="title" color="yellow">
-          Weather
-        </Heading>
-      </Box>
+    </Section>
+    <Section>
+      <SectionHeader title="Weather" color="yellow" />
       <Image
         src="/photos/fog.jpg"
         alt="Fog over a meadow with a sunlit tree"
         width={3072}
         height={2048}
       />
-    </Box>
-    <Box as="section">
-      <Box as="header" p={[3, 4, 5]}>
-        <Heading as="h2" variant="title" color="azure">
-          Water
-        </Heading>
-      </Box>
+    </Section>
+    <Section>
+      <SectionHeader title="Water" color="azure" />
       <Grid columns={2} gap={[2, 4]}>
         <Image
           src="/photos/marsh.jpg"
@@ -141,21 +133,17 @@ const ClimatePage = () => (
           height={3072}
         />
       </Grid>
-    </Box>
-    <Box as="section" bg="sunken">
-      <Box as="header" p={[3, 4, 5]}>
-        <Heading as="h2" variant="title" color="purple">
-          Farms
-        </Heading>
-      </Box>
+    </Section>
+    <Section>
+      <SectionHeader title="Farms" color="purple" />
       <Image
         src="/photos/farms.jpg"
         alt="Happy Valley Farm"
         width={3072}
         height={2048}
       />
-    </Box>
-  </Box>
+    </Section>
+  </>
 )
 
 export default ClimatePage

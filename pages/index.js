@@ -1,7 +1,8 @@
 import { Box, Container, Heading, Text } from 'theme-ui'
 import BGImg from '../components/bg-img'
-import Nav from '../components/nav'
 import CTA from '../components/cta'
+import Signup from '../components/signup'
+import Survey from '../components/survey.mdx'
 
 const HomePage = () => (
   <>
@@ -13,7 +14,7 @@ const HomePage = () => (
         textShadow: 'text',
         lineHeight: 'body',
         position: 'relative',
-        pt: [5, 128 * 1.5],
+        pt: [6, 128 * 1.5],
         pb: 4,
         textAlign: 'center'
       }}
@@ -41,14 +42,10 @@ const HomePage = () => (
         sx={{ mt: [3, 4], px: 3, justifyContent: 'center' }}
       />
     </Box>
-    {/* <Container
-      id="projects"
-      as="article"
-      sx={{ py: [3, 4], mt: [3, 4], mb: [5, 6] }}
-    >
-      <Heading as="h1" sx={{ variant: 'text.title', fontSize: [4, 5] }} />
-      <Text sx={{ fontSize: [2, 3], my: [3, 4], maxWidth: 'copyPlus' }} />
-    </Container> */}
+    <Container as="article" variant="story" mt={0}>
+      <Survey />
+      <Signup />
+    </Container>
   </>
 )
 

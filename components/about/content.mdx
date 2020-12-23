@@ -1,5 +1,5 @@
 import Team from './team'
-import Timeline from './timeline'
+import { Timeline, TimelineStep } from '../timeline'
 
 # About us
 
@@ -23,7 +23,33 @@ Centre Sustains is an effort inside the Council of Governments (COG) working on 
 
 Pam Adams, the COG Sustainability Planner, started the effort in 2019. It’s made up of the Technical Advisory Group (TAG) providing technical expertise, and the General Forum, which is a group of elected officials from all 6 municipalities.
 
-<Timeline />
+<Timeline>
+  <TimelineStep
+    name="Sustainability Planner hired, compiles emissions inventory for base year 2016"
+    duration="2018"
+    color="indigo"
+  />
+  <TimelineStep
+    name="Technical Advisory Group (TAG) formed"
+    duration="2019"
+    color="purple"
+  />
+  <TimelineStep
+    name="TAG holds 5 sessions with 70 subject experts on best practices"
+    duration="May–Dec 2020"
+    color="azure"
+  />
+  <TimelineStep
+    name="Community stakeholder survey"
+    duration="Feb–Mar 2021"
+    color="aqua"
+  />
+  <TimelineStep
+    name="Community climate forum event"
+    duration="April 2021"
+    color="green"
+  />
+</Timeline>
 
 ### Technical Advisory Group (TAG)
 
