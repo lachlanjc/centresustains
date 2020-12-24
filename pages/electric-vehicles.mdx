@@ -1,0 +1,62 @@
+import { Box, Button } from 'theme-ui'
+import { GeoFill, Diagram3 } from 'react-bootstrap-icons'
+import BGImg from '../components/bg-img'
+import Story from '../components/story'
+
+<Box
+  as="header"
+  variant="header"
+  sx={{
+    position: 'relative',
+    mt: 0,
+    pt: [6, 128],
+    pb: [5, 72],
+    h1: { color: 'white', textShadow: 'text' }
+  }}
+>
+<BGImg
+  width={1950}
+  height={1300}
+  alt="Electric car plugged in on the side of a sunny downtown street"
+  src="/electric-vehicles.jpeg"
+  gradient="rgba(0,0,0,0.125), rgba(0,0,0,0.25)"
+/>
+
+# Electric Vehicles
+
+<Button
+  as="a"
+  href="https://afdc.energy.gov/fuels/electricity_locations.html#/find/nearest?fuel=ELEC&location=16801"
+  bg="teal"
+  mt={[3, 4]}
+>
+  <GeoFill />
+  Find local charging stations
+</Button>
+
+</Box>
+
+<Story
+  color="teal"
+  sx={{
+    pt: [0,0],
+    '> p:last-of-type': { variant: 'caption', fontSize: 1, color: 'muted' }
+  }}
+>
+
+Driving cleaner, more efficient vehicles will be one way to reduce our greenhouse gas emissions. Local government in the Centre Region will continue to review their fleets for cleaner, more efficient vehicles. It will also support a growing and necessary electric vehicle charging infrastructure.
+
+---
+
+## Local government <Diagram3 />
+
+Through the Department of Environmental Protection (DEP), the following municipalities have begun installing electric vehicle charging stations and/or purchasing electric vehicles for their fleet.
+
+- [State College Borough](https://www.statecollege.com/news/local-news/electric-vehicle-charging-stations-added-to-beaver-avenue-garage,1480787/) installed six level 2 universal charging stations at the Beaver Ave Parking Garage
+- [Ferguson Township](https://www.twp.ferguson.pa.us/home/news/new-electric-vehicle-charging-station-installed-0) installed two level 2 universal charging stations at the Ferguson Township Building and replaced a fleet vehicle with a Chevy Bolt
+- College Township installed two level 2 universal charging stations at the College Township Building and replaced a fleet vehicle with a Chevy Bolt
+- Patton Township installed two level 2 universal charging stations at the Patton Township Building
+
+Photo by [Andrew Roberts](https://unsplash.com/@studiodenley?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) via [Unsplash](https://unsplash.com/s/photos/electric-car?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+</Story>

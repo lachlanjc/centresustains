@@ -45,7 +45,7 @@ const ClimatePage = () => (
         }}
       >
         <Heading as="h1" variant="title" color="inherit">
-          Climate in Central PA
+          Climate in Central&nbsp;PA
         </Heading>
         <Text as="p" variant="lead">
           We’re already experiencing expensive changes in weather patterns in
