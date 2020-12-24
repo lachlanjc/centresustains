@@ -1,29 +1,13 @@
-import { Container } from 'theme-ui'
 import Image from 'next/image'
-
-<Container
-  as="article"
-  variant="story"
-  sx={{
-    'h1, a': { color: 'azure' },
-    ul: {
-      listStyle: 'none',
-      pl: 0,
-      mt: 2,
-      mb: 4,
-      display: 'grid',
-      gridGap: 3,
-      gridTemplateColumns: [null, 'repeat(2, 1fr)'],
-      li: { variant: 'cards.secondary' },
-    },
-  }}
->
 import {
   ClipboardData,
   Lightning,
   Newspaper,
   BookmarkStar
 } from 'react-bootstrap-icons'
+import Story from '../components/story'
+
+export default props => <Story cards color="azure" {...props} />
 
 # Progress
 
@@ -33,8 +17,8 @@ import {
 
 In 2019, we completed a full inventory of greenhouse gas emissions in Centre Region, using 2016 as a base year.
 
-- **[<Image src="/progress/ghg_summary.jpg" width={500} height={647} alt="Summary report thumbnail" /> Inventory Summary](/progress/ghg_summary.pdf)**
-- **[<Image src="/progress/ghg_report.jpg" width={500} height={647} alt="Full report thumbnail" /> Full Report](/progress/ghg_report.pdf)**
+- **[Inventory Summary <Image src="/progress/ghg_summary.jpg" width={500} height={647} alt="Summary report thumbnail" />](/progress/ghg_summary.pdf)**
+- **[Full Report <Image src="/progress/ghg_report.jpg" width={500} height={647} alt="Full report thumbnail" />](/progress/ghg_report.pdf)**
 
 ## Municipal actions <Lightning />
 

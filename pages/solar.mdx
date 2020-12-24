@@ -1,21 +1,5 @@
-import { Container } from 'theme-ui'
-
-<Container
-  as="article"
-  variant="story"
-  sx={{
-    h1: { color: 'yellow' },
-    ul: {
-      listStyle: 'none',
-      pl: 0,
-      display: 'grid',
-      gridGap: 3,
-      gridTemplateColumns: [null, 'repeat(2, 1fr)']
-    },
-    li: { variant: 'cards.secondary' },
-    a: { color: 'yellow' }
-  }}
->
+import Story from '../components/story'
+export default props => <Story cards color="yellow" {...props} />
 
 # Solar Energy
 
@@ -39,5 +23,3 @@ The Centre Region is working to improve solar market conditions, making it faste
 ---
 
 The Centre Region Comprehensive Plan was updated in 2013 and includes the objective of working to reduce barriers to alternative energy uses to help decrease dependence on finite natural resources. One of the fastest growing forms of alternative energy is the use of solar energy.
-
-</Container>

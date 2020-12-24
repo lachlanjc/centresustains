@@ -1,12 +1,6 @@
-import { Container } from 'theme-ui'
+import Story from '../components/story'
 
-<Container
-  as="article"
-  variant="story"
-  sx={{
-    h1: { color: 'primary' }
-  }}
->
+export default props => <Story color="primary" {...props} />
 
 # Code of Conduct
 
@@ -28,5 +22,3 @@ Our events are dedicated to providing a safe, comfortable and harassment-free ex
 We do not tolerate harassment of event participants in any form. Sexual language and imagery is not appropriate at any time.
 
 Participants violating these rules **may be expelled** from the event at the discretion of the organizers.
-
-</Container>

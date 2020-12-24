@@ -1,4 +1,4 @@
-import { Container, Grid } from 'theme-ui'
+import { Grid } from 'theme-ui'
 import Signup from '../components/signup'
 import Feature, { CompactFeature } from '../components/forum/feature'
 import {
@@ -9,14 +9,9 @@ import {
   CalendarRange
 } from 'react-bootstrap-icons'
 import { Timeline, TimelineStep } from '../components/timeline'
+import Story from '../components/story'
 
-<Container
-  as="article"
-  variant="story"
-  sx={{
-    'h1, a': { color: 'brown' }
-  }}
->
+export default props => <Story color="brown" {...props} />
 
 # Forum
 
@@ -65,5 +60,3 @@ import { Timeline, TimelineStep } from '../components/timeline'
 - Anybody is welcome to come: we’re talking about Centre Region Council of Governments’ plans
 
 Subject to our [Code of Conduct](/conduct).
-
-</Container>
