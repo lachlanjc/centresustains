@@ -59,10 +59,7 @@ const Nav = () => {
             ...linkEffect,
             fontSize: 1,
             color: 'secondary',
-            textDecoration: 'none',
-            '+ a': {
-              ml: [3, 4]
-            }
+            textDecoration: 'none'
           }
         }}
       >
@@ -85,7 +82,7 @@ const Nav = () => {
             />
           </NavLink>
         </Link>
-        <Box sx={{ mx: 'auto', textAlign: 'center' }}>
+        <Box sx={{ maxWidth: [128 * 1.5, 'none'], mx: 'auto', textAlign: 'center', a: { mx: [2, 3] } }}>
           <Link href="/forum" passHref>
             <NavLink px={2}>Forum</NavLink>
           </Link>

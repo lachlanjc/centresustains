@@ -1,7 +1,7 @@
-import { Box, Container, Heading, Text } from 'theme-ui'
+import { Box, Heading, Text } from 'theme-ui'
 import BGImg from '../components/bg-img'
 import CTA from '../components/cta'
-import Signup from '../components/signup'
+import Story from '../components/story'
 import Survey from '../components/survey.mdx'
 
 const HomePage = () => (
@@ -37,15 +37,14 @@ const HomePage = () => (
         Take our survey on the climate action you care about in our community.
       </Text>
       <CTA
-        primary={['/about', 'About us']}
-        secondary={['/climate', 'Learn more']}
+        primary={['/climate', 'Learn about climate']}
+        secondary={['/about', 'About us']}
         sx={{ mt: [3, 4], px: 3, justifyContent: 'center' }}
       />
     </Box>
-    <Container as="article" variant="story" mt={0}>
+    <Story>
       <Survey />
-      <Signup />
-    </Container>
+    </Story>
   </>
 )
 

@@ -4,32 +4,30 @@ export const CompactFeature = ({ icon: Icon, color, name, desc, ...props }) => (
   <Flex sx={{ alignItems: 'center' }} {...props}>
     <Box
       as="span"
+      role="img"
+      aria-hidden
       sx={{
         bg: color,
         color: 'white',
-        borderRadius: 18,
+        borderRadius: 'circle',
         lineHeight: 0,
         p: 3,
         mr: [0, 3],
         display: 'inline-block',
         transform: ['scale(0.75)', 'none'],
-        transformOrigin: 'bottom left',
+        transformOrigin: 'center left',
         boxShadow:
-          'inset 2px 2px 6px rgba(255,255,255,0.2), inset -2px -2px 6px rgba(0,0,0,0.1), 0 1px 4px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.1)'
+          'inset 2px 2px 6px rgba(255,255,255,0.25), inset -2px -2px 6px rgba(0,0,0,0.125), 0 1px 4px rgba(0,0,0,0.125), 0 4px 8px rgba(0,0,0,0.125)'
       }}
     >
       <Icon size={32} />
     </Box>
-    <Box>
-      <Text as="span" variant="lead" color="secondary" my={0}>
+    <Box sx={{ lineHeight: 'heading' }}>
+      <Text as="span" variant="lead" sx={{ color: 'secondary', display: 'block', my: [0, 0] }}>
         {name}
       </Text>
       {desc &&
-        <Text
-          as="p"
-          variant="caption"
-          sx={{ mt: 2, pb: 2, a: { variant: 'styles.a', color: 'blue' } }}
-        >
+        <Text as="p" variant="caption">
           {desc}
         </Text>
       }
@@ -42,6 +40,7 @@ const Feature = ({ icon: Icon, color, name, desc, children, ...props }) => (
     {children || (
       <Box
         as="span"
+        role="img"
         sx={{
           bg: color,
           color: 'white',

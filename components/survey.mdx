@@ -1,6 +1,19 @@
-import { ClipboardCheck } from 'react-bootstrap-icons'
+import Link from 'next/link'
+import { Button } from 'theme-ui'
+import { ClipboardCheck, CalendarEvent } from 'react-bootstrap-icons'
+import Signup from './signup'
 
 ## Take the survey <ClipboardCheck />
 
-- Not just for people who live here, also people who work here or go to Penn&nbsp;State
-- Open for 6 weeks
+Weigh in on Centre County’s upcoming climate adaptation plans—whether you live here, work in the area, or go to Penn&nbsp;State, we want to hear public opinion. The survey opens in January for 6 weeks.
+
+<Signup />
+
+After the survey, in April 2021 we will be running a public forum event to discuss:
+
+<Link href="/forum" passHref>
+  <Button as="a" bg="brown">
+    <CalendarEvent />
+    Attend the forum →
+  </Button>
+</Link>

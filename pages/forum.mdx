@@ -1,4 +1,4 @@
-import { Grid } from 'theme-ui'
+import { Text, Card, Grid } from 'theme-ui'
 import Signup from '../components/signup'
 import Feature, { CompactFeature } from '../components/forum/feature'
 import {
@@ -19,16 +19,28 @@ export default props => <Story color="brown" {...props} />
 
 <Signup />
 
-## Learn what’s happening, hear what local government is doing, influence that conversation.
+## <Text color="green">Learn</Text> about climate change in our area, <Text color="brown">discuss</Text>&nbsp;local government’s plans.
+
+### In attendance
 
 <Grid
   columns={[null, 2]}
-  gap={[2, 4]}
-  sx={{ mt: [3, 4], mb: [4, 5], alignItems: 'end' }}
+  gap={[0, 3]}
+  sx={{ mt: 3, mb: [4, 5], alignItems: 'end' }}
 >
   <CompactFeature icon={Flag} color="green" name="Local residents" />
-  <CompactFeature icon={Award} color="yellow" name="Local government" />
-  <CompactFeature icon={Building} color="blue" name="Students" />
+  <CompactFeature
+    icon={Award}
+    color="yellow"
+    name="Local government"
+    desc="Elected officials"
+  />
+  <CompactFeature
+    icon={Building}
+    color="blue"
+    name="Students"
+    desc="Penn State & nearby schools"
+  />
   <CompactFeature icon={Shop} color="pink" name="Business owners" />
 </Grid>
 

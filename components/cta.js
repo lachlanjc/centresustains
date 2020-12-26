@@ -1,11 +1,10 @@
 import { Flex, Button } from 'theme-ui'
 import Link from 'next/link'
-import { isEmpty } from 'lodash'
 
 const CTA = ({
   primary = [],
   secondary = {},
-  colors = ['pink', 'azure'],
+  colors = ['primary', 'brown'],
   sx = {}
 }) => (
     <Flex
@@ -31,7 +30,7 @@ const CTA = ({
           {primary[1]} →
       </Button>
       </Link>
-      {!isEmpty(secondary?.[0]) && (
+      {(secondary?.[0]) && (
         <Link href={secondary[0]} prefetch={false} passHref>
           <Button
             variant="outline"
@@ -40,7 +39,7 @@ const CTA = ({
             sx={{ color: colors[1], mb: 2 }}
           >
             {secondary[1]} →
-        </Button>
+          </Button>
         </Link>
       )}
     </Flex>

@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import {
-  Card,
-  Heading,
-  Text,
-  Grid,
-  Label,
-  Input,
+  Alert,
   Button,
+  Card,
+  Flex,
+  Grid,
+  Heading,
+  Input,
+  Label,
   Spinner,
-  Alert
+  Text
 } from 'theme-ui'
 import { Mailbox2, ExclamationTriangle } from 'react-bootstrap-icons'
+import Image from 'next/image'
 
 const Loading = () => (
   <Spinner
@@ -25,21 +27,18 @@ const Signup = () => {
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
   const [error, setError] = useState('')
-  const onSubmit = async (e) => {
+  const onSubmit = async e => {
     e.preventDefault()
     if (email.length < 3) return
     setSubmitting(true)
-    let submission = await fetch(
-      '/api/signup',
-      {
-        method: 'POST',
-        body: JSON.stringify({ email, timestamp: new Date() }),
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        }
+    let submission = await fetch('/api/signup', {
+      method: 'POST',
+      body: JSON.stringify({ email, timestamp: new Date() }),
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
       }
-    )
+    })
     if (submission.ok) {
       setEmail('')
       setSubmitting(false)
@@ -50,7 +49,16 @@ const Signup = () => {
     }
   }
   return (
-    <Card variant="sunken" sx={{ maxWidth: 'narrowPlus', mx: 'auto', my: [3, 4] }}>
+    <Card
+      sx={{
+        border: '1px solid',
+        borderColor: 'border',
+        maxWidth: 'narrowPlus',
+        mx: 'auto',
+        mt: [3, 4],
+        mb: [4, 5]
+      }}
+    >
       <Heading as="h2" variant="subheadline" color="primary">
         Get an email when event registration opens
       </Heading>
@@ -60,10 +68,10 @@ const Signup = () => {
         gap={[2, 3]}
         sx={{
           mt: [null, 3],
-          gridTemplateColumns: [null, '1fr auto'],
+          gridTemplateColumns: '1fr auto',
           textAlign: 'left',
           alignItems: 'end',
-          input: { bg: 'elevated' }
+          input: { bg: 'sunken' }
         }}
       >
         <div>
@@ -74,7 +82,7 @@ const Signup = () => {
             id="email"
             placeholder="me@email.com"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
           />
         </div>
         <Button type="submit" sx={{ mt: [2, 0] }}>
@@ -84,9 +92,7 @@ const Signup = () => {
       {error && (
         <Alert variant="primary" sx={{ mt: [2, 3] }}>
           <ExclamationTriangle />
-          <Text sx={{ ml: 2 }}>
-            {error.toString()}
-          </Text>
+          <Text sx={{ ml: 2 }}>{error.toString()}</Text>
         </Alert>
       )}
       {done && (
@@ -95,9 +101,30 @@ const Signup = () => {
           <Text sx={{ ml: 2 }}>Signed up!</Text>
         </Alert>
       )}
-      {!done && !error && (
-        <Text as="p" variant="caption" mt={2}>No unrelated emails, no spam, no ads.</Text>
-      )}
+      {!done &&
+        !error && (
+          <Flex
+            as="p"
+            sx={{
+              mt: 3,
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              '> div': { borderRadius: 'circle', overflow: 'hidden' }
+            }}
+          >
+            <Image
+              width={48}
+              height={48}
+              alt="Pam's avatar"
+              src="/tag/pam_adams.jpg"
+            />
+            <Text variant="caption" pl={[null, 2]} pt={[2, 0]}>
+              I’ll send you 4 emails between now & April, unsubscribe any time.
+              <br />
+              I’d love to have you involved. <strong>—Pam</strong>
+            </Text>
+          </Flex>
+        )}
     </Card>
   )
 }
