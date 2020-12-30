@@ -45,7 +45,7 @@ const Signup = () => {
       setDone(true)
     } else {
       setSubmitting(false)
-      setError(submission.errors || 'Something went wrong')
+      setError(submission.errors || 'Something went wrong.')
     }
   }
   return (
@@ -92,7 +92,10 @@ const Signup = () => {
       {error && (
         <Alert variant="primary" sx={{ mt: [2, 3] }}>
           <ExclamationTriangle />
-          <Text sx={{ ml: 2 }}>{error.toString()}</Text>
+          <Text sx={{ ml: 2 }}>
+            {error.toString()}
+            <Text as="a" pl={1} href="mailto:padams@crcog.net">Email Pam?</Text>
+          </Text>
         </Alert>
       )}
       {done && (

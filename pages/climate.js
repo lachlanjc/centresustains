@@ -1,15 +1,21 @@
 import { Box, Text, Container, Grid, Heading } from 'theme-ui'
 import Image from 'next/image'
+import Link from 'next/link'
 import BGImg from '../components/bg-img'
+
+import Chart from '../components/inventory/chart'
+import Footprint from '../components/inventory/footprint'
+import TransitEmissions from '../components/inventory/transit-emissions'
+import BuildingEmissions from '../components/inventory/building-emissions'
 
 const Section = props => (
   <Box
     as="section"
     {...props}
-    sx={{ ':nth-of-type(even)': { bg: 'card' }, ...props.sx }}
+    sx={{ ':nth-of-type(even)': { bg: 'sheet' }, ...props.sx }}
   />
 )
-const SectionHeader = ({ color, title, subtitle, ...props }) => (
+const SectionHeader = ({ color, title, subtitle, children, ...props }) => (
   <Box
     as="header"
     {...props}
@@ -19,9 +25,12 @@ const SectionHeader = ({ color, title, subtitle, ...props }) => (
     <Heading as="h2" variant="title" color={color}>
       {title}
     </Heading>
-    {subtitle && <Text as="p" variant="subtitle">
-      {subtitle}
-    </Text>}
+    {subtitle && (
+      <Text as="p" variant="subtitle">
+        {subtitle}
+      </Text>
+    )}
+    {children}
   </Box>
 )
 
@@ -53,6 +62,30 @@ const ClimatePage = () => (
         </Text>
       </Container>
     </Box>
+    <Section sx={{ py: [4, 5] }}>
+      <Container as="header" variant="copy" sx={{ textAlign: 'center', a: { color: 'azure' } }}>
+        <Heading as="h2" variant="title">
+          Emissions breakdown
+        </Heading>
+        <Text as="p" variant="subtitle">
+          Based on our <Link href="/progress"><a>2016 inventory</a></Link> of local greenhouse gas emissions.
+        </Text>
+      </Container>
+      <Grid
+        variant="layout.container"
+        columns={[null, 2]}
+        gap={3}
+        sx={{
+          text: { fontWeight: 'bold' },
+          h3: { fontFamily: 'body' },
+        }}
+      >
+        <Chart />
+        <Footprint />
+        <TransitEmissions />
+        <BuildingEmissions />
+      </Grid>
+    </Section>
     <Section>
       <SectionHeader title="Forests" color="green" />
       <Grid columns={[null, 3]} gap={[2, 3]}>
