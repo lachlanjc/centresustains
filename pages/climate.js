@@ -8,6 +8,13 @@ import Footprint from '../components/inventory/footprint'
 import TransitEmissions from '../components/inventory/transit-emissions'
 import BuildingEmissions from '../components/inventory/building-emissions'
 
+// import Wildlife from '../components/learn/wildlife.mdx'
+// import Water from '../components/learn/water.mdx'
+import Forests from '../components/learn/forests.mdx'
+import Weather from '../components/learn/weather.mdx'
+import Roads from '../components/learn/roads.mdx'
+import Farms from '../components/learn/farms.mdx'
+
 const Section = props => (
   <Box
     as="section"
@@ -87,7 +94,7 @@ const ClimatePage = () => (
       </Grid>
     </Section>
     <Section>
-      <SectionHeader title="Forests" color="green" />
+      <SectionHeader title="Forests" color="green" children={<Forests />} />
       <Grid columns={[null, 3]} gap={[2, 3]}>
         <Image
           src="/photos/forest_spring.jpg"
@@ -109,17 +116,26 @@ const ClimatePage = () => (
         />
       </Grid>
     </Section>
-    <Section>
-      <SectionHeader title="Wildlife" color="brown" />
+    {/* <Section>
+      <SectionHeader title="Wildlife" color="brown" children={Wildlife} />
       <Image
         src="/photos/deer.jpg"
         alt="Deer crouching on the forest floor"
         width={3504}
         height={2336}
       />
+    </Section> */}
+    <Section>
+      <SectionHeader title="Weather" color="yellow" children={<Weather />} />
+      <Image
+        src="/photos/fog.jpg"
+        alt="Fog over a meadow with a sunlit tree"
+        width={3072}
+        height={2048}
+      />
     </Section>
     <Section>
-      <SectionHeader title="Roads" color="secondary" />
+      <SectionHeader title="Roads" color="secondary" children={<Roads />} />
       <Grid columns={[null, 3]} gap={[2, 3]}>
         <Image
           src="/photos/roads_2.jpg"
@@ -141,17 +157,8 @@ const ClimatePage = () => (
         />
       </Grid>
     </Section>
-    <Section>
-      <SectionHeader title="Weather" color="yellow" />
-      <Image
-        src="/photos/fog.jpg"
-        alt="Fog over a meadow with a sunlit tree"
-        width={3072}
-        height={2048}
-      />
-    </Section>
-    <Section>
-      <SectionHeader title="Water" color="azure" />
+    {/* <Section>
+      <SectionHeader title="Water" color="azure" children={Water} />
       <Grid columns={2} gap={[2, 4]}>
         <Image
           src="/photos/marsh.jpg"
@@ -166,9 +173,9 @@ const ClimatePage = () => (
           height={3072}
         />
       </Grid>
-    </Section>
+    </Section> */}
     <Section>
-      <SectionHeader title="Farms" color="purple" />
+      <SectionHeader title="Farms" color="purple" children={<Farms />} />
       <Image
         src="/photos/farms.jpg"
         alt="Happy Valley Farm"

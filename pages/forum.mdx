@@ -1,4 +1,5 @@
 import { Text, Card, Grid } from 'theme-ui'
+import Link from 'next/link'
 import Signup from '../components/signup'
 import Feature, { CompactFeature } from '../components/forum/feature'
 import {
@@ -21,14 +22,19 @@ export default props => <Story color="brown" {...props} />
 
 ## <Text color="green">Learn</Text> about climate change in our area, <Text color="brown">discuss</Text>&nbsp;local government’s plans.
 
-### In attendance
+### All are welcome to attend
 
 <Grid
   columns={[null, 2]}
   gap={[0, 3]}
   sx={{ mt: 3, mb: [4, 5], alignItems: 'end' }}
 >
-  <CompactFeature icon={Flag} color="green" name="Local residents" />
+  <CompactFeature
+    icon={Flag}
+    color="green"
+    name="Community members"
+    desc="Residents & people who work here"
+  />
   <CompactFeature
     icon={Award}
     color="yellow"
@@ -39,7 +45,7 @@ export default props => <Story color="brown" {...props} />
     icon={Building}
     color="blue"
     name="Students"
-    desc="Penn State & nearby schools"
+    desc="Penn State & SCASD"
   />
   <CompactFeature icon={Shop} color="pink" name="Business owners" />
 </Grid>
@@ -63,6 +69,16 @@ export default props => <Story color="brown" {...props} />
     color="green"
   />
 </Timeline>
+
+<Link href="/" passHref>
+
+<Card as="a" variant="interactive" sx={{ variant: 'layout.narrow', bg: 'brown', 'p, h3': { color: 'white' }, mx: 'auto', display: 'block' }}>
+
+### Take the survey
+
+</Card>
+
+</Link>
 
 - Community members + students + business owners: learn what’s happening, hear what local government is doing, influence that conversation
   - Take the survey first!
