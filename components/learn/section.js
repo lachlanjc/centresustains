@@ -5,7 +5,11 @@ export const Section = props => (
   <Box
     as="section"
     {...props}
-    sx={{ ':nth-of-type(even)': { bg: 'sheet' }, ...props.sx }}
+    sx={{
+      ':nth-of-type(even)': { bg: 'sheet' },
+      'img[role="presentation"]': { bg: 'sunken' },
+      ...props.sx
+    }}
   />
 )
 
@@ -40,7 +44,7 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
             lineHeight: 'caption',
             // fontWeight: 'bold',
             textAlign: 'center',
-            color: 'text',
+            color: 'text'
           },
           strong: {
             variant: 'badges.outline',
@@ -59,13 +63,13 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
             ml: 3,
             transition: '0.125s all ease-in-out',
             willChange: 'transform'
-          },
+          }
         },
         '&[open] summary svg:last-of-type': {
           transform: 'rotate(-45deg)',
           bg: 'muted',
           boxShadow: 'none'
-        },
+        }
       },
       hr: { mx: 0 },
       article: {

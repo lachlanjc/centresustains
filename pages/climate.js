@@ -78,7 +78,6 @@ const ClimatePage = () => (
       </Grid>
     </Section>
     <Section>
-      <SectionHeader title="Forests" color="green" children={<Forests />} />
       <Grid columns={[null, 3]} gap={[2, 3]}>
         <Image
           src="/photos/forest_spring.jpg"
@@ -99,6 +98,7 @@ const ClimatePage = () => (
           height={2868}
         />
       </Grid>
+      <SectionHeader title="Forests" color="green" children={<Forests />} />
     </Section>
     {/* <Section>
       <SectionHeader title="Wildlife" color="brown" children={Wildlife} />
@@ -110,16 +110,15 @@ const ClimatePage = () => (
       />
     </Section> */}
     <Section>
-      <SectionHeader title="Weather" color="yellow" children={<Weather />} />
       <Image
         src="/photos/fog.jpg"
         alt="Fog over a meadow with a sunlit tree"
         width={3072}
         height={2048}
       />
+      <SectionHeader title="Weather" color="yellow" children={<Weather />} />
     </Section>
     <Section>
-      <SectionHeader title="Roads" color="azure" children={<Roads />} />
       <Grid columns={[null, 3]} gap={[2, 3]}>
         <Image
           src="/photos/roads_2.jpg"
@@ -140,6 +139,7 @@ const ClimatePage = () => (
           height={3504}
         />
       </Grid>
+      <SectionHeader title="Roads" color="azure" children={<Roads />} />
     </Section>
     {/* <Section>
       <SectionHeader title="Water" color="azure" children={Water} />
@@ -159,14 +159,28 @@ const ClimatePage = () => (
       </Grid>
     </Section> */}
     <Section>
-      <SectionHeader title="Farms" color="purple" children={<Farms />} />
       <Image
         src="/photos/farms.jpg"
         alt="Happy Valley Farm"
         width={3072}
         height={2048}
       />
+      <SectionHeader title="Farms" color="purple" children={<Farms />} />
     </Section>
+    <Grid columns={[null, 2]} gap={[2, 3]} pb={[4, 5]}>
+      <Image
+        src="/photos/leaves.jpg"
+        alt="Leaves"
+        width={2912}
+        height={4368}
+      />
+      <Image
+        src="/photos/tree_portrait.jpg"
+        alt="Leaves"
+        width={2912}
+        height={4368}
+      />
+    </Grid>
   </>
 )
 
