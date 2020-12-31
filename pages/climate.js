@@ -2,8 +2,10 @@ import { Box, Text, Container, Grid, Heading } from 'theme-ui'
 import Image from 'next/image'
 import Link from 'next/link'
 import BGImg from '../components/bg-img'
+import { Section, SectionHeader } from '../components/learn/section'
 
-import Chart from '../components/inventory/chart'
+import EmissionsChart from '../components/inventory/emissions-chart'
+import LandUseChart from '../components/inventory/land-use-chart'
 import Footprint from '../components/inventory/footprint'
 import TransitEmissions from '../components/inventory/transit-emissions'
 import BuildingEmissions from '../components/inventory/building-emissions'
@@ -14,32 +16,6 @@ import Forests from '../components/learn/forests.mdx'
 import Weather from '../components/learn/weather.mdx'
 import Roads from '../components/learn/roads.mdx'
 import Farms from '../components/learn/farms.mdx'
-
-const Section = props => (
-  <Box
-    as="section"
-    {...props}
-    sx={{ ':nth-of-type(even)': { bg: 'sheet' }, ...props.sx }}
-  />
-)
-const SectionHeader = ({ color, title, subtitle, children, ...props }) => (
-  <Box
-    as="header"
-    {...props}
-    id={title.toLowerCase()}
-    sx={{ p: [4, 5], ...props.sx }}
-  >
-    <Heading as="h2" variant="title" color={color}>
-      {title}
-    </Heading>
-    {subtitle && (
-      <Text as="p" variant="subtitle">
-        {subtitle}
-      </Text>
-    )}
-    {children}
-  </Box>
-)
 
 const ClimatePage = () => (
   <>
@@ -60,8 +36,8 @@ const ClimatePage = () => (
           textShadow: 'text'
         }}
       >
-        <Heading as="h1" variant="title" color="inherit">
-          Climate in Central&nbsp;PA
+        <Heading as="h1" variant="ultratitle" color="inherit">
+          Our climate in Central&nbsp;PA is changing, fast.
         </Heading>
         <Text as="p" variant="lead">
           We’re already experiencing expensive changes in weather patterns in
@@ -70,12 +46,20 @@ const ClimatePage = () => (
       </Container>
     </Box>
     <Section sx={{ py: [4, 5] }}>
-      <Container as="header" variant="copy" sx={{ textAlign: 'center', a: { color: 'azure' } }}>
+      <Container
+        as="header"
+        variant="copy"
+        sx={{ textAlign: 'center', a: { color: 'azure' } }}
+      >
         <Heading as="h2" variant="title">
           Emissions breakdown
         </Heading>
         <Text as="p" variant="subtitle">
-          Based on our <Link href="/progress"><a>2016 inventory</a></Link> of local greenhouse gas emissions.
+          Based on our{' '}
+          <Link href="/progress">
+            <a>2016 inventory</a>
+          </Link>{' '}
+          of local greenhouse gas emissions.
         </Text>
       </Container>
       <Grid
@@ -84,10 +68,10 @@ const ClimatePage = () => (
         gap={3}
         sx={{
           text: { fontWeight: 'bold' },
-          h3: { fontFamily: 'body' },
+          h3: { fontFamily: 'body' }
         }}
       >
-        <Chart />
+        <EmissionsChart />
         <Footprint />
         <TransitEmissions />
         <BuildingEmissions />
@@ -135,7 +119,7 @@ const ClimatePage = () => (
       />
     </Section>
     <Section>
-      <SectionHeader title="Roads" color="secondary" children={<Roads />} />
+      <SectionHeader title="Roads" color="azure" children={<Roads />} />
       <Grid columns={[null, 3]} gap={[2, 3]}>
         <Image
           src="/photos/roads_2.jpg"

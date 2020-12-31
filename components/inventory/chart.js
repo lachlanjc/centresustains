@@ -1,14 +1,6 @@
 import { PieChart, Pie, Cell } from 'recharts'
 import { colors } from '../../lib/theme'
 
-const data = [
-  { name: 'Transit', value: 0.2, fill: colors.pink },
-  { name: 'Solid Waste', value: 0.06, fill: colors.brown },
-  { name: 'Agriculture', value: 0.05, fill: colors.green },
-  { name: 'Water', value: 0.02, fill: colors.azure },
-  { name: 'Energy', value: 0.67, fill: colors.yellow }
-]
-
 const RADIAN = Math.PI / 180
 
 const renderCustomizedLabel = ({
@@ -43,7 +35,7 @@ const renderCustomizedLabel = ({
 
 const SIZE = 384
 
-const Infographic = () => (
+const Infographic = ({ data }) => (
   <PieChart width={SIZE} height={SIZE}>
     <Pie
       data={data}
@@ -55,7 +47,7 @@ const Infographic = () => (
       paddingAngle={3}
     >
       {data.map(entry => (
-        <Cell fill={entry.fill} />
+        <Cell fill={colors[entry.fill]} />
       ))}
     </Pie>
   </PieChart>

@@ -50,7 +50,8 @@ const Story = ({ color, cards = false, sx = {}, ...props }) => (
           ml: 3,
           color: 'secondary',
           float: 'right'
-        }
+        },
+        '+ h3': { mt: 4 }
       },
       ...(color ? { 'h1, a': { color } } : null),
       ...(cards ? sxCards : null),
