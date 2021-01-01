@@ -1,5 +1,6 @@
 import { Box, Heading } from 'theme-ui'
-import { colors } from '../../lib/theme'
+import theme, { colors } from '../../lib/theme'
+import { keyframes } from '@emotion/react'
 
 export const Section = props => (
   <Box
@@ -13,6 +14,11 @@ export const Section = props => (
   />
 )
 
+const slideDown = keyframes({
+  from: { opacity: 0, transform: 'translateY(-50%)' },
+  to: { opacity: 1, transform: 'translateY(0)' }
+})
+
 export const SectionHeader = ({ color, title, children, ...props }) => (
   <Box
     {...props}
@@ -20,7 +26,8 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
     style={{ '--section-color': colors[color] }}
     sx={{
       px: [3, 4, 5],
-      py: [5, null, 6],
+      pt: [5, null, 6],
+      pb: 5,
       fontSize: 2,
       '> p': {
         maxWidth: 'copy',
@@ -36,15 +43,21 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
         ml: 0,
         my: [4, null, 5, 6],
         svg: { color: 'var(--section-color)', verticalAlign: 'middle' },
-        ':focus-visible': { outline: 'none' },
         summary: {
+          outline: 'none',
+          ':focus svg:last-of-type,:hover svg:last-of-type': {
+            outline: 'none',
+            filter: 'brightness(120%) drop-shadow(0 0 12px var(--section-color))',
+            transform: 'scale(1.125)'
+          },
           p: {
             variant: 'text.title',
             fontSize: [5, 6],
             lineHeight: 'caption',
             // fontWeight: 'bold',
             textAlign: 'center',
-            color: 'text'
+            color: 'text',
+            WebkitTapHighlightColor: 'transparent',
           },
           strong: {
             variant: 'badges.outline',
@@ -58,17 +71,32 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
             bg: 'var(--section-color)',
             color: 'white',
             borderRadius: 'circle',
-            boxShadow: '0 0 12px var(--section-color)',
+            // boxShadow: '0 0 12px var(--section-color)',
+            filter: 'drop-shadow(0 0 12px var(--section-color))',
             p: 2,
             ml: 3,
             transition: '0.125s all ease-in-out',
-            willChange: 'transform'
+            willChange: 'transform, filter'
           }
         },
-        '&[open] summary svg:last-of-type': {
-          transform: 'rotate(-45deg)',
-          bg: 'muted',
-          boxShadow: 'none'
+        '&[open]': {
+          summary: {
+            'svg:last-of-type': {
+              transform: 'rotate(45deg)',
+              p: 1,
+              bg: 'muted',
+              filter: 'none'
+            },
+            ':focus svg:last-of-type, svg:last-of-type:hover': {
+              transform: 'rotate(45deg) scale(1.125)',
+              filter: 'brightness(120%)'
+            }
+          },
+          [theme.util.motion]: {
+            article: {
+              animation: `${slideDown} 0.25s ease-out`
+            }
+          }
         }
       },
       hr: { mx: 0 },
@@ -76,7 +104,7 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
         variant: 'cards.sunken',
         maxWidth: 'copy',
         mx: 'auto',
-        '> p': {
+        'p, li': {
           fontSize: 2,
           letterSpacing: 'headline',
           lineHeight: 'caption',
@@ -90,7 +118,6 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
         border: '2px solid var(--section-color)',
         maxWidth: 'copy',
         position: 'relative',
-        // textAlign: 'center',
         // mx: 'auto',
         mt: [4, 5],
         '> svg': {
@@ -99,7 +126,8 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
           left: 0,
           width: 64,
           height: 64,
-          opacity: 0.125
+          opacity: 0.125,
+          color: 'var(--section-color)'
         },
         '> p': { my: 0 }
       },
