@@ -1,7 +1,7 @@
 import Chart from './chart'
 
 const data = [
-  { name: 'Transit', value: 0.2, fill: 'pink' },
+  { name: 'Transportation', value: 0.2, fill: 'pink' },
   { name: 'Solid Waste', value: 0.06, fill: 'brown' },
   { name: 'Agriculture', value: 0.05, fill: 'green' },
   { name: 'Water', value: 0.02, fill: 'azure' },
