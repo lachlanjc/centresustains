@@ -12,6 +12,7 @@
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
     "@next/mdx": "^10.0.4",
+    "@rehooks/component-size": "^1.0.3",
     "lodash": "^4.17.20",
     "next": "^10.0.4",
     "react": "^17.0.1",

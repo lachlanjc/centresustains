@@ -1,5 +1,8 @@
+import { Box } from 'theme-ui'
 import { PieChart, Pie, Cell } from 'recharts'
 import { colors } from '../../lib/theme'
+import { useRef } from 'react'
+import useComponentSize from '@rehooks/component-size'
 
 const RADIAN = Math.PI / 180
 
@@ -10,6 +13,7 @@ const renderCustomizedLabel = ({
   innerRadius,
   outerRadius,
   percent,
+  acres,
   name,
   fill,
   index
@@ -33,24 +37,30 @@ const renderCustomizedLabel = ({
   )
 }
 
-const SIZE = 384
+const SIZE = 300
 
-const Infographic = ({ data }) => (
-  <PieChart width={SIZE} height={SIZE}>
-    <Pie
-      data={data}
-      cx={SIZE / 2}
-      cy={SIZE / 2}
-      innerRadius={64}
-      outerRadius={96}
-      label={renderCustomizedLabel}
-      paddingAngle={3}
-    >
-      {data.map(entry => (
-        <Cell fill={colors[entry.fill]} />
-      ))}
-    </Pie>
-  </PieChart>
-)
+const Chart = ({ data }) => {
+  const ref = useRef(null)
+  const { width } = useComponentSize(ref)
+  return (
+    <div ref={ref}>
+      <PieChart width={width} height={SIZE}>
+        <Pie
+          data={data}
+          cx={width / 2}
+          cy={SIZE / 2}
+          innerRadius={64}
+          outerRadius={96}
+          label={renderCustomizedLabel}
+          paddingAngle={3}
+        >
+          {data.map(entry => (
+            <Cell fill={colors[entry.fill]} />
+          ))}
+        </Pie>
+      </PieChart>
+    </div>
+  )
+}
 
-export default Infographic
+export default Chart
