@@ -67,8 +67,6 @@ const ClimatePage = () => (
         columns={[null, 2]}
         gap={3}
         sx={{
-          text: { fontWeight: 'bold' },
-          h3: { fontFamily: 'body' }
         }}
       >
         <EmissionsChart />

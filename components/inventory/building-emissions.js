@@ -2,46 +2,59 @@ import { Box, Heading, Flex, Grid } from 'theme-ui'
 import { Building, House } from 'react-bootstrap-icons'
 
 const bar = {
-  py: 2,
-  px: 3,
+  py: 1,
+  px: 2,
   borderRadius: 'default',
   alignItems: 'center',
   fontWeight: 'bold',
-  color: 'white',
-  svg: {
-    width: 32,
-    height: 32,
-    mr: 2
-  }
+  color: 'white'
 }
+
+const Row = props => (
+  <Flex
+    sx={{
+      alignItems: 'center',
+      my: 2,
+      svg: {
+        width: 24,
+        height: 24,
+        mr: 3
+      }
+    }}
+    {...props}
+  />
+)
 
 const BuildingEmissions = () => (
   <Box as="section">
-    <Heading as="h3" variant="subheadline">
-      Building Emissions
+    <Heading as="h4" variant="subheadline">
+      Building emissions
     </Heading>
-    <Flex
-      sx={{
-        ...bar,
-        mb: 2,
-        maxWidth: 256,
-        pr: 4,
-        bg: 'slate'
-      }}
-    >
+    <Row color="slate">
       <Building />
+      <Flex
+        sx={{
+          ...bar,
+          maxWidth: 256,
+          pr: 4,
+          bg: 'slate'
+        }}
+      >
         52% residential
       </Flex>
-    <Flex
-      sx={{
-        ...bar,
-        maxWidth: 256 * 0.92,
-        bg: 'muted'
-      }}
-    >
+    </Row>
+    <Row color="muted">
       <House />
+      <Flex
+        sx={{
+          ...bar,
+          maxWidth: 256 * 0.92,
+          bg: 'muted'
+        }}
+      >
         48% commercial
       </Flex>
+    </Row>
   </Box>
 )
 

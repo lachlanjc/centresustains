@@ -1,61 +1,58 @@
 import { Box, Heading, Flex, Text } from 'theme-ui'
-import { People, PersonBoundingBox, Truck } from 'react-bootstrap-icons'
 
 const bar = {
-  py: 2,
-  px: 3,
-  my: 2,
+  py: 1,
+  px: 2,
   borderRadius: 'default',
   width: 'fit-content',
   alignItems: 'center',
   fontWeight: 'bold',
-  color: 'white',
-  svg: {
-    width: 32,
-    height: 32,
-    mr: 2
-  }
+  color: 'white'
 }
 
 const TransitEmissions = () => (
   <Box as="section">
-    <Heading as="h3" variant="subheadline">
-      Transportation Emissions
+    <Heading as="h4" variant="subheadline">
+      Transportation emissions
     </Heading>
-    <Box>
+    <Box sx={{ maxWidth: 384 }}>
       <Flex
         sx={{
           ...bar,
           width: '100%',
-          maxWidth: 512,
-          bg: 'blue'
+          maxWidth: 256,
+          bg: 'teal'
         }}
       >
-        <PersonBoundingBox />
         79% passenger vehicles
       </Flex>
-      <Flex
-        sx={{
-          ...bar,
-          pr: 4,
-          bg: 'purple'
-        }}
-      >
-        <Truck />
-        17% freight & service trucks
+      <Flex sx={{ alignItems: 'center', my: 2 }}>
+        <Flex
+          sx={{
+            ...bar,
+            bg: 'green'
+          }}
+        >
+          17% trucks
+        </Flex>
+        <Text as="span" variant="caption" pl={3}>
+          (freight & service)
+        </Text>
       </Flex>
       <Flex sx={{ alignItems: 'center', my: 2 }}>
         <Flex
           sx={{
             ...bar,
             my: 0,
-            bg: 'green'
+            bg: 'yellow',
+            color: 'slate'
           }}
         >
-          <People />
-        4% transit
-      </Flex>
-        <Text as="span" variant="caption" pl={3}>(CATA & other buses)</Text>
+          4%
+        </Flex>
+        <Text as="span" variant="caption" pl={2}>
+          <strong>transit</strong> (CATA & other buses)
+        </Text>
       </Flex>
     </Box>
   </Box>
