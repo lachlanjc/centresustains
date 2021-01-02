@@ -63,13 +63,14 @@ const ClimatePage = () => (
         </Text>
       </Container>
       <Grid
-        variant="layout.container"
-        columns={[null, 2]}
+        columns={[null, '2fr 3fr']}
         gap={3}
         sx={{
+          px: [3, 4, 5],
         }}
       >
         <EmissionsChart />
+        <Heading as="h3" variant="headline" mb={0}>Local carbon footprint</Heading>
         <Footprint />
         <TransitEmissions />
         <BuildingEmissions />
