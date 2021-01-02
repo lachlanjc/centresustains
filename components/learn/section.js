@@ -62,6 +62,7 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
           strong: {
             variant: 'badges.outline',
             color: 'var(--section-color)',
+            bg: 'sheet',
             px: [3, 4]
           },
           '::-webkit-details-marker': {
