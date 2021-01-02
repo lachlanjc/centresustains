@@ -1,4 +1,4 @@
-import { Box, Text, Container, Grid, Heading } from 'theme-ui'
+import { Box, Text, Container, Grid, Heading, Image as Img } from 'theme-ui'
 import Image from 'next/image'
 import Link from 'next/link'
 import BGImg from '../components/bg-img'
@@ -40,16 +40,16 @@ const ClimatePage = () => (
           Our climate in Central&nbsp;PA is changing, fast.
         </Heading>
         <Text as="p" variant="lead">
-          We’re already experiencing expensive changes in weather patterns in
+          We’re already experiencing <strong>expensive changes in weather patterns</strong> in
           central Pennsylvania as a result of human-caused climate change.
         </Text>
       </Container>
     </Box>
-    <Section sx={{ py: [4, 5] }}>
+    <Section sx={{ py: 5 }}>
       <Container
         as="header"
         variant="copy"
-        sx={{ textAlign: 'center', a: { color: 'azure' } }}
+        sx={{ textAlign: [null, 'center'], a: { color: 'green' } }}
       >
         <Heading as="h2" variant="title">
           Emissions breakdown
@@ -63,23 +63,29 @@ const ClimatePage = () => (
         </Text>
       </Container>
       <Grid
-        columns={[null, '2fr 3fr']}
+        variant="layout.container"
+        columns={[null, null, '3fr 4fr']}
         gap={3}
         sx={{
-          px: [3, 4, 5],
           alignItems: 'center',
-          h3: { gridColumn: [null, 'span 2'] }
+          h3: { gridColumn: [null, null, 'span 2'] }
         }}
       >
         <Heading as="h3" variant="headline" mb={0}>Local carbon footprint</Heading>
         <Footprint />
+        <Heading as="h3" variant="headline" mb={0}>Emissions by sector</Heading>
         <EmissionsChart />
-        <Grid columns={[null, null, 2]} sx={{ pt: [null, null, 4], gridColumnGap: 4 }}>
+        <Grid columns={[null, 2]} sx={{ pt: [null, null, 4], gridColumnGap: 4 }}>
           <TransitEmissions />
           <BuildingEmissions />
         </Grid>
         <Heading as="h3" variant="headline" mt={4} mb={0}>Local land use</Heading>
         <LandUseChart />
+        <Img
+          src="/cog_region.svg"
+          alt="Diagram of regions of Centre County surveyed"
+          sx={{ maxWidth: ['100%', 512], justifySelf: 'end' }}
+        />
       </Grid>
     </Section>
     <Section>
