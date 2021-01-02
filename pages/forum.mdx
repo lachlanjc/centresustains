@@ -1,4 +1,4 @@
-import { Text, Card, Grid } from 'theme-ui'
+import { Text, Button, Grid } from 'theme-ui'
 import Link from 'next/link'
 import Signup from '../components/signup'
 import Feature, { CompactFeature } from '../components/forum/feature'
@@ -7,7 +7,8 @@ import {
   Building,
   Flag,
   Shop,
-  CalendarRange
+  CalendarRange,
+  ClipboardData
 } from 'react-bootstrap-icons'
 import { Timeline, TimelineStep } from '../components/timeline'
 import Story from '../components/story'
@@ -76,21 +77,11 @@ This initial forum will help set the stage for promoting policies and practices 
 
 This will be a facilitated forum led by Professor Lara Fowler and her law students who are enrolled in an environmental mediation course at Penn State Law. They will be conducting a series of interviews before the forum; if you would like to talk with them, please contact Lara Fowler at <lbf10@psu.edu>.
 
-<Link href="/" passHref>
-
-<Card as="a" variant="interactive" sx={{ variant: 'layout.narrow', bg: 'brown', 'p, h3': { color: 'white' }, mx: 'auto', display: 'block' }}>
-
-### Take the survey
-
-</Card>
-
-</Link>
-
-- Community members + students + business owners: learn what’s happening, hear what local government is doing, influence that conversation
-  - Take the survey first!
-  - Community-oriented
-- Elected officials, business owners, students fellow community members
-- Where are we & where do we want to go? You can inform that
-- Anybody is welcome to come: we’re talking about Centre Region Council of Governments’ plans
-
 Subject to our [Code of Conduct](/conduct).
+
+<Link href="/" passHref>
+  <Button as="a" sx={{ mt: 4, bg: 'brown', color: 'white !important' }}>
+    <ClipboardData />
+    Take the survey
+  </Button>
+</Link>

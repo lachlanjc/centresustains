@@ -4,7 +4,7 @@ import Link from 'next/link'
 const CTA = ({
   primary = [],
   secondary = {},
-  colors = ['primary', 'brown'],
+  colors = ['primary', 'white'],
   sx = {}
 }) => (
     <Flex
@@ -36,7 +36,7 @@ const CTA = ({
             variant="outline"
             as="a"
             target={secondary[0].startsWith('http') ? '_blank' : '_self'}
-            sx={{ color: colors[1], mb: 2 }}
+            sx={{ color: colors[1], borderColor: 'rgba(255,255,255,0.5)', mb: 2 }}
           >
             {secondary[1]} →
           </Button>

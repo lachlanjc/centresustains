@@ -45,6 +45,7 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
         svg: { color: 'var(--section-color)', verticalAlign: 'middle' },
         summary: {
           outline: 'none',
+          WebkitTapHighlightColor: 'transparent',
           ':focus svg:last-of-type,:hover svg:last-of-type': {
             outline: 'none',
             filter: 'brightness(120%) drop-shadow(0 0 12px var(--section-color))',
@@ -57,12 +58,11 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
             // fontWeight: 'bold',
             textAlign: 'center',
             color: 'text',
-            WebkitTapHighlightColor: 'transparent',
           },
           strong: {
             variant: 'badges.outline',
             color: 'var(--section-color)',
-            bg: 'sheet',
+            bg: 'background',
             px: [3, 4]
           },
           '::-webkit-details-marker': {

@@ -21,10 +21,11 @@ const ClimatePage = () => (
   <>
     <Box as="header" sx={{ position: 'relative', bg: 'muted' }}>
       <BGImg
-        src="/photos/fog.jpg"
-        alt="Fog over a meadow with a sunlit tree"
-        width={3072}
-        height={2048}
+        src="/photos/overlook_fall.jpg"
+        alt="Overlook of Centre County forest in the fall"
+        width={3504}
+        height={2336}
+        gradient="rgba(0,0,0,0.125), rgba(0,0,0,.25)"
       />
       <Container
         variant="copy"
@@ -81,11 +82,6 @@ const ClimatePage = () => (
         </Grid>
         <Heading as="h3" variant="headline" mt={4} mb={0}>Local land use</Heading>
         <LandUseChart />
-        <Img
-          src="/cog_region.svg"
-          alt="Diagram of regions of Centre County surveyed"
-          sx={{ maxWidth: ['100%', 512], justifySelf: 'end' }}
-        />
       </Grid>
     </Section>
     <Section>

@@ -30,21 +30,22 @@ const BuildingEmissions = () => (
     <Heading as="h4" variant="subheadline">
       Building emissions
     </Heading>
-    <Row color="slate">
-      <Building />
+    <Row color="secondary">
+      <House />
       <Flex
         sx={{
           ...bar,
           maxWidth: 256,
           pr: 4,
-          bg: 'slate'
+          bg: 'secondary',
+          color: 'inverted'
         }}
       >
         52% residential
       </Flex>
     </Row>
     <Row color="muted">
-      <House />
+      <Building />
       <Flex
         sx={{
           ...bar,

@@ -11,6 +11,7 @@ import {
   Spinner,
   Text
 } from 'theme-ui'
+import { useRouter } from 'next/router'
 import { Mailbox2, ExclamationTriangle } from 'react-bootstrap-icons'
 import Image from 'next/image'
 
@@ -23,6 +24,7 @@ const Loading = () => (
 )
 
 const Signup = () => {
+  const { pathname } = useRouter()
   const [email, setEmail] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
@@ -60,7 +62,7 @@ const Signup = () => {
       }}
     >
       <Heading as="h2" variant="subheadline" color="primary">
-        Get an email when event registration opens
+        Get an email when {pathname === '/forum' ? 'event registration' : 'the survey'} opens
       </Heading>
       <Grid
         as="form"

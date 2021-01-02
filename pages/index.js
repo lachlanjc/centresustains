@@ -24,7 +24,7 @@ const HomePage = () => (
         alt="Fog over a meadow with a sunlit tree"
         width={9926}
         height={4256}
-        gradient="rgba(0,0,0,0.125), rgba(0,0,0,0.375)"
+        gradient="rgba(0,0,0,0), rgba(0,0,0,0.5)"
       />
       <Heading
         as="h1"
@@ -34,7 +34,7 @@ const HomePage = () => (
         Centre County is planning bold climate action.
       </Heading>
       <Text as="p" variant="layout.copy" sx={{ variant: 'text.lead' }}>
-        Take our survey on the climate action you care about in our community.
+        We’re a group of elected officials in central Pennsylvania working on stewardship & climate planning in our community.
       </Text>
       <CTA
         primary={['/climate', 'Learn about climate']}
@@ -42,7 +42,7 @@ const HomePage = () => (
         sx={{ mt: [3, 4], px: 3, justifyContent: 'center' }}
       />
     </Box>
-    <Story>
+    <Story sx={{ py: [5] }}>
       <Survey />
     </Story>
   </>
