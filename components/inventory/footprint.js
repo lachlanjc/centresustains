@@ -49,7 +49,7 @@ const Bubble = ({ value, bg, sx, scale = 1, ...props }) => (
 )
 
 const Footprint = () => (
-  <Box>
+  <>
     <Text as="p" sx={{ maxWidth: '48ch', fontSize: 2 }}>
       Across Centre Region, our annual emissions are{' '}
       <strong>824,209&nbsp;MT&nbsp;CO₂e</strong> (that’s “CO
@@ -66,7 +66,7 @@ const Footprint = () => (
         <Bubble scale={0.42} bg="muted" value={4.35} />
       </Stat>
     </Grid>
-  </Box>
+  </>
 )
 
 export default Footprint

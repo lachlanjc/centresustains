@@ -67,13 +67,19 @@ const ClimatePage = () => (
         gap={3}
         sx={{
           px: [3, 4, 5],
+          alignItems: 'center',
+          h3: { gridColumn: [null, 'span 2'] }
         }}
       >
-        <EmissionsChart />
         <Heading as="h3" variant="headline" mb={0}>Local carbon footprint</Heading>
         <Footprint />
-        <TransitEmissions />
-        <BuildingEmissions />
+        <EmissionsChart />
+        <Grid columns={[null, null, 2]} sx={{ pt: [null, null, 4], gridColumnGap: 4 }}>
+          <TransitEmissions />
+          <BuildingEmissions />
+        </Grid>
+        <Heading as="h3" variant="headline" mt={4} mb={0}>Local land use</Heading>
+        <LandUseChart />
       </Grid>
     </Section>
     <Section>
