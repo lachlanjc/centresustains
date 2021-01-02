@@ -64,7 +64,7 @@ const ClimatePage = () => (
       </Container>
       <Grid
         variant="layout.container"
-        columns={[null, null, '3fr 4fr']}
+        columns={[null, null, 2]}
         gap={3}
         sx={{
           alignItems: 'center',
