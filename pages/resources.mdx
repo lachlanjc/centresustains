@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import {
   BookmarkStar,
   BlockquoteLeft,
@@ -9,39 +8,13 @@ import {
 } from 'react-bootstrap-icons'
 import NavCard from '../components/nav-card'
 import Story from '../components/story'
+import Image from 'next/image'
 
-
-# Progress
-
-## See our local work on sustainability in Centre County, PA.
-
-## Emissions inventory <ClipboardData />
-
-In 2019, we completed a full inventory of greenhouse gas emissions in Centre Region, using 2016 as a base year.
-
-- **[Inventory Summary<Image src="/progress/ghg_summary.jpg" width={500} height={647} alt="Summary report thumbnail" />](/progress/ghg_summary.pdf)**
-- **[Full Report<Image src="/progress/ghg_report.jpg" width={500} height={647} alt="Full report thumbnail" />](/progress/ghg_report.pdf)**
-
-<NavCard to="/climate" color="green" icon={BlockquoteLeft}>
-  Explore the findings
-</NavCard>
-
-## Municipal actions <Lightning />
-
-The following resolutions have been adopted in our region making a commitment to develop a strategy to reduce our greenhouse gas emissions and adapt to a changing climate.
-
-- [Declaration as a Climate Protection Community](/progress/res_protection.pdf)
-- [State College Borough 1229](/progress/res_borough.pdf)
-- [Centre Region Council of Governments](/progress/res_cog.pdf)
-- [Ferguson Township 2017-14](/progress/res_ferguson.pdf)
-- [Harris Township 17-13](/progress/res_harris.pdf)
-
----
 export default props => <Story cards color="pink" {...props} />
 
 # <BookmarkStar /> Resources
 
-## If you’re looking to lessen the carbon footprint of your lifestyle, we’ve gathered these resources to help, alongside some relevant books & local journalism.
+## If you’re looking to lessen the carbon footprint of your lifestyle, we’ve gathered these resources to help.
 
 - **[Solar](/solar)**
   Resources for learning about local solar & finding installers
@@ -75,3 +48,19 @@ export default props => <Story cards color="pink" {...props} />
   Centre Daily Times, December 2020
 - **[Hearings begin on climate change initiative](https://www.post-gazette.com/news/environment/2020/12/08/pennsylvania-hearings-begin-climate-change-initiative-greenhouse-gas/stories/202012080119)**
   Pittsburgh Post-Gazette, December 2020
+
+<NavCard to="/climate" color="azure" icon={BlockquoteLeft}>
+  Learn about local climate
+</NavCard>
+
+---
+
+## Municipal actions <Lightning />
+
+The following resolutions have been adopted in our region making a commitment to develop a strategy to reduce our carbon emissions and adapt to a changing climate.
+
+- [Declaration as a Climate Protection Community](/progress/res_protection.pdf)
+- [State College Borough 1229](/progress/res_borough.pdf)
+- [Centre Region Council of Governments](/progress/res_cog.pdf)
+- [Ferguson Township 2017-14](/progress/res_ferguson.pdf)
+- [Harris Township 17-13](/progress/res_harris.pdf)

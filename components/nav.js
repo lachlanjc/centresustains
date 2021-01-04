@@ -82,18 +82,25 @@ const Nav = () => {
             />
           </NavLink>
         </Link>
-        <Box sx={{ maxWidth: [128 * 1.5, 'none'], mx: 'auto', textAlign: 'center', a: { mx: [2, 3] } }}>
+        <Box
+          sx={{
+            maxWidth: [128 * 1.5, 'none'],
+            mx: 'auto',
+            textAlign: 'center',
+            a: { mx: [2, 3], px: 2 }
+          }}
+        >
           <Link href="/forum" passHref>
-            <NavLink px={2}>Forum</NavLink>
+            <NavLink>Forum</NavLink>
           </Link>
           <Link href="/about" passHref>
-            <NavLink px={2}>About</NavLink>
+            <NavLink>About</NavLink>
           </Link>
-          <Link href="/progress" passHref>
-            <NavLink px={2}>Progress</NavLink>
+          <Link href="/resources" passHref>
+            <NavLink>Resources</NavLink>
           </Link>
           <Link href="/climate" passHref>
-            <NavLink px={2}>Learn</NavLink>
+            <NavLink>Learn</NavLink>
           </Link>
         </Box>
         <ColorSwitcher />

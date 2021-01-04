@@ -1,6 +1,13 @@
-import { Box, Text, Container, Grid, Heading, Image as Img } from 'theme-ui'
+import {
+  Box,
+  Text,
+  Container,
+  Grid,
+  Flex,
+  Heading,
+  Image as Img
+} from 'theme-ui'
 import Image from 'next/image'
-import Link from 'next/link'
 import BGImg from '../components/bg-img'
 import { Section, SectionHeader } from '../components/learn/section'
 
@@ -9,9 +16,8 @@ import LandUseChart from '../components/inventory/land-use-chart'
 import Footprint from '../components/inventory/footprint'
 import TransitEmissions from '../components/inventory/transit-emissions'
 import BuildingEmissions from '../components/inventory/building-emissions'
+import Reports from '../components/inventory/reports'
 
-// import Wildlife from '../components/learn/wildlife.mdx'
-// import Water from '../components/learn/water.mdx'
 import Forests from '../components/learn/forests.mdx'
 import Weather from '../components/learn/weather.mdx'
 import Roads from '../components/learn/roads.mdx'
@@ -44,42 +50,47 @@ const ClimatePage = () => (
           Our climate in Central&nbsp;PA is changing, fast.
         </Heading>
         <Text as="p" variant="lead">
-          We’re already experiencing <strong>expensive changes in weather patterns</strong> in
-          central Pennsylvania as a result of human-caused climate change.
+          We’re already experiencing{' '}
+          <strong>expensive changes in weather patterns</strong> in central
+          Pennsylvania as a result of human-caused climate change.
         </Text>
       </Container>
     </Box>
     <Section sx={{ py: 5 }}>
-      <Container as="header">
+      <Container>
         <Heading as="h2" variant="title">
           Emissions breakdown
         </Heading>
-        <Text as="p" variant="subtitle" sx={{ a: { color: 'primary' } }}>
-          Based on our{' '}
-          <Link href="/progress">
-            <a>2016 inventory</a>
-          </Link>{' '}
-          of local greenhouse gas emissions.
+        <Text as="p" variant="subtitle">
+          Based on our 2016 inventory of local greenhouse gas emissions.
         </Text>
-      </Container>
-      <Grid
-        variant="layout.container"
-        columns={[null, null, 2]}
-        gap={3}
-        sx={{
-          alignItems: 'center',
-          h3: { gridColumn: [null, null, 'span 2'] }
-        }}
-      >
-        <Heading as="h3" variant="headline" mb={0}>Local carbon footprint</Heading>
-        <Footprint />
-        <Heading as="h3" variant="headline" mb={0}>Emissions by sector</Heading>
-        <EmissionsChart />
-        <Grid columns={[null, 2]} sx={{ pt: [null, null, 4], gridColumnGap: 4 }}>
-          <TransitEmissions />
-          <BuildingEmissions />
+        <Grid
+          columns={[null, null, 2]}
+          gap={3}
+          sx={{
+            alignItems: 'center',
+            pb: 3,
+            h3: { gridColumn: [null, null, 'span 2'], mb: 0 }
+          }}
+        >
+          <Heading as="h3" variant="headline">
+            Local carbon footprint
+          </Heading>
+          <Footprint />
+          <Heading as="h3" variant="headline">
+            Emissions by sector
+          </Heading>
+          <EmissionsChart />
+          <Grid
+            columns={[null, 2]}
+            sx={{ pt: [null, null, 4], gridColumnGap: 4 }}
+          >
+            <TransitEmissions />
+            <BuildingEmissions />
+          </Grid>
+          <Reports />
         </Grid>
-      </Grid>
+      </Container>
     </Section>
     <Section>
       <Grid as="footer" columns={3}>
@@ -177,7 +188,12 @@ const ClimatePage = () => (
         />
       </Grid>
     </Section>
-    <Grid as="section" variant="layout.container" columns={[null, 2]} sx={{ py: 55 }}>
+    <Grid
+      as="section"
+      variant="layout.container"
+      columns={[null, 2]}
+      sx={{ py: 55 }}
+    >
       <Heading as="h3" variant="headline" sx={{ gridColumn: [null, 'span 2'] }}>
         Centre Region land use
       </Heading>
