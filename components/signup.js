@@ -18,7 +18,7 @@ import {
   CheckCircleFill,
   ArrowRepeat
 } from 'react-bootstrap-icons'
-import Image from 'next/image'
+import Avatar from './avatar'
 
 const Loading = () => (
   <Spinner
@@ -106,35 +106,35 @@ const Signup = () => {
           </IconButton>
         </Grid>
       ) : (
-          <Grid
-            as="form"
-            onSubmit={onSubmit}
-            gap={[2, 3]}
-            columns="1fr auto"
-            sx={{
-              mt: [null, 3],
-              gridTemplateColumns: '1fr auto',
-              textAlign: 'left',
-              alignItems: 'end',
-              input: { bg: 'sunken' }
-            }}
-          >
-            <div>
-              <Label htmlFor="email">Email</Label>
-              <Input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="me@email.com"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-              />
-            </div>
-            <Button type="submit" sx={{ bg: 'azure', mt: [2, 0] }}>
-              {submitting ? <Loading /> : 'Sign up'}
-            </Button>
-          </Grid>
-        )}
+        <Grid
+          as="form"
+          onSubmit={onSubmit}
+          gap={[2, 3]}
+          columns="1fr auto"
+          sx={{
+            mt: [null, 3],
+            gridTemplateColumns: '1fr auto',
+            textAlign: 'left',
+            alignItems: 'end',
+            input: { bg: 'sunken' }
+          }}
+        >
+          <div>
+            <Label htmlFor="email">Email</Label>
+            <Input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="me@email.com"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+            />
+          </div>
+          <Button type="submit" sx={{ bg: 'azure', mt: [2, 0] }}>
+            {submitting ? <Loading /> : 'Sign up'}
+          </Button>
+        </Grid>
+      )}
       {error && (
         <Alert variant="primary" sx={{ mt: [2, 3] }}>
           <ExclamationTriangleFill />
@@ -149,21 +149,20 @@ const Signup = () => {
       {!done &&
         !error && (
           <Flex
-            as="p"
+            as="footer"
             sx={{
               mt: 3,
               alignItems: 'center',
-              flexWrap: 'wrap',
-              '> div': { borderRadius: 'circle', overflow: 'hidden' }
+              flexWrap: 'wrap'
             }}
           >
-            <Image
-              width={48}
-              height={48}
+            <Avatar
+              size={48}
               alt="Pam's avatar"
               src="/tag/pam_adams.jpg"
+              sx={{ pr: 2 }}
             />
-            <Text variant="caption" pl={[null, 2]} pt={[2, 0]}>
+            <Text as="p" variant="caption" pt={[2, 0]}>
               I’ll send you 4 emails between now & April, unsubscribe any time.
               <br />
               I’d love to have you involved. <strong>—Pam</strong>

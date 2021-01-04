@@ -14,6 +14,15 @@ import {
   ClipboardData
 } from 'react-bootstrap-icons'
 
+export const Lara = () => (
+  <Avatar
+    size={24}
+    alt="Lara Fowler's avatar"
+    src="/lara_fowler.jpg"
+    sx={{ ml: 1 }}
+  />
+)
+
 export default props => <Story color="brown" {...props} />
 
 # Forum
@@ -76,7 +85,11 @@ This initial forum will help set the stage for promoting policies and practices 
   />
 </Timeline>
 
-This will be a facilitated forum led by Professor Lara Fowler and her law students who are enrolled in an environmental mediation course at Penn State Law. They will be conducting a series of interviews before the forum; if you would like to talk with them, please contact Lara Fowler at <lbf10@psu.edu>.
+This will be a facilitated forum led by Professor Lara Fowler and her law students
+who are enrolled in an environmental mediation course at Penn State Law.
+They will be conducting a series of interviews before the forum;
+if you would like to talk with them, please contact <Lara /> Lara
+Fowler at <lbf10@psu.edu>.
 
 Subject to our [Code of Conduct](/conduct).
 
