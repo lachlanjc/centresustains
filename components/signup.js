@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   Alert,
   Button,
@@ -6,13 +6,18 @@ import {
   Flex,
   Grid,
   Heading,
+  IconButton,
   Input,
   Label,
   Spinner,
   Text
 } from 'theme-ui'
 import { useRouter } from 'next/router'
-import { Mailbox2, ExclamationTriangle } from 'react-bootstrap-icons'
+import {
+  ExclamationTriangleFill,
+  CheckCircleFill,
+  ArrowRepeat
+} from 'react-bootstrap-icons'
 import Image from 'next/image'
 
 const Loading = () => (
@@ -29,6 +34,17 @@ const Signup = () => {
   const [submitting, setSubmitting] = useState(false)
   const [done, setDone] = useState(false)
   const [error, setError] = useState('')
+
+  useEffect(() => {
+    if (localStorage) {
+      const address = localStorage.getItem('emailSubscribed')
+      if (address) {
+        setEmail(address)
+        setDone(true)
+      }
+    }
+  }, [])
+
   const onSubmit = async e => {
     e.preventDefault()
     if (email.length < 3) return
@@ -42,6 +58,7 @@ const Signup = () => {
       }
     })
     if (submission.ok) {
+      localStorage.setItem('emailSubscribed', email)
       setEmail('')
       setSubmitting(false)
       setDone(true)
@@ -50,6 +67,7 @@ const Signup = () => {
       setError(submission.errors || 'Something went wrong.')
     }
   }
+
   return (
     <Card
       sx={{
@@ -61,49 +79,71 @@ const Signup = () => {
         mb: [4, 5]
       }}
     >
-      <Heading as="h2" variant="subheadline" color="primary">
-        Get an email when {pathname === '/forum' ? 'event registration' : 'the survey'} opens
-      </Heading>
-      <Grid
-        as="form"
-        onSubmit={onSubmit}
-        gap={[2, 3]}
-        sx={{
-          mt: [null, 3],
-          gridTemplateColumns: '1fr auto',
-          textAlign: 'left',
-          alignItems: 'end',
-          input: { bg: 'sunken' }
-        }}
+      <Heading
+        as="h2"
+        variant="subheadline"
+        color={done ? 'text' : 'primary'}
+        mt={0}
       >
-        <div>
-          <Label htmlFor="email">Email</Label>
-          <Input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="me@email.com"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-          />
-        </div>
-        <Button type="submit" sx={{ mt: [2, 0] }}>
-          {submitting ? <Loading /> : 'Sign up'}
-        </Button>
-      </Grid>
+        Get an email when{' '}
+        {pathname === '/forum' ? 'event registration' : 'the survey'} opens
+      </Heading>
+      {done ? (
+        <Grid
+          gap={2}
+          columns="auto 1fr auto"
+          sx={{ color: 'green', fontSize: 3, alignItems: 'center' }}
+        >
+          <CheckCircleFill />
+          <Text sx={{ fontSize: 2 }}>
+            <strong>Signed up!</strong> ({email})
+          </Text>
+          <IconButton
+            onClick={() => setDone(false)}
+            sx={{ color: 'secondary', fontSize: 4 }}
+          >
+            <ArrowRepeat />
+          </IconButton>
+        </Grid>
+      ) : (
+          <Grid
+            as="form"
+            onSubmit={onSubmit}
+            gap={[2, 3]}
+            columns="1fr auto"
+            sx={{
+              mt: [null, 3],
+              gridTemplateColumns: '1fr auto',
+              textAlign: 'left',
+              alignItems: 'end',
+              input: { bg: 'sunken' }
+            }}
+          >
+            <div>
+              <Label htmlFor="email">Email</Label>
+              <Input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="me@email.com"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+              />
+            </div>
+            <Button type="submit" sx={{ bg: 'azure', mt: [2, 0] }}>
+              {submitting ? <Loading /> : 'Sign up'}
+            </Button>
+          </Grid>
+        )}
       {error && (
         <Alert variant="primary" sx={{ mt: [2, 3] }}>
-          <ExclamationTriangle />
+          <ExclamationTriangleFill />
           <Text sx={{ ml: 2 }}>
             {error.toString()}
-            <Text as="a" pl={1} href="mailto:padams@crcog.net">Email Pam?</Text>
+            <Text as="a" color="inherit" pl={1} href="mailto:padams@crcog.net">
+              Email Pam?
+            </Text>
           </Text>
-        </Alert>
-      )}
-      {done && (
-        <Alert variant="primary" sx={{ bg: 'green', mt: [2, 3] }}>
-          <Mailbox2 />
-          <Text sx={{ ml: 2 }}>Signed up!</Text>
         </Alert>
       )}
       {!done &&
