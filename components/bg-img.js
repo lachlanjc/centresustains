@@ -10,16 +10,16 @@ import Image from 'next/image'
 const gx = gradient =>
   gradient
     ? {
-        '&:after': {
-          content: '""',
-          position: 'absolute',
-          backgroundImage: `linear-gradient(${gradient})`,
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0
-        }
+      '&:after': {
+        content: '""',
+        position: 'absolute',
+        backgroundImage: `linear-gradient(${gradient})`,
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0
       }
+    }
     : {}
 
 const BGImg = ({ gradient, ...props }) => (
@@ -35,11 +35,15 @@ const BGImg = ({ gradient, ...props }) => (
       zIndex: 0,
       ...gx(gradient),
       '> div': { height: '100%', width: '100%' },
-      img: { objectFit: 'cover', objectPosition: 'center' },
       '~ *': { position: 'relative' }
     }}
   >
-    <Image layout="responsive" {...props} />
+    <Image
+      layout="responsive"
+      objectFit="cover"
+      objectPosition="center"
+      {...props}
+    />
   </Box>
 )
 

@@ -9,7 +9,7 @@ const Meta = ({
   name = 'Centre Sustains',
   description = '',
   image = '',
-  url = 'https://centresustains.now.sh',
+  url = 'https://centresustains.com',
   children
 }) => (
   <Head>
