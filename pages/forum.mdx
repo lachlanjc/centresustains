@@ -1,7 +1,10 @@
-import { Text, Button, Grid } from 'theme-ui'
-import Link from 'next/link'
+import { Grid } from 'theme-ui'
+import Story from '../components/story'
 import Signup from '../components/signup'
+import Avatar from '../components/avatar'
+import NavCard from '../components/nav-card'
 import Feature, { CompactFeature } from '../components/forum/feature'
+import { Timeline, TimelineStep } from '../components/timeline'
 import {
   Award,
   Building,
@@ -10,8 +13,6 @@ import {
   CalendarRange,
   ClipboardData
 } from 'react-bootstrap-icons'
-import { Timeline, TimelineStep } from '../components/timeline'
-import Story from '../components/story'
 
 export default props => <Story color="brown" {...props} />
 
@@ -61,17 +62,17 @@ This initial forum will help set the stage for promoting policies and practices 
   <TimelineStep
     name="Welcome, introduction of key climate impacts in the area"
     duration="30 mins"
-    color="indigo"
+    color="yellow"
   />
   <TimelineStep
     name="Randomly-assigned breakout rooms discuss"
     duration="1 hour"
-    color="azure"
+    color="pink"
   />
   <TimelineStep
     name="Sharing out from breakout rooms, conclusion"
     duration="30 mins"
-    color="green"
+    color="brown"
   />
 </Timeline>
 
@@ -79,9 +80,6 @@ This will be a facilitated forum led by Professor Lara Fowler and her law studen
 
 Subject to our [Code of Conduct](/conduct).
 
-<Link href="/" passHref>
-  <Button as="a" sx={{ mt: 4, bg: 'brown', color: 'white !important' }}>
-    <ClipboardData />
-    Take the survey
-  </Button>
-</Link>
+<NavCard color="green" icon={ClipboardData}>
+  Take the survey
+</NavCard>

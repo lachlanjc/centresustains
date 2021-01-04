@@ -9,7 +9,7 @@ export default class extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html lang="en-US">
         <Head>
           <style>{`:root { supported-color-schemes: light dark; }`}</style>
         </Head>

@@ -1,3 +1,5 @@
+import { Lightning } from 'react-bootstrap-icons'
+import NavCard from '../components/nav-card'
 import Story from '../components/story'
 export default props => <Story cards color="yellow" {...props} />
 
@@ -23,3 +25,7 @@ The Centre Region is working to improve solar market conditions, making it faste
 ---
 
 The Centre Region Comprehensive Plan was updated in 2013 and includes the objective of working to reduce barriers to alternative energy uses to help decrease dependence on finite natural resources. One of the fastest growing forms of alternative energy is the use of solar energy.
+
+<NavCard color="aqua" to="/electric-vehicles" icon={Lightning}>
+  Learn about electric vehicles
+</NavCard>

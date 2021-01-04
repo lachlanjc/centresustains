@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Button } from 'theme-ui'
 import { ClipboardCheck, CalendarEvent } from 'react-bootstrap-icons'
+import NavCard from './nav-card'
 import Signup from './signup'
 
 ## Take the survey <ClipboardCheck />
@@ -12,9 +13,6 @@ We’d love to have you weigh in—whether you live here, work in the area, go t
 
 After the survey, in April 2021 we will be running a public forum event to discuss:
 
-<Link href="/forum" passHref>
-  <Button as="a" bg="brown">
-    <CalendarEvent />
-    Attend the forum →
-  </Button>
-</Link>
+<NavCard color="brown" to="/forum" icon={CalendarEvent}>
+  Attend our public forum
+</NavCard>

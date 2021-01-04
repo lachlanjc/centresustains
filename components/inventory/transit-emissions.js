@@ -13,6 +13,17 @@ const bar = {
 const TransitEmissions = () => (
   <Box as="section">
     <Heading as="h4" variant="subheadline">
+      <Box
+        as="span"
+        sx={{
+          bg: 'pink',
+          display: 'inline-block',
+          verticalAlign: 'middle',
+          p: '6px',
+          mr: 2,
+          borderRadius: 'default'
+        }}
+      />
       Transportation emissions
     </Heading>
     <Box sx={{ maxWidth: 384 }}>

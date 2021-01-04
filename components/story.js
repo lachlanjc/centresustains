@@ -55,6 +55,7 @@ const Story = ({ color, cards = false, sx = {}, ...props }) => (
       },
       ...(color ? { 'h1, a': { color } } : null),
       ...(cards ? sxCards : null),
+      '.nav-card:last-child': { mb: [0, 3] },
       ...props.sx
     }}
   />

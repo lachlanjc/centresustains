@@ -1,6 +1,7 @@
 import { Box, Button } from 'theme-ui'
-import { GeoFill, Diagram3 } from 'react-bootstrap-icons'
+import { GeoFill, Diagram3, Sun } from 'react-bootstrap-icons'
 import BGImg from '../components/bg-img'
+import NavCard from '../components/nav-card'
 import Story from '../components/story'
 
 <Box
@@ -11,7 +12,7 @@ import Story from '../components/story'
     mt: 0,
     pt: [6, 128],
     pb: [5, 72],
-    h1: { color: 'white', textShadow: 'text' }
+    h1: { variant: 'text.ultratitle', color: 'white', textShadow: 'text' }
   }}
 >
 <BGImg
@@ -29,22 +30,21 @@ import Story from '../components/story'
   href="https://afdc.energy.gov/fuels/electricity_locations.html#/find/nearest?fuel=ELEC&location=16801"
   bg="teal"
   mt={[3, 4]}
+  sx={{ mt: [3, 4], fontSize: 2 }}
 >
   <GeoFill />
   Find local charging stations
 </Button>
-
 </Box>
 
 <Story
   color="teal"
-  sx={{
-    pt: [0,0],
-    '> p:last-of-type': { variant: 'caption', fontSize: 1, color: 'muted' }
-  }}
+  sx={{ py: [0, 0], mb: [0, 0] }}
 >
 
 Driving cleaner, more efficient vehicles will be one way to reduce our greenhouse gas emissions. Local government in the Centre Region will continue to review their fleets for cleaner, more efficient vehicles. It will also support a growing and necessary electric vehicle charging infrastructure.
+
+(Photo by [Andrew Roberts](https://unsplash.com/@studiodenley?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) via [Unsplash](https://unsplash.com/s/photos/electric-car?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).)
 
 ---
 
@@ -57,6 +57,7 @@ Through the Department of Environmental Protection (DEP), the following municipa
 - College Township installed two level 2 universal charging stations at the College Township Building and replaced a fleet vehicle with a Chevy Bolt
 - Patton Township installed two level 2 universal charging stations at the Patton Township Building
 
-Photo by [Andrew Roberts](https://unsplash.com/@studiodenley?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) via [Unsplash](https://unsplash.com/s/photos/electric-car?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-
+<NavCard color="yellow" to="/solar" icon={Sun}>
+  Learn about solar
+</NavCard>
 </Story>
