@@ -1,17 +1,15 @@
 import Image from 'next/image'
 import {
+  BookmarkStar,
   BlockquoteLeft,
   ClipboardData,
   Lightning,
   Newspaper,
-  BookmarkStar,
   Book
 } from 'react-bootstrap-icons'
-import { Flex } from 'theme-ui'
 import NavCard from '../components/nav-card'
 import Story from '../components/story'
 
-export default props => <Story cards color="azure" {...props} />
 
 # Progress
 
@@ -39,24 +37,11 @@ The following resolutions have been adopted in our region making a commitment to
 - [Harris Township 17-13](/progress/res_harris.pdf)
 
 ---
+export default props => <Story cards color="pink" {...props} />
 
-<Flex
-  as="h1"
-  variant="text.title"
-  id="resources"
-  sx={{
-    mt: 5,
-    color: 'var(--theme-ui-colors-accent, #e94256) !important',
-    alignItems: 'flex-start',
-    svg: { ml: -1, mr: 3 }
-  }}
->
-  <BookmarkStar /> Resources
-</Flex>
+# <BookmarkStar /> Resources
 
-If you’re looking to lessen the carbon footprint of your lifestyle,
-we’ve gathered these resources to help,
-alongside some relevant books & local journalism.
+## If you’re looking to lessen the carbon footprint of your lifestyle, we’ve gathered these resources to help, alongside some relevant books & local journalism.
 
 - **[Solar](/solar)**
   Resources for learning about local solar & finding installers

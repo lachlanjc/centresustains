@@ -21,7 +21,7 @@ const sxCards = {
         fontWeight: 'bold'
       },
       '&[href^="http"]:before': {
-        content: '"↗"',
+        content: '"↗"'
       }
     },
     img: {
@@ -43,6 +43,14 @@ const Story = ({ color, cards = false, sx = {}, ...props }) => (
       fontSize: 2,
       h1: {
         variant: 'text.title',
+        display: 'flex',
+        alignItems: 'flex-start',
+        svg: {
+          size: '0.75em',
+          opacity: 0.625,
+          ml: [null, '-1em'],
+          mr: '0.25em'
+        },
         '+ h2': { variant: 'text.subtitle' }
       },
       h2: {

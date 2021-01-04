@@ -28,6 +28,8 @@ const NavCard = ({
           textDecoration: 'none',
           fontWeight: 'bold',
           fontSize: [3, 4],
+          lineHeight: 'subheading',
+          letterSpacing: 'title',
           mt: [3, 4],
           mb: [4, 5],
           px: [3, 4],
