@@ -1,4 +1,3 @@
-import { Box } from 'theme-ui'
 import { PieChart, Pie, Cell } from 'recharts'
 import { colors } from '../../lib/theme'
 import { useRef } from 'react'

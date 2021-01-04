@@ -33,12 +33,14 @@ const ClimatePage = () => (
         sx={{
           pt: 6,
           pb: [4, 5],
-          textAlign: 'center',
-          color: 'white',
-          textShadow: 'text'
+          'h1, p': {
+            textAlign: 'center',
+            color: 'white',
+            textShadow: 'text'
+          }
         }}
       >
-        <Heading as="h1" variant="ultratitle" color="inherit">
+        <Heading as="h1" variant="ultratitle">
           Our climate in Central&nbsp;PA is changing, fast.
         </Heading>
         <Text as="p" variant="lead">
@@ -48,15 +50,11 @@ const ClimatePage = () => (
       </Container>
     </Box>
     <Section sx={{ py: 5 }}>
-      <Container
-        as="header"
-        variant="copy"
-        sx={{ textAlign: [null, 'center'], a: { color: 'green' } }}
-      >
+      <Container as="header">
         <Heading as="h2" variant="title">
           Emissions breakdown
         </Heading>
-        <Text as="p" variant="subtitle">
+        <Text as="p" variant="subtitle" sx={{ a: { color: 'primary' } }}>
           Based on our{' '}
           <Link href="/progress">
             <a>2016 inventory</a>
@@ -81,12 +79,10 @@ const ClimatePage = () => (
           <TransitEmissions />
           <BuildingEmissions />
         </Grid>
-        <Heading as="h3" variant="headline" mt={4} mb={0}>Local land use</Heading>
-        <LandUseChart />
       </Grid>
     </Section>
     <Section>
-      <Grid columns={3} gap={[1, 3]} sx={{ div: { minHeight: 300 } }}>
+      <Grid as="footer" columns={3}>
         <Image
           src="/photos/forest_spring.jpg"
           alt="Panorama of winding road around mountain, frame 1"
@@ -125,7 +121,7 @@ const ClimatePage = () => (
       <SectionHeader title="Weather" color="yellow" children={<Weather />} />
     </Section>
     <Section>
-      <Grid columns={3} gap={[1, 3]} sx={{ div: { minHeight: 300 } }}>
+      <Grid as="footer" columns={3}>
         <Image
           src="/photos/roads_2.jpg"
           alt="Panorama of winding road around mountain, frame 1"
@@ -153,23 +149,6 @@ const ClimatePage = () => (
       </Grid>
       <SectionHeader title="Roads" color="azure" children={<Roads />} />
     </Section>
-    {/* <Section>
-      <SectionHeader title="Water" color="azure" children={Water} />
-      <Grid columns={2} gap={[2, 4]}>
-        <Image
-          src="/photos/marsh.jpg"
-          alt="Marsh with a small stream running through it"
-          width={2048}
-          height={3072}
-        />
-        <Image
-          src="/photos/water.jpg"
-          alt="Lily pads with a flower on the surface of still water"
-          width={2048}
-          height={3072}
-        />
-      </Grid>
-    </Section> */}
     <Section>
       <Image
         src="/photos/farms.jpg"
@@ -179,7 +158,7 @@ const ClimatePage = () => (
         layout="responsive"
       />
       <SectionHeader title="Farms" color="purple" children={<Farms />} />
-      <Grid columns={2} gap={[1, 3]} sx={{ div: { minHeight: 300 } }}>
+      <Grid as="footer" columns={2}>
         <Image
           src="/photos/leaves.jpg"
           alt="Leaves"
@@ -198,6 +177,17 @@ const ClimatePage = () => (
         />
       </Grid>
     </Section>
+    <Grid as="section" variant="layout.container" columns={[null, 2]} sx={{ py: 55 }}>
+      <Heading as="h3" variant="headline" sx={{ gridColumn: [null, 'span 2'] }}>
+        Centre Region land use
+      </Heading>
+      <LandUseChart />
+      <Img
+        src="/cog_region.svg"
+        alt="Diagram of regions of Centre County surveyed"
+        sx={{ maxWidth: ['100%', 512], justifySelf: 'end' }}
+      />
+    </Grid>
   </>
 )
 

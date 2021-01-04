@@ -9,6 +9,10 @@ export const Section = props => (
     sx={{
       ':nth-of-type(even)': { bg: 'sheet' },
       'img[role="presentation"]': { bg: 'sunken' },
+      footer: {
+        gridGap: [1, 3],
+        div: { minHeight: 300 }
+      },
       ...props.sx
     }}
   />
@@ -41,21 +45,15 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
       a: { color: 'var(--section-color)' },
       details: {
         ml: 0,
-        my: [4, null, 5, 6],
+        my: [5, 6],
         svg: { color: 'var(--section-color)', verticalAlign: 'middle' },
         summary: {
           outline: 'none',
           WebkitTapHighlightColor: 'transparent',
-          ':focus svg:last-of-type,:hover svg:last-of-type': {
-            outline: 'none',
-            filter: 'brightness(120%) drop-shadow(0 0 12px var(--section-color))',
-            transform: 'scale(1.125)'
-          },
           p: {
             variant: 'text.title',
-            fontSize: [5, 6],
-            lineHeight: 'caption',
-            // fontWeight: 'bold',
+            fontSize: [4, 5, 6],
+            lineHeight: ['body', 'caption'],
             textAlign: 'center',
             color: 'text',
           },
@@ -72,12 +70,19 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
             bg: 'var(--section-color)',
             color: 'white',
             borderRadius: 'circle',
-            // boxShadow: '0 0 12px var(--section-color)',
-            filter: 'drop-shadow(0 0 12px var(--section-color))',
+            minWidth: 48,
+            minHeight: 48,
+            filter: 'drop-shadow(0 0 8px var(--section-color))',
             p: 2,
-            ml: 3,
+            m: 3,
+            cursor: 'pointer',
             transition: '0.125s all ease-in-out',
             willChange: 'transform, filter'
+          },
+          ':focus svg:last-of-type,:hover svg:last-of-type': {
+            outline: 'none',
+            filter: 'brightness(120%) drop-shadow(0 0 12px var(--section-color))',
+            transform: 'scale(1.125)'
           }
         },
         '&[open]': {
@@ -114,7 +119,7 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
         },
         'p + p': { mt: 3 }
       },
-      footer: {
+      aside: {
         variant: 'cards.primary',
         border: '2px solid var(--section-color)',
         maxWidth: 'copy',
