@@ -132,7 +132,7 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
           left: 0,
           width: 64,
           height: 64,
-          opacity: 0.125,
+          opacity: 0.25,
           color: 'var(--section-color)'
         },
         '> p': { my: 0 }

@@ -34,8 +34,8 @@ const HomePage = () => (
       >
         Centre County is planning bold climate action.
       </Heading>
-      <Text as="p" variant="layout.copy" sx={{ variant: 'text.lead', fontWeight: 'bold' }}>
-        We’re a group of elected officials in central Pennsylvania working on stewardship & climate planning in our community.
+      <Text as="p" variant="layout.copy" sx={{ variant: 'text.lead' }}>
+        We’re a group out of central Pennsylvania local government working&nbsp;on stewardship & climate planning in our community.
       </Text>
       <CTA
         primary={['/climate', 'Learn about climate']}
