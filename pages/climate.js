@@ -1,11 +1,10 @@
-import { Box, Text, Container, Grid, Heading, Image as Img } from 'theme-ui'
+import { Box, Text, Container, Grid, Heading } from 'theme-ui'
 import Image from 'next/image'
 import BGImg from '../components/bg-img'
 import Meta from '../components/meta'
 import { Section, SectionHeader } from '../components/learn/section'
 
 import EmissionsChart from '../components/inventory/emissions-chart'
-import LandUseChart from '../components/inventory/land-use-chart'
 import Footprint from '../components/inventory/footprint'
 import TransitEmissions from '../components/inventory/transit-emissions'
 import BuildingEmissions from '../components/inventory/building-emissions'
@@ -185,22 +184,6 @@ const ClimatePage = () => (
         />
       </Grid>
     </Section>
-    <Grid
-      as="section"
-      variant="layout.container"
-      columns={[null, 2]}
-      sx={{ py: 55 }}
-    >
-      <Heading as="h3" variant="headline" sx={{ gridColumn: [null, 'span 2'] }}>
-        Centre Region land use
-      </Heading>
-      <LandUseChart />
-      <Img
-        src="/cog_region.svg"
-        alt="Diagram of regions of Centre County surveyed"
-        sx={{ maxWidth: ['100%', 512], justifySelf: 'end' }}
-      />
-    </Grid>
   </>
 )
 
