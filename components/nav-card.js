@@ -27,7 +27,7 @@ const NavCard = ({
           WebkitTapHighlightColor: 'transparent',
           textDecoration: 'none',
           fontWeight: 'bold',
-          fontSize: [3, 4],
+          fontSize: 3,
           lineHeight: 'subheading',
           letterSpacing: 'title',
           mt: [3, 4],
@@ -40,7 +40,7 @@ const NavCard = ({
           },
           '> svg': {
             fontSize: 4,
-            transformOrigin: 'center right'
+            transformOrigin: 'center left'
           },
           ':hover, :focus': {
             div: {
@@ -69,7 +69,7 @@ const NavCard = ({
             transition: 'transform 0.125s ease-out',
             svg: {
               position: 'absolute',
-              left: 1,
+              left: 0,
               top: '50%',
               transform: 'translateY(-50%)',
               width: 64,
