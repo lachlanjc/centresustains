@@ -1,4 +1,5 @@
 import { Box } from 'theme-ui'
+import Meta from './meta'
 
 const sxCards = {
   ul: {
@@ -31,7 +32,7 @@ const sxCards = {
   }
 }
 
-const Story = ({ color, cards = false, sx = {}, ...props }) => (
+const Story = ({ color, cards = false, sx = {}, title, children, ...props }) => (
   <Box
     as="article"
     {...props}
@@ -66,7 +67,10 @@ const Story = ({ color, cards = false, sx = {}, ...props }) => (
       '.nav-card:last-child': { mb: [0, 3] },
       ...props.sx
     }}
-  />
+  >
+    {title && <Meta title={title} />}
+    {children}
+  </Box>
 )
 
 export default Story

@@ -1,14 +1,7 @@
-import {
-  Box,
-  Text,
-  Container,
-  Grid,
-  Flex,
-  Heading,
-  Image as Img
-} from 'theme-ui'
+import { Box, Text, Container, Grid, Heading, Image as Img } from 'theme-ui'
 import Image from 'next/image'
 import BGImg from '../components/bg-img'
+import Meta from '../components/meta'
 import { Section, SectionHeader } from '../components/learn/section'
 
 import EmissionsChart from '../components/inventory/emissions-chart'
@@ -25,6 +18,10 @@ import Farms from '../components/learn/farms.mdx'
 
 const ClimatePage = () => (
   <>
+    <Meta
+      title="Central PA Climate Change"
+      description="Learn about how climate change is affecting State College & all of Pennsylvania, and explore our breakdown of local carbon emissions."
+    />
     <Box as="header" sx={{ position: 'relative', bg: 'muted' }}>
       <BGImg
         src="/photos/overlook_fall.jpg"

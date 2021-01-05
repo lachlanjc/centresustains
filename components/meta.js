@@ -7,8 +7,8 @@ const makeTitle = (title, name) =>
 const Meta = ({
   title = 'Centre Sustains',
   name = 'Centre Sustains',
-  description = '',
-  image = '',
+  description,
+  image,
   url = 'https://centresustains.com',
   children
 }) => (
