@@ -48,7 +48,7 @@ const ClimatePage = () => (
         </Heading>
         <Text as="p" variant="lead">
           We’re already experiencing{' '}
-          <strong>expensive changes in weather patterns</strong> in central
+          <strong>costly changes in weather patterns</strong> in&nbsp;central
           Pennsylvania as a result of human-caused climate change.
         </Text>
       </Container>
@@ -126,7 +126,7 @@ const ClimatePage = () => (
         height={2048}
         layout="responsive"
       />
-      <SectionHeader title="Weather" color="yellow" children={<Weather />} />
+      <SectionHeader title="Weather" color="aqua" children={<Weather />} />
     </Section>
     <Section>
       <Grid as="footer" columns={3}>
