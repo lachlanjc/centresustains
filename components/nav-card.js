@@ -43,7 +43,7 @@ const NavCard = ({
             transformOrigin: 'center left'
           },
           ':hover, :focus': {
-            div: {
+            '> span': {
               transform: 'scale(1.0625)',
               svg: {
                 transform: 'scale(1.25) translateX(-50%) translateY(-37.5%)'
@@ -56,6 +56,7 @@ const NavCard = ({
         }}
       >
         <Box
+          as="span"
           sx={{
             position: 'absolute',
             top: 0,
@@ -78,7 +79,7 @@ const NavCard = ({
             }
           }}
         >
-          <Icon aria-hidden />
+          {Icon && <Icon aria-hidden />}
         </Box>
         {children}
         <ArrowRightCircle aria-hidden />
