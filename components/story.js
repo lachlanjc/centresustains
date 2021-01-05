@@ -42,6 +42,7 @@ const Story = ({ color, cards = false, sx = {}, title, children, ...props }) => 
       'nav + &': { mt: 64 },
       py: [4, 5],
       fontSize: 2,
+      ...sx,
       h1: {
         variant: 'text.title',
         display: 'flex',
@@ -64,8 +65,7 @@ const Story = ({ color, cards = false, sx = {}, title, children, ...props }) => 
       },
       ...(color ? { 'h1, a': { color } } : null),
       ...(cards ? sxCards : null),
-      '.nav-card:last-child': { mb: [0, 3] },
-      ...props.sx
+      '.nav-card:last-child': { mb: [0, 3] }
     }}
   >
     {title && <Meta title={title} />}

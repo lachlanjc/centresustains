@@ -2,7 +2,7 @@ import { Box, Heading, Text } from 'theme-ui'
 import BGImg from '../components/bg-img'
 import CTA from '../components/cta'
 import Story from '../components/story'
-import Survey from '../components/survey.mdx'
+import Home from '../components/home.mdx'
 
 const HomePage = () => (
   <>
@@ -24,7 +24,7 @@ const HomePage = () => (
         alt="Fog over a meadow with a sunlit tree"
         width={9926}
         height={4256}
-        gradient="rgba(0,0,0,0), rgba(0,0,0,0.5)"
+        gradient="rgba(0,0,0,0), rgba(0,0,0,0.625)"
         loading="eager"
       />
       <Heading
@@ -34,7 +34,7 @@ const HomePage = () => (
       >
         Centre County is planning bold climate action.
       </Heading>
-      <Text as="p" variant="layout.copy" sx={{ variant: 'text.lead' }}>
+      <Text as="p" variant="layout.copy" sx={{ variant: 'text.lead', fontWeight: 'bold' }}>
         We’re a group of elected officials in central Pennsylvania working on stewardship & climate planning in our community.
       </Text>
       <CTA
@@ -43,8 +43,8 @@ const HomePage = () => (
         sx={{ mt: [3, 4], px: 3, justifyContent: 'center' }}
       />
     </Box>
-    <Story sx={{ py: [5] }}>
-      <Survey />
+    <Story>
+      <Home />
     </Story>
   </>
 )

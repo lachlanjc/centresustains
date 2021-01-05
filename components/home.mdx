@@ -1,8 +1,14 @@
 import Link from 'next/link'
 import { Button } from 'theme-ui'
-import { ClipboardCheck, CalendarEvent } from 'react-bootstrap-icons'
+import {
+  ClipboardCheck,
+  ChatQuote,
+  CalendarEvent,
+  JournalBookmarkFill
+} from 'react-bootstrap-icons'
 import NavCard from './nav-card'
 import Signup from './signup'
+import { FootprintBubbles } from './inventory/footprint'
 
 ## Take the survey <ClipboardCheck />
 
@@ -11,8 +17,15 @@ We’d love to have you weigh in—whether you live here, work in the area, go t
 
 <Signup />
 
-After the survey, in April 2021 we will be running a public forum event to discuss:
+## Public forum <ChatQuote />
+
+After the survey, in April 2021 we will be running a public forum event
+with elected officials, local residents, & business owners to discuss our plans.
 
 <NavCard color="brown" to="/forum" icon={CalendarEvent}>
   Attend our public forum
 </NavCard>
+
+## Learn about local climate change <JournalBookmarkFill />
+
+<FootprintBubbles />

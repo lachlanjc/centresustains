@@ -78,10 +78,10 @@ const NavCard = ({
             }
           }}
         >
-          <Icon />
+          <Icon aria-hidden />
         </Box>
         {children}
-        <ArrowRightCircle />
+        <ArrowRightCircle aria-hidden />
       </Flex>
     </Link>
   )

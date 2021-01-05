@@ -1,5 +1,5 @@
 import { PatchQuestion } from 'react-bootstrap-icons'
-import { Box, Card, Flex, Grid, Text } from 'theme-ui'
+import { Box, Flex, Grid, Text } from 'theme-ui'
 import Intro from './footprint.mdx'
 
 const Stat = ({ title, unit, children }) => (
@@ -50,6 +50,20 @@ const Bubble = ({ value, bg, sx, scale = 1, ...props }) => (
   />
 )
 
+export const FootprintBubbles = () => (
+  <Grid
+    columns={2}
+    sx={{ width: '100%', maxWidth: 384, alignItems: 'end' }}
+  >
+    <Stat title="Centre, PA" unit="MT CO₂/person">
+      <Bubble scale={1} bg="brown" value={10.21} />
+    </Stat>
+    <Stat title="Global average" unit="MT CO₂/person">
+      <Bubble scale={0.42} bg="muted" value={4.35} />
+    </Stat>
+  </Grid>
+)
+
 const Footprint = () => [
   <Box
     as="section"
@@ -63,17 +77,7 @@ const Footprint = () => [
     <Intro />
   </Box>,
   <Box as="section" key="metrics">
-    <Grid
-      columns={[2]}
-      sx={{ width: '100%', maxWidth: 384, pb: 3, alignItems: 'end' }}
-    >
-      <Stat title="Centre, PA" unit="MT CO₂/person">
-        <Bubble scale={1} bg="brown" value={10.21} />
-      </Stat>
-      <Stat title="Global average" unit="MT CO₂/person">
-        <Bubble scale={0.42} bg="muted" value={4.35} />
-      </Stat>
-    </Grid>
+    <FootprintBubbles />
     <Text
       as="p"
       variant="caption"
@@ -82,6 +86,7 @@ const Footprint = () => [
         display: 'flex',
         alignItems: 'center',
         ml: [null, 4],
+        pt: 3,
         svg: { mr: 3, flexShrink: 0, fontSize: 3 }
       }}
     >
