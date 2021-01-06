@@ -1,0 +1,35 @@
+import { GeoAlt, CameraVideo, SuitSpade } from 'react-bootstrap-icons'
+import Story from '../components/story'
+import Avatar from '../components/avatar'
+
+export default props => <Story title="Colophon" color="purple" {...props} />
+
+export const Person = props => <Avatar size={24} sx={{ ml: 1 }} {...props} />
+
+# <SuitSpade /> Colophon
+
+This site was created December 2020–January 2021 in <GeoAlt />State College, PA
+over numerous <CameraVideo /> Zoom calls.
+
+It was conceived, designed, & built by <Person src="/lachlanjc.jpg" alt="Lachlan Campbell" /> [Lachlan Campbell]
+in collaboration with <Person src="/tag/pam_adams.jpg" alt="Pam Adams" /> Pam&nbsp;Adams,
+the COG Sustainability Planner, who provided writing, research, & guidance.
+Thanks to Betsy Whitman for initiating the connection.
+
+The local photography was captured & edited by [Christopher Campbell].
+
+The site is powered by [Next.js] with [MDX] & [Theme UI].<br />
+It’s hosted on [Vercel] & uses [Fathom Analytics].
+
+The code is fully [open source] on GitHub, under the MIT license.
+
+& thanks for visiting! We appreciate it.
+
+[lachlan campbell]: https://lachlanjc.com
+[christopher campbell]: https://cbcampbell.com
+[next.js]: https://nextjs.org
+[mdx]: https://mdxjs.com
+[theme ui]: https://theme-ui.com
+[vercel]: https://vercel.com
+[fathom analytics]: https://usefathom.com/ref/VZSOUX
+[open source]: https://github.com/lachlanjc/centresustains

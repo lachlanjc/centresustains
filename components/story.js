@@ -63,7 +63,8 @@ const Story = ({ color, cards = false, sx = {}, title, children, ...props }) => 
         },
         '+ h3': { mt: 4 }
       },
-      ...(color ? { 'h1, a': { color } } : null),
+      'p svg': { verticalAlign: 'middle' },
+      ...(color ? { 'h1, a, p svg': { color } } : null),
       ...(cards ? sxCards : null),
       '.nav-card:last-child': { mb: [0, 3] }
     }}
