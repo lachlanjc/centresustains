@@ -67,6 +67,7 @@ const NavCard = ({
             borderRadius: 'extra',
             boxShadow: 'elevated',
             bg: 'var(--card-color)',
+            overflow: 'hidden',
             transition: 'transform 0.125s ease-out',
             svg: {
               position: 'absolute',
