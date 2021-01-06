@@ -128,8 +128,8 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
         mt: [4, 5],
         '> svg': {
           position: 'absolute',
-          top: 0,
-          left: 0,
+          top: 2,
+          left: 2,
           width: 64,
           height: 64,
           opacity: 0.25,
