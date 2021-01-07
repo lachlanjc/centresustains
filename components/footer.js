@@ -5,17 +5,31 @@ const Footer = () => (
   <Box
     as="footer"
     sx={{
-      py: 4,
-      bg: 'sunken',
-      color: 'secondary'
+      py: 3,
+      bg: 'sunken'
     }}
   >
     <Container
       variant="narrow"
       sx={{
+        color: 'muted',
         textAlign: 'center',
-        p: { mt: 3 },
-        a: { color: 'primary' }
+        ul: {
+          p: 0,
+          listStyle: 'none',
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center'
+        },
+        li: {
+          my: 1,
+          pl: 2,
+          '+ li::before': { content: '"|"', pr: 2 },
+        },
+        a: {
+          color: 'secondary',
+          textUnderlinePosition: 'under'
+        }
       }}
     >
       <Content />
