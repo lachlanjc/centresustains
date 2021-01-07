@@ -1,0 +1,44 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "Event",
+  "name": "Central PA Climate Change Public Forum",
+  "startDate": "2021-04-12T14:00-05:00",
+  "endDate": "2021-04-12T16:00-05:00",
+  "description": "We’re holding an open forum on Zoom for community members to help inform Centre County’s climate planning & strategies.",
+  "isAccessibleForFree": true,
+  "url": "https://centresustains.com/forum",
+  "image": [
+    "https://centresustains.com/cards/forum.jpg",
+    "https://centresustains.com/icon.png"
+  ],
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+  "location": {
+    "@type": "VirtualLocation",
+    "url": "https://centresustains.com/forum"
+  },
+  "sponsor": {
+    "@type": "Organization",
+    "name": "Centre Region County of Governments",
+    "url": "https://www.crcog.net"
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Centre Sustains",
+    "url": "https://centresustains.com"
+  },
+  "offers": {
+    "@type": "Offer",
+    "name": "Free Admission",
+    "url": "https://centresustains.com",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/PreOrder",
+    "validFrom": "2021-01-11",
+    "validThrough": "2021-04-12"
+  },
+  "performer": {
+    "@type": "PerformingGroup",
+    "name": "Centre Sustains team"
+  }
+}

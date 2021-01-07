@@ -20,6 +20,7 @@ const ClimatePage = () => (
     <Meta
       title="Central PA Climate Change"
       description="Learn about how climate change is affecting State College & all of Pennsylvania, and explore our breakdown of local carbon emissions."
+      image="https://centresustains.com/cards/climate.jpg"
     />
     <Box as="header" sx={{ position: 'relative', bg: 'muted' }}>
       <BGImg
@@ -97,6 +98,7 @@ const ClimatePage = () => (
           height={2868}
           objectFit="cover"
           layout="responsive"
+          loading="eager"
         />
         <Image
           src="/photos/forest_summer.jpg"
@@ -105,6 +107,7 @@ const ClimatePage = () => (
           height={2868}
           objectFit="cover"
           layout="responsive"
+          loading="eager"
         />
         <Image
           src="/photos/forest_fall.jpg"

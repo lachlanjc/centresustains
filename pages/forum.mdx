@@ -1,4 +1,5 @@
 import { Text, Grid } from 'theme-ui'
+import Meta from '../components/meta'
 import Story from '../components/story'
 import Signup from '../components/signup'
 import Avatar from '../components/avatar'
@@ -24,9 +25,15 @@ export const Lara = () => (
   />
 )
 
-export default props => (
-  <Story title="Spring 2021 Forum" color="brown" {...props} />
-)
+export default props => <Story color="brown" {...props} />
+
+<Meta
+  title="Spring 2021 Climate Forum"
+  description="April 2021, we’re holding an open forum on Zoom for community members to help inform our climate planning & strategies in central Pennsylvania."
+  image="https://centresustains.com/cards/forum.jpg"
+>
+  {/* <script key="event_json" type="application/ld+json" children={JSON.stringify(event)} /> */}
+</Meta>
 
 # <CalendarEvent />Forum
 

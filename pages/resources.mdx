@@ -6,13 +6,18 @@ import {
   Newspaper,
   Book
 } from 'react-bootstrap-icons'
+import Meta from '../components/meta'
 import NavCard from '../components/nav-card'
 import Story from '../components/story'
 import Image from 'next/image'
 
-export default props => (
-  <Story title="Sustainability Resources" cards color="pink" {...props} />
-)
+export default props => <Story cards color="pink" {...props} />
+
+<Meta
+  title="Sustainability Resources"
+  description="If you’re looking to reduce the carbon footprint of your lifestyle in central Pennsylvania, we’ve gathered these resources to help."
+  image="https://centresustains.com/cards/resources.jpg"
+/>
 
 # <BookmarkStar /> Resources
 
