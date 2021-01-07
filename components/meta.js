@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import theme from '../lib/theme'
+import org from './org.json'
 
 const makeTitle = (title, name) =>
   title === name ? title : `${title} – ${name}`
@@ -8,7 +9,7 @@ const Meta = ({
   title = 'Centre Sustains',
   name = 'Centre Sustains',
   description,
-  image,
+  image = 'https://centresustains.com/card.jpg',
   url = 'https://centresustains.com',
   children
 }) => (
@@ -70,6 +71,11 @@ const Meta = ({
       href={`${url}/favicon-16x16.png`}
     />
     <link key="manifest" rel="manifest" href={`${url}/site.webmanifest`} />
+    <script
+      key="org_json"
+      type="application/ld+json"
+      children={JSON.stringify(org)}
+    />
     {children}
   </Head>
 )

@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Centre Sustains",
+  "url": "https://centresustains.com",
+  "logo": "https://centresustains.com/icon.png",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "email": "padams@crcog.net",
+      "contactType": "customer support",
+      "url": "https://centresustains.com"
+    }
+  ]
+}
