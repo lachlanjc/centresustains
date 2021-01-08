@@ -1,5 +1,6 @@
 import { Box, Heading, Text } from 'theme-ui'
 import BGImg from '../components/bg-img'
+import SlideUp from '../components/slide-up'
 import CTA from '../components/cta'
 import Story from '../components/story'
 import Home from '../components/home.mdx'
@@ -47,7 +48,16 @@ const HomePage = () => (
         />
       </SlideUp>
     </Box>
-    <Story>
+    <Story
+      sx={{
+        pt: [4, 4],
+        'p:first-of-type': {
+          variant: 'text.lead',
+          color: 'secondary',
+          mb: [3, 4]
+        }
+      }}
+    >
       <Home />
     </Story>
   </>
