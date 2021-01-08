@@ -16,7 +16,8 @@ const HomePage = () => (
         position: 'relative',
         pt: [6, 128 * 1.5],
         pb: 4,
-        textAlign: 'center'
+        textAlign: 'center',
+        overflow: 'hidden'
       }}
     >
       <BGImg
@@ -27,21 +28,24 @@ const HomePage = () => (
         gradient="rgba(0,0,0,0), rgba(0,0,0,0.625)"
         loading="eager"
       />
-      <Heading
-        as="h1"
-        variant="layout.container"
-        sx={{ variant: 'text.ultratitle', color: 'inherit' }}
-      >
-        Centre Region is planning bold climate action.
-      </Heading>
-      <Text as="p" variant="layout.copy" sx={{ variant: 'text.lead' }}>
-        We’re a group out of central Pennsylvania local government working&nbsp;on stewardship & climate planning in our community.
-      </Text>
-      <CTA
-        primary={['/climate', 'Learn about climate']}
-        secondary={['/about', 'About us']}
-        sx={{ mt: [3, 4], px: 3, justifyContent: 'center' }}
-      />
+      <SlideUp>
+        <Heading
+          as="h1"
+          variant="layout.container"
+          sx={{ variant: 'text.ultratitle', color: 'inherit' }}
+        >
+          Centre Region is planning bold climate action.
+        </Heading>
+        <Text as="p" variant="layout.copy" sx={{ variant: 'text.lead' }}>
+          We’re a group out of central Pennsylvania local government
+          working&nbsp;on stewardship & climate planning in our community.
+        </Text>
+        <CTA
+          primary={['/climate', 'Learn about climate']}
+          secondary={['/about', 'About us']}
+          sx={{ mt: [3, 4], px: 3, justifyContent: 'center' }}
+        />
+      </SlideUp>
     </Box>
     <Story>
       <Home />

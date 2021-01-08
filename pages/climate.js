@@ -1,7 +1,8 @@
 import { Box, Text, Container, Grid, Heading } from 'theme-ui'
 import Image from 'next/image'
-import BGImg from '../components/bg-img'
 import Meta from '../components/meta'
+import BGImg from '../components/bg-img'
+import SlideUp from '../components/slide-up'
 import { Section, SectionHeader } from '../components/learn/section'
 
 import EmissionsChart from '../components/inventory/emissions-chart'
@@ -31,8 +32,8 @@ const ClimatePage = () => (
         gradient="rgba(0,0,0,0.125), rgba(0,0,0,.25)"
         loading="eager"
       />
-      <Container
-        variant="copy"
+      <SlideUp
+        variant="layout.copy"
         sx={{
           pt: 6,
           pb: [4, 5],
@@ -51,7 +52,7 @@ const ClimatePage = () => (
           <strong>costly changes in weather patterns</strong> in&nbsp;central
           Pennsylvania as a result of human-caused climate change.
         </Text>
-      </Container>
+      </SlideUp>
     </Box>
     <Section sx={{ py: 5 }}>
       <Container>
