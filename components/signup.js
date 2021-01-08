@@ -37,7 +37,7 @@ const Signup = () => {
 
   useEffect(() => {
     if (localStorage) {
-      const address = localStorage.getItem('emailSubscribed')
+      const address = localStorage.getItem('email-subscribed')
       if (address) {
         setEmail(address)
         setDone(true)
@@ -49,7 +49,7 @@ const Signup = () => {
     e.preventDefault()
     if (email.length < 3) return
     setSubmitting(true)
-    let submission = await fetch('/api/signup', {
+    let submission = await fetch('/api/subscribe', {
       method: 'POST',
       body: JSON.stringify({ email, timestamp: new Date() }),
       headers: {
@@ -58,13 +58,14 @@ const Signup = () => {
       }
     })
     if (submission.ok) {
-      localStorage.setItem('emailSubscribed', email)
-      setEmail('')
+      localStorage.setItem('email-subscribed', email)
       setSubmitting(false)
       setDone(true)
+      setError('')
     } else {
       setSubmitting(false)
-      setError(submission.errors || 'Something went wrong.')
+      const body = await submission.json()
+      setError(body?.error || submission.error || 'Something went wrong.')
     }
   }
 
@@ -136,9 +137,9 @@ const Signup = () => {
         </Grid>
       )}
       {error && (
-        <Alert variant="primary" sx={{ mt: [2, 3] }}>
+        <Alert variant="primary" sx={{ bg: 'brown', mt: [2, 3] }}>
           <ExclamationTriangleFill />
-          <Text sx={{ ml: 2 }}>
+          <Text as="p" sx={{ ml: 3 }}>
             {error.toString()}
             <Text as="a" color="inherit" pl={1} href="mailto:padams@crcog.net">
               Email Pam?
