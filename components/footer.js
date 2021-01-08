@@ -24,7 +24,7 @@ const Footer = () => (
         li: {
           my: 1,
           pl: 2,
-          '+ li::before': { content: '"|"', pr: 2 },
+          '+ li::before': { content: '"|"', pr: 2 }
         },
         a: {
           color: 'secondary',

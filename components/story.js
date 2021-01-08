@@ -32,7 +32,14 @@ const sxCards = {
   }
 }
 
-const Story = ({ color, cards = false, sx = {}, title, children, ...props }) => (
+const Story = ({
+  color,
+  cards = false,
+  sx = {},
+  title,
+  children,
+  ...props
+}) => (
   <Box
     as="article"
     {...props}

@@ -51,7 +51,7 @@ const HomePage = () => (
     <Story
       sx={{
         pt: [4, 4],
-        'p:first-of-type': {
+        '> p:first-of-type': {
           variant: 'text.lead',
           color: 'secondary',
           mb: [3, 4]
