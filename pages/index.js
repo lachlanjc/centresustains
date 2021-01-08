@@ -32,7 +32,7 @@ const HomePage = () => (
         variant="layout.container"
         sx={{ variant: 'text.ultratitle', color: 'inherit' }}
       >
-        Centre County is planning bold climate action.
+        Centre Region is planning bold climate action.
       </Heading>
       <Text as="p" variant="layout.copy" sx={{ variant: 'text.lead' }}>
         We’re a group out of central Pennsylvania local government working&nbsp;on stewardship & climate planning in our community.
