@@ -74,11 +74,12 @@ const Nav = () => {
               fontWeight: 'bold'
             }}
           >
-            <Image
-              src="/SCR-Seondary-Tree-Color-Logo.png"
-              alt="Sustainable Centre Region logo"
+            <img
+              src="/icon/icon@96.png"
+              alt="Centre Sustains logo"
               width={48}
               height={48}
+              loading="eager"
             />
           </NavLink>
         </Link>
