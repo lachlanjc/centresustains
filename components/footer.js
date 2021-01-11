@@ -1,18 +1,26 @@
 import { Box, Container } from 'theme-ui'
+import BGImg from './bg-img'
 import Content from './footer.mdx'
 
 const Footer = () => (
   <Box
     as="footer"
     sx={{
-      py: 3,
-      bg: 'sunken'
+      py: [3, 4],
+      bg: 'sunken',
+      position: 'relative'
     }}
   >
+    <BGImg
+      src="/content/footer.jpg"
+      width={3405}
+      height={1086}
+    />
     <Container
       variant="narrow"
       sx={{
-        color: 'muted',
+        color: 'white',
+        textShadow: 'text',
         textAlign: 'center',
         ul: {
           p: 0,
@@ -24,10 +32,10 @@ const Footer = () => (
         li: {
           my: 1,
           pl: 2,
-          '+ li::before': { content: '"|"', pr: 2 }
+          '+ li::before': { content: '"|"', opacity: 0.625, pr: 2 }
         },
         a: {
-          color: 'secondary',
+          color: 'inherit',
           textUnderlinePosition: 'under'
         }
       }}
