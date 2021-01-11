@@ -15,6 +15,7 @@ import Forests from '../components/learn/forests.mdx'
 import Weather from '../components/learn/weather.mdx'
 import Roads from '../components/learn/roads.mdx'
 import Farms from '../components/learn/farms.mdx'
+import Outro from '../components/learn/outro.mdx'
 
 const ClimatePage = () => (
   <>
@@ -40,7 +41,8 @@ const ClimatePage = () => (
           'h1, p': {
             textAlign: 'center',
             color: 'white',
-            textShadow: '0 1px 2px rgba(0, 0, 0, 0.75), 0 2px 6px rgba(0, 0, 0, 0.25)'
+            textShadow:
+              '0 1px 2px rgba(0, 0, 0, 0.75), 0 2px 6px rgba(0, 0, 0, 0.25)'
           }
         }}
       >
@@ -188,6 +190,16 @@ const ClimatePage = () => (
         />
       </Grid>
     </Section>
+    <Container
+      as="section"
+      variant="copy"
+      sx={{
+        py: [4, 5, 6],
+        fontSize: 3
+      }}
+    >
+      <Outro />
+    </Container>
   </>
 )
 

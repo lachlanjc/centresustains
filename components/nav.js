@@ -75,7 +75,7 @@ const Nav = () => {
             }}
           >
             <img
-              src="/icon/icon@96.png"
+              src="/icon/scr_logo.png"
               alt="Centre Sustains logo"
               width={48}
               height={48}
