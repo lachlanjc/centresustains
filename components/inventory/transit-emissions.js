@@ -1,54 +1,37 @@
-import { Box, Heading, Flex, Text } from 'theme-ui'
+import { Box, Flex, Text } from 'theme-ui'
 
-const bar = {
-  py: 1,
-  px: 2,
-  borderRadius: 'default',
-  width: 'fit-content',
-  alignItems: 'center',
-  fontWeight: 'bold',
-  color: 'white'
-}
+const Bar = ({ opacity, style, ...props }) => (
+  <Flex
+    {...props}
+    sx={{
+      py: 1,
+      px: 2,
+      borderRadius: 'default',
+      width: 'fit-content',
+      alignItems: 'center',
+      fontWeight: 'bold',
+      maxWidth: 256,
+      bg: 'pink',
+      color: 'white'
+    }}
+    style={{ opacity, ...style }}
+  />
+)
 
 const TransitEmissions = () => (
-  <Box sx={{ maxWidth: 384 }}>
-    <Flex
-      sx={{
-        ...bar,
-        width: '100%',
-        maxWidth: 256,
-        bg: 'teal'
-      }}
-    >
-      79% passenger vehicles
-      </Flex>
-    <Flex sx={{ alignItems: 'center', my: 2 }}>
-      <Flex
-        sx={{
-          ...bar,
-          bg: 'green'
-        }}
-      >
-        17% trucks
-        </Flex>
-      <Text as="span" variant="caption" pl={3}>
-        (freight & service)
-        </Text>
-    </Flex>
-    <Flex sx={{ alignItems: 'center', my: 2 }}>
-      <Flex
-        sx={{
-          ...bar,
-          my: 0,
-          bg: 'yellow',
-          color: 'slate'
-        }}
-      >
-        4%
-        </Flex>
+  <Box sx={{ mt: 1, maxWidth: 384 }}>
+    <Bar style={{ width: '100%' }}>79% passenger vehicles</Bar>
+    <Flex sx={{ alignItems: 'center', my: 1 }}>
+      <Bar opacity={0.75}>17% trucks</Bar>
       <Text as="span" variant="caption" pl={2}>
-        <strong>transit</strong> (CATA & other buses)
-        </Text>
+        (freight & service)
+      </Text>
+    </Flex>
+    <Flex sx={{ alignItems: 'center' }}>
+      <Bar opacity={0.5}>4%</Bar>
+      <Text as="span" variant="caption" pl={2}>
+        <strong>transit</strong> (buses)
+      </Text>
     </Flex>
   </Box>
 )

@@ -1,5 +1,4 @@
-import { Box, Heading, Flex, Grid } from 'theme-ui'
-import { Building, House } from 'react-bootstrap-icons'
+import { Box, Flex } from 'theme-ui'
 
 const bar = {
   py: 1,
@@ -7,52 +6,32 @@ const bar = {
   borderRadius: 'default',
   alignItems: 'center',
   fontWeight: 'bold',
+  bg: 'indigo',
   color: 'white'
 }
 
-const Row = props => (
-  <Flex
-    sx={{
-      alignItems: 'center',
-      my: 2,
-      svg: {
-        width: 24,
-        height: 24,
-        mr: 3
-      }
-    }}
-    {...props}
-  />
-)
-
 const BuildingEmissions = () => (
-  <Box as="section">
-    <Row color="secondary">
-      <House />
-      <Flex
-        sx={{
-          ...bar,
-          maxWidth: 256,
-          pr: 4,
-          bg: 'secondary',
-          color: 'inverted'
-        }}
-      >
-        52% residential
-      </Flex>
-    </Row>
-    <Row color="muted">
-      <Building />
-      <Flex
-        sx={{
-          ...bar,
-          maxWidth: 256 * 0.92,
-          bg: 'muted'
-        }}
-      >
-        48% commercial
-      </Flex>
-    </Row>
+  <Box>
+    <Flex
+      sx={{
+        ...bar,
+        maxWidth: 200,
+        pr: 4,
+        mt: 2,
+        mb: 1
+      }}
+    >
+      52% residential
+    </Flex>
+    <Flex
+      sx={{
+        ...bar,
+        maxWidth: 200 * 0.92,
+        opacity: 0.75
+      }}
+    >
+      48% commercial
+    </Flex>
   </Box>
 )
 

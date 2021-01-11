@@ -33,8 +33,9 @@ const Reports = () => (
   <Box
     as="details"
     sx={{
-      borderRadius: 24,
       mt: 3,
+      maxWidth: 'copy',
+      borderRadius: 24,
       '&[open]': {
         bg: 'sunken',
         summary: {

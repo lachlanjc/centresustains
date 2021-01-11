@@ -51,10 +51,7 @@ const Bubble = ({ value, bg, sx, scale = 1, ...props }) => (
 )
 
 export const FootprintBubbles = () => (
-  <Grid
-    columns={2}
-    sx={{ width: '100%', maxWidth: 384, alignItems: 'end' }}
-  >
+  <Grid columns={2} sx={{ width: '100%', maxWidth: 384, alignItems: 'end' }}>
     <Stat title="Centre, PA" unit="MT CO₂/person">
       <Bubble scale={1} bg="brown" value={10.21} />
     </Stat>

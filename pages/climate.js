@@ -5,9 +5,8 @@ import BGImg from '../components/bg-img'
 import SlideUp from '../components/slide-up'
 import { Section, SectionHeader } from '../components/learn/section'
 
-import EmissionsChart from '../components/inventory/emissions-chart'
+import { EmissionsChart, EmissionsLegend } from '../components/inventory/emissions-chart'
 import Footprint from '../components/inventory/footprint'
-import Legend from '../components/inventory/legend.mdx'
 import Reports from '../components/inventory/reports'
 
 import Forests from '../components/learn/forests.mdx'
@@ -55,7 +54,7 @@ const ClimatePage = () => (
         </Text>
       </SlideUp>
     </Box>
-    <Section sx={{ py: 5 }}>
+    <Section sx={{ py: 5, h3: { mb: 0 } }}>
       <Container>
         <Heading as="h2" variant="title">
           Emissions breakdown
@@ -63,26 +62,20 @@ const ClimatePage = () => (
         <Text as="p" variant="subtitle">
           Based on our 2016 inventory of local greenhouse gas emissions.
         </Text>
-        <Grid
-          columns={[null, null, 2]}
-          gap={3}
-          sx={{
-            alignItems: 'center',
-            pb: 3,
-            h3: { gridColumn: [null, null, 'span 2'], mb: 0 }
-          }}
-        >
-          <Heading as="h3" variant="headline">
-            Local carbon footprint
-          </Heading>
+        <Heading as="h3" variant="headline">
+          Local carbon footprint
+        </Heading>
+        <Grid columns={[null, null, 2]} gap={3} sx={{ alignItems: 'center', pb: 3 }}>
           <Footprint />
-          <Heading as="h3" variant="headline">
-            Emissions by sector
-          </Heading>
-          <EmissionsChart />
-          <Legend />
-          <Reports />
         </Grid>
+        <Heading as="h3" variant="headline">
+          Emissions by sector
+        </Heading>
+        <Grid columns={[null, null, '3fr 4fr']} gap={3} sx={{ alignItems: 'center', pb: 4 }}>
+          <EmissionsChart />
+          <EmissionsLegend />
+        </Grid>
+        <Reports />
       </Container>
     </Section>
     <Section>
