@@ -25,11 +25,11 @@ const ClimatePage = () => (
     />
     <Box as="header" sx={{ position: 'relative', bg: 'muted' }}>
       <BGImg
-        src="/photos/overlook_fall.jpg"
-        alt="Overlook of Centre County forest in the fall"
-        width={3504}
-        height={2336}
-        gradient="rgba(0,0,0,0.125), rgba(0,0,0,.25)"
+        src="/photos/airplane_view.jpg"
+        alt="View out an airplane window of State College dotted with puffy clouds"
+        width={4032}
+        height={3024}
+        gradient="rgba(0,0,0,0), rgba(0,0,0,.375)"
         loading="eager"
       />
       <SlideUp
@@ -40,7 +40,7 @@ const ClimatePage = () => (
           'h1, p': {
             textAlign: 'center',
             color: 'white',
-            textShadow: 'text'
+            textShadow: '0 1px 2px rgba(0, 0, 0, 0.75), 0 2px 6px rgba(0, 0, 0, 0.25)'
           }
         }}
       >
