@@ -181,7 +181,8 @@ const ClimatePage = () => (
       variant="copy"
       sx={{
         py: [4, 5, 6],
-        fontSize: 3
+        fontSize: 3,
+        p: { mt: 0 }
       }}
     >
       <Outro />
