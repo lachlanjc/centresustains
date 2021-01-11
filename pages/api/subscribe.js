@@ -1,3 +1,4 @@
+// Via https://leerob.io/snippets/buttondown
 export default async (req, res) => {
   const { email } = req.body
 
