@@ -27,9 +27,6 @@ const Row = props => (
 
 const BuildingEmissions = () => (
   <Box as="section">
-    <Heading as="h4" variant="subheadline">
-      Building emissions
-    </Heading>
     <Row color="secondary">
       <House />
       <Flex

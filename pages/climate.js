@@ -7,8 +7,7 @@ import { Section, SectionHeader } from '../components/learn/section'
 
 import EmissionsChart from '../components/inventory/emissions-chart'
 import Footprint from '../components/inventory/footprint'
-import TransitEmissions from '../components/inventory/transit-emissions'
-import BuildingEmissions from '../components/inventory/building-emissions'
+import Legend from '../components/inventory/legend.mdx'
 import Reports from '../components/inventory/reports'
 
 import Forests from '../components/learn/forests.mdx'
@@ -81,13 +80,7 @@ const ClimatePage = () => (
             Emissions by sector
           </Heading>
           <EmissionsChart />
-          <Grid
-            columns={[null, 2]}
-            sx={{ pt: [null, null, 4], gridColumnGap: 4 }}
-          >
-            <TransitEmissions />
-            <BuildingEmissions />
-          </Grid>
+          <Legend />
           <Reports />
         </Grid>
       </Container>
