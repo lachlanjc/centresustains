@@ -6,22 +6,24 @@ const Stat = ({ title, unit, children }) => (
   <Flex
     sx={{
       flexDirection: 'column',
-      alignItems: 'center',
-      textAlign: 'center'
+      alignItems: 'center'
     }}
   >
-    <Text as="strong" sx={{ fontSize: [1, 2] }}>
-      {title}
-    </Text>
-    <Text as="span" variant="caption" sx={{ pb: [2, 3], mb: 'auto' }}>
-      {unit}
-    </Text>
+    <Box as="header" sx={{ lineHeight: 'subheading' }}>
+      <Text as="strong" sx={{ fontSize: [1, 2], display: 'block' }}>
+        {title}
+      </Text>
+      <Text as="span" variant="caption">
+        {unit}
+      </Text>
+    </Box>
     {children}
   </Flex>
 )
 
 const Bubble = ({ value, bg, sx, scale = 1, ...props }) => (
   <Box
+    as="strong"
     sx={{
       fontSize: scale === 1 ? [3, 4, 5] : 1,
       fontWeight: 'bold',
@@ -51,14 +53,14 @@ const Bubble = ({ value, bg, sx, scale = 1, ...props }) => (
 )
 
 export const FootprintBubbles = () => (
-  <Grid columns={2} sx={{ width: '100%', maxWidth: 384, alignItems: 'end' }}>
+  <>
     <Stat title="Centre, PA" unit="MT CO₂/person">
       <Bubble scale={1} bg="brown" value={10.21} />
     </Stat>
     <Stat title="Global average" unit="MT CO₂/person">
       <Bubble scale={0.42} bg="muted" value={4.35} />
     </Stat>
-  </Grid>
+  </>
 )
 
 const Footprint = () => [
@@ -74,7 +76,18 @@ const Footprint = () => [
     <Intro />
   </Box>,
   <Box as="section" key="metrics">
-    <FootprintBubbles />
+    <Grid
+      columns={2}
+      sx={{
+        width: '100%',
+        maxWidth: 384,
+        alignItems: 'end',
+        textAlign: 'center',
+        header: { pb: [2, 3], mb: 'auto' }
+      }}
+    >
+      <FootprintBubbles />
+    </Grid>
     <Text
       as="p"
       variant="caption"

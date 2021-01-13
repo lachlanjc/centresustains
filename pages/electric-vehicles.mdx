@@ -1,4 +1,4 @@
-import { Box, Button } from 'theme-ui'
+import { Box } from 'theme-ui'
 import { GeoFill, Diagram3, Sun } from 'react-bootstrap-icons'
 import BGImg from '../components/bg-img'
 import NavCard from '../components/nav-card'
@@ -30,16 +30,15 @@ import Story from '../components/story'
 
 # Electric Vehicles
 
-<Button
+<Box
+  variant="buttons.primary"
   as="a"
   href="https://afdc.energy.gov/fuels/electricity_locations.html#/find/nearest?fuel=ELEC&location=16801"
-  bg="teal"
-  mt={[3, 4]}
-  sx={{ mt: [3, 4], fontSize: 2 }}
+  sx={{ mt: [3, 4], fontSize: 2, bg: 'teal' }}
 >
   <GeoFill />
   Find local charging stations
-</Button>
+</Box>
 </Box>
 
 <Story title="Electric Vehicles" color="teal">

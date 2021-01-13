@@ -80,12 +80,7 @@ const Signup = () => {
         mb: [4, 5]
       }}
     >
-      <Heading
-        as="h2"
-        variant="subheadline"
-        color={done ? 'text' : 'brown'}
-        mt={0}
-      >
+      <Heading as="h2" variant="subheadline" mt={0}>
         Get an email when{' '}
         {pathname === '/forum' ? 'event registration' : 'the survey'} opens
       </Heading>
@@ -121,7 +116,9 @@ const Signup = () => {
           }}
         >
           <div>
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email" sx={{ fontSize: 1 }}>
+              Email
+            </Label>
             <Input
               type="email"
               name="email"

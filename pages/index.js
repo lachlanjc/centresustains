@@ -43,14 +43,16 @@ const HomePage = () => (
         </Text>
         <CTA
           primary={['/climate', 'Learn about climate']}
-          secondary={['/about', 'About us']}
-          sx={{ mt: [3, 4], px: 3, justifyContent: 'center' }}
+          secondary={['/resources', 'Explore resources']}
+          colors={['primary', 'white', 'rgba(255,255,255,0.5)']}
+          sx={{ mt: [3, 4], px: 3 }}
         />
       </SlideUp>
     </Box>
     <Story
       sx={{
         pt: [4, 4],
+        pb: [4, 5],
         '> p:first-of-type': {
           variant: 'text.lead',
           color: 'secondary',

@@ -1,39 +1,70 @@
 import Link from 'next/link'
-import { Button } from 'theme-ui'
+import { Grid, Button } from 'theme-ui'
 import {
-  ClipboardCheck,
-  ChatQuote,
+  ClipboardData,
+  ChatRightQuote,
   CalendarEvent,
-  JournalBookmarkFill
+  JournalAlbum,
+  PlugFill as ArrowRightCircle
 } from 'react-bootstrap-icons'
 import NavCard from './nav-card'
 import Signup from './signup'
+import CTA from './cta'
 import { FootprintBubbles } from './inventory/footprint'
 
-Centre Sustains wants to engage the community to cultivate literacy about climate risks and responses to generate a shared understanding and commitment to actions that will sustain our community’s economic, environmental and social well-being.
+We’re <Link href="/about">[a group of elected officials](/about)</Link> in Centre County working with local scientists, engineers, & urban planners on pragmatic, fiscally responsible **environmental stewardship**.
 
-## Take the survey <ClipboardCheck />
+## Take the survey <ClipboardData />
 
-Starting mid-February, we’re running a survey for 8 weeks on Centre County’s climate adaptation plans.
-We’d love to have you weigh in—whether you live here, work in the area, go to Penn&nbsp;State or State&nbsp;High, we want to hear your opinion.
+Starting mid-February, we’re running a survey for 8 weeks
+on Centre County’s climate adaptation plans.
+We’d love to have you weigh in—whether you live here, work in the area,
+or go to Penn&nbsp;State or State&nbsp;High, we want to hear your opinion.
 
 <Signup />
 
-## Public forum <ChatQuote />
+## Public forum <ChatRightQuote />
 
-After the survey, in April 2021 we will be running a public forum event
+After the survey, in April 2021, we will be running a public forum event
 with elected officials, local residents, & business owners to discuss our plans.
 
 <NavCard color="brown" to="/forum" icon={CalendarEvent}>
   Attend our public forum
 </NavCard>
 
-## Learn about local climate change <JournalBookmarkFill />
+## Local climate change <JournalAlbum />
 
-<NavCard
-  color="elevated"
-  sx={{ color: 'text', fontWeight: 'body' }}
-  to="/forum"
->
-  <FootprintBubbles />
-</NavCard>
+While other areas see sea level rise & wildfires, in central PA,
+drastic changes to our **forests, weather, roads, & agriculture** are underway.
+We’ve made an inventory of carbon emissions &
+assembled a primer on local climate change impacts.
+
+<Link href="/climate" passHref>
+  <Grid
+    as="a"
+    columns={[null, 2]}
+    sx={{
+      width: '100%',
+      alignItems: 'end',
+      textDecoration: 'none',
+      color: 'text',
+      maxWidth: 580,
+      mx: 'auto',
+      py: [3, 4],
+      mt: -3,
+      '> div': {
+        flexDirection: 'row-reverse',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        header: { pl: 3 },
+        ':last-of-type': { mt: [-3, 0], header: { pl: [3, 0] } }
+      }
+    }}
+  >
+    <FootprintBubbles />
+  </Grid>
+</Link>
+<CTA
+  primary={['/climate', 'Learn about climate']}
+  secondary={['/resources', 'Explore resources']}
+/>
