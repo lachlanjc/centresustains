@@ -128,7 +128,10 @@ const Signup = () => {
               onChange={e => setEmail(e.target.value)}
             />
           </div>
-          <Button type="submit" sx={{ bg: 'azure', mt: [2, 0] }}>
+          <Button
+            type="submit"
+            sx={{ bg: 'azure', color: 'white', mt: [2, 0] }}
+          >
             {submitting ? <Loading /> : 'Sign up'}
           </Button>
         </Grid>

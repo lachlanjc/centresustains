@@ -52,11 +52,10 @@ const HomePage = () => (
     <Story
       sx={{
         pt: [4, 4],
-        pb: [4, 5],
+        pb: 5,
         '> p:first-of-type': {
           variant: 'text.lead',
-          color: 'secondary',
-          mb: [3, 4]
+          mb: [4, 4]
         }
       }}
     >
