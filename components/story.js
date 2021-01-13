@@ -67,8 +67,14 @@ const Story = ({
           ml: 3,
           color: 'secondary',
           float: 'right'
-        },
-        '+ h3': { mt: 4 }
+        }
+      },
+      h3: {
+        mt: 4,
+        a: {
+          color: 'inherit',
+          textUnderlinePosition: 'under'
+        }
       },
       'p svg': { verticalAlign: 'middle' },
       ...(color ? { 'h1, a, p svg': { color } } : null),

@@ -16,7 +16,6 @@ const BuildingEmissions = () => (
       sx={{
         ...bar,
         maxWidth: 200,
-        pr: 4,
         mt: 2,
         mb: 1
       }}

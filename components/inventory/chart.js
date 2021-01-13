@@ -51,10 +51,10 @@ const Chart = ({ data }) => {
           innerRadius={64}
           outerRadius={96}
           label={renderCustomizedLabel}
-          paddingAngle={3}
+          paddingAngle={2}
         >
           {data.map(entry => (
-            <Cell fill={colors[entry.fill]} />
+            <Cell fill={colors[entry.fill]} stroke="none" />
           ))}
         </Pie>
       </PieChart>

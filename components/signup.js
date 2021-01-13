@@ -83,7 +83,7 @@ const Signup = () => {
       <Heading
         as="h2"
         variant="subheadline"
-        color={done ? 'text' : 'primary'}
+        color={done ? 'text' : 'brown'}
         mt={0}
       >
         Get an email when{' '}

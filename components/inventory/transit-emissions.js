@@ -28,7 +28,7 @@ const TransitEmissions = () => (
       </Text>
     </Flex>
     <Flex sx={{ alignItems: 'center' }}>
-      <Bar opacity={0.5}>4%</Bar>
+      <Bar opacity={0.625}>4%</Bar>
       <Text as="span" variant="caption" pl={2}>
         <strong>transit</strong> (buses)
       </Text>

@@ -35,7 +35,7 @@ const data = [
   },
   {
     name: 'Agriculture',
-    desc: 'Livestock emissions, fertilizer, park land & landscaping',
+    desc: 'Livestock emissions, fertilizer, & park land maintenance',
     value: 0.05,
     fill: 'green'
   },
