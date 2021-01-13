@@ -16,7 +16,8 @@ const SlideUp = ({ duration = 720, delay = 0, sx, ...props }) => (
         animationName: slideUp.toString(),
         animationFillMode: 'backwards',
         animationDuration: duration + 'ms',
-        animationDelay: delay + 'ms'
+        animationDelay: delay + 'ms',
+        willChange: 'transform, opacity'
       }
     }}
   />

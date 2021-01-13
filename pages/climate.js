@@ -22,14 +22,14 @@ const ClimatePage = () => (
       description="Learn about how climate change is affecting State College & all of Pennsylvania, and explore our breakdown of local carbon emissions."
       image="https://centresustains.com/cards/climate.jpg"
     />
-    <Box as="header" sx={{ position: 'relative', bg: 'muted' }}>
+    <Box as="header" sx={{ position: 'relative', bg: 'secondary' }}>
       <BGImg
         src="/photos/airplane_view.jpg"
         alt="View out an airplane window of State College dotted with puffy clouds"
         width={3024}
         height={2668}
         gradient="rgba(0,0,0,0), rgba(0,0,0,.375)"
-        loading="eager"
+        priority
       />
       <SlideUp
         variant="layout.copy"
@@ -87,7 +87,8 @@ const ClimatePage = () => (
           height={2868}
           objectFit="cover"
           layout="responsive"
-          loading="eager"
+          sizes="33vw"
+          priority
         />
         <Image
           src="/photos/forest_summer.jpg"
@@ -96,7 +97,7 @@ const ClimatePage = () => (
           height={2868}
           objectFit="cover"
           layout="responsive"
-          loading="eager"
+          sizes="33vw"
         />
         <Image
           src="/photos/forest_fall.jpg"
@@ -105,6 +106,7 @@ const ClimatePage = () => (
           height={2868}
           objectFit="cover"
           layout="responsive"
+          sizes="33vw"
         />
       </Grid>
       <SectionHeader title="Forests" color="green" children={<Forests />} />
@@ -128,6 +130,7 @@ const ClimatePage = () => (
           height={3504}
           objectFit="cover"
           layout="responsive"
+          sizes="33vw"
         />
         <Image
           src="/photos/roads_1.jpg"
@@ -136,6 +139,7 @@ const ClimatePage = () => (
           height={2868}
           objectFit="cover"
           layout="responsive"
+          sizes="33vw"
         />
         <Image
           src="/photos/roads_3.jpg"
@@ -144,6 +148,7 @@ const ClimatePage = () => (
           height={3504}
           objectFit="cover"
           layout="responsive"
+          sizes="33vw"
         />
       </Grid>
       <SectionHeader title="Roads" color="azure" children={<Roads />} />
@@ -165,6 +170,7 @@ const ClimatePage = () => (
           height={4368}
           objectFit="cover"
           layout="responsive"
+          sizes="50vw"
         />
         <Image
           src="/photos/tree_portrait.jpg"
@@ -173,6 +179,7 @@ const ClimatePage = () => (
           height={4368}
           objectFit="cover"
           layout="responsive"
+          sizes="50vw"
         />
       </Grid>
     </Section>

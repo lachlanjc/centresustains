@@ -88,7 +88,7 @@ const Nav = () => {
             maxWidth: [128 * 1.5, 'none'],
             mx: 'auto',
             textAlign: 'center',
-            a: { mx: [2, 3], px: 2 }
+            a: { mx: [2, 3], px: 2, lineHeight: 1.75 }
           }}
         >
           <Link href="/forum" passHref>
