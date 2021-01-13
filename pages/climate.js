@@ -26,8 +26,8 @@ const ClimatePage = () => (
       <BGImg
         src="/photos/airplane_view.jpg"
         alt="View out an airplane window of State College dotted with puffy clouds"
-        width={4032}
-        height={3024}
+        width={3024}
+        height={2668}
         gradient="rgba(0,0,0,0), rgba(0,0,0,.375)"
         loading="eager"
       />
@@ -180,8 +180,8 @@ const ClimatePage = () => (
       as="section"
       variant="copy"
       sx={{
-        py: [4, 5, 6],
-        fontSize: 3,
+        py: [5, 6],
+        fontSize: [2, 3],
         p: { mt: 0 }
       }}
     >
