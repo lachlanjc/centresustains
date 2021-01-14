@@ -4918,7 +4918,7 @@ terser@^4.1.2:
     source-map "~0.6.1"
     source-map-support "~0.5.12"
 
-theme-ui@^0.6.0-alpha.4:
+theme-ui@^0.6.0-alpha.3:
   version "0.6.0-alpha.4"
   resolved "https://registry.yarnpkg.com/theme-ui/-/theme-ui-0.6.0-alpha.4.tgz#aba6de398847697bbc6ab37bb2b626b3db64c6d0"
   integrity sha512-VOGNpPO3eDKmM5QZZ7efWnXqnrow1hPbimR7bdQvBX7FcImGOG387uHVlGm4rGyIZvnQW/ExwQW+zJPsaxznlQ==

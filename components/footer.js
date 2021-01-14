@@ -7,7 +7,7 @@ const Footer = () => (
     as="footer"
     sx={{
       py: [3, 4],
-      bg: 'sunken',
+      bg: 'secondary',
       position: 'relative'
     }}
   >

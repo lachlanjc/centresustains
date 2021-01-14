@@ -5,7 +5,10 @@ import BGImg from '../components/bg-img'
 import SlideUp from '../components/slide-up'
 import { Section, SectionHeader } from '../components/learn/section'
 
-import { EmissionsChart, EmissionsLegend } from '../components/inventory/emissions-chart'
+import {
+  EmissionsChart,
+  EmissionsLegend
+} from '../components/inventory/emissions-chart'
 import Footprint from '../components/inventory/footprint'
 import Reports from '../components/inventory/reports'
 
@@ -22,7 +25,10 @@ const ClimatePage = () => (
       description="Learn about how climate change is affecting State College & all of Pennsylvania, and explore our breakdown of local carbon emissions."
       image="https://centresustains.com/cards/climate.jpg"
     />
-    <Box as="header" sx={{ position: 'relative', bg: 'secondary' }}>
+    <Box
+      as="header"
+      sx={{ position: 'relative', bg: 'secondary', overflow: 'hidden' }}
+    >
       <BGImg
         src="/photos/airplane_view.jpg"
         alt="View out an airplane window of State College dotted with puffy clouds"
@@ -65,13 +71,21 @@ const ClimatePage = () => (
         <Heading as="h3" variant="headline">
           Local carbon footprint
         </Heading>
-        <Grid columns={[null, null, 2]} gap={3} sx={{ alignItems: 'center', pb: 3 }}>
+        <Grid
+          columns={[null, null, 2]}
+          gap={3}
+          sx={{ alignItems: 'center', pb: 3 }}
+        >
           <Footprint />
         </Grid>
         <Heading as="h3" variant="headline">
           Emissions by sector
         </Heading>
-        <Grid columns={[null, null, '3fr 4fr']} gap={3} sx={{ alignItems: 'center', pb: 4 }}>
+        <Grid
+          columns={[null, null, '3fr 4fr']}
+          gap={3}
+          sx={{ alignItems: 'center', pb: 4 }}
+        >
           <EmissionsChart />
           <EmissionsLegend />
         </Grid>
