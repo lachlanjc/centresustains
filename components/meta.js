@@ -8,8 +8,8 @@ const makeTitle = (title, name) =>
 const Meta = ({
   title = 'Centre Sustains',
   name = 'Centre Sustains',
-  description,
-  image = 'https://centresustains.com/card.jpg',
+  description = 'We’re a group in Centre County, PA working with local scientists, engineers, & urban planners on pragmatic, fiscally responsible environmental stewardship.',
+  image = 'https://centresustains.com/cards/default.jpg',
   url = 'https://centresustains.com',
   children
 }) => (

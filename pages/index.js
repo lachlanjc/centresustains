@@ -27,7 +27,7 @@ const HomePage = () => (
         width={9926}
         height={4256}
         gradient="rgba(0,0,0,0), rgba(0,0,0,0.625)"
-        loading="eager"
+        priority
       />
       <SlideUp>
         <Heading

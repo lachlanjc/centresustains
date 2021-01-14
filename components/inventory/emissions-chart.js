@@ -1,9 +1,11 @@
-import Chart from './chart'
 import { Grid, Flex, Box, Text } from 'theme-ui'
 import { colors } from '../../lib/theme'
 import { Fragment } from 'react'
 import BuildingEmissions from './building-emissions'
 import TransitEmissions from './transit-emissions'
+
+import dynamic from 'next/dynamic'
+const Chart = dynamic(() => import('./chart'), { ssr: false })
 
 const data = [
   {
@@ -86,8 +88,8 @@ export const EmissionsLegend = () => (
     columns={[null, 2]}
     sx={{ p: 0, lineHeight: 'caption' }}
   >
-    {data.map(row => (
-      <Item {...row} />
+    {data.map(item => (
+      <Item key={item.fill} {...item} />
     ))}
   </Grid>
 )

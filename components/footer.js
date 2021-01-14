@@ -13,6 +13,7 @@ const Footer = () => (
   >
     <BGImg
       src="/content/footer.jpg"
+      alt="Mount Nittany and skyline of State College houses at sunset"
       width={3405}
       height={1086}
     />

@@ -46,6 +46,7 @@ const Chart = ({ data }) => {
       <PieChart width={width} height={SIZE}>
         <Pie
           data={data}
+          dataKey="value"
           cx={width / 2}
           cy={SIZE / 2}
           innerRadius={64}
@@ -54,7 +55,7 @@ const Chart = ({ data }) => {
           paddingAngle={2}
         >
           {data.map(entry => (
-            <Cell fill={colors[entry.fill]} stroke="none" />
+            <Cell fill={colors[entry.fill]} stroke="none" key={entry.name} />
           ))}
         </Pie>
       </PieChart>
