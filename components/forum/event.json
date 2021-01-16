@@ -29,12 +29,12 @@
   },
   "offers": {
     "@type": "Offer",
-    "name": "Free Admission",
+    "name": "Free & open to the public",
     "url": "https://centresustains.com",
     "price": "0",
     "priceCurrency": "USD",
     "availability": "https://schema.org/PreOrder",
-    "validFrom": "2021-01-16",
+    "validFrom": "2021-01-15",
     "validThrough": "2021-04-13"
   },
   "performer": {
