@@ -1,7 +1,7 @@
 const withMDX = require('@next/mdx')()
 module.exports = withMDX({
   pageExtensions: ['js', 'mdx'],
-  async rewrites() {
+  async redirects() {
     return [
       {
         source: '/card.jpg',
