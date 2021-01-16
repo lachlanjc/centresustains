@@ -76,8 +76,8 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
             p: 2,
             m: 3,
             cursor: 'pointer',
-            transition: '0.125s all ease-in-out',
             willChange: 'transform, filter'
+            transition: '0.125s transform ease-in-out, 0.25s filter ease-out',
           },
           ':focus svg:last-of-type,:hover svg:last-of-type': {
             outline: 'none',
