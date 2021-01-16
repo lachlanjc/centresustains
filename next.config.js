@@ -5,7 +5,8 @@ module.exports = withMDX({
     return [
       {
         source: '/card.jpg',
-        destination: '/cards/default.jpg'
+        destination: '/cards/default.jpg',
+        permanent: true
       }
     ]
   }
