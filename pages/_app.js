@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import * as Fathom from 'fathom-client'
+import { debounce } from 'lodash'
 
 import '../public/fonts.css'
 import { ThemeProvider } from 'theme-ui'
@@ -41,7 +42,7 @@ const App = ({ Component, pageProps }) => {
   useEffect(() => {
     const goal = scrollGoals[pathname]
 
-    const logPageEndReached = e => {
+    const logPageEndReached = () => {
       if (
         goal &&
         window.innerHeight + window.scrollY >= document.body.offsetHeight &&
@@ -53,13 +54,13 @@ const App = ({ Component, pageProps }) => {
     }
 
     if (goal) {
-      window.addEventListener('scroll', logPageEndReached)
-
+      const logPageEvent = debounce(logPageEndReached, 50)
+      window.addEventListener('scroll', logPageEvent)
       return () => {
-        window.removeEventListener('scroll', logPageEndReached)
+        window.removeEventListener('scroll', logPageEvent)
       }
     }
-  }, [pathname])
+  }, [pathname, loggedPageScroll])
 
   return (
     <ThemeProvider theme={theme}>
