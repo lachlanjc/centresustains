@@ -11,10 +11,10 @@ import Nav from '../components/nav'
 import Footer from '../components/footer'
 
 const scrollGoals = {
-  '/': 'A7NVRGKL',
-  '/forum': '62DPAVRO',
-  '/resources': 'UWQVJHND',
-  '/climate': 'AGN8URLH'
+  '/': 'WTEMNVOP',
+  '/forum': '5LBSXX3J',
+  '/resources': 'RES0RWA7',
+  '/climate': 'JEPKJPOI'
 }
 
 const App = ({ Component, pageProps }) => {
