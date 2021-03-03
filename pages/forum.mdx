@@ -8,23 +8,23 @@ import NavCard from '../components/nav-card'
 import Feature, { CompactFeature } from '../components/forum/feature'
 import { Timeline, TimelineStep } from '../components/timeline'
 import {
-  ChatRightQuote,
-  Award,
-  Building,
-  Flag,
-  Shop,
-  CalendarRange,
-  ClipboardData
+ChatRightQuote,
+Award,
+Building,
+Flag,
+Shop,
+CalendarRange,
+ClipboardData
 } from 'react-bootstrap-icons'
 import event from '../components/forum/event.json'
 
 export const Lara = () => (
-  <Avatar
-    size={24}
-    alt="Lara Fowler's avatar"
-    src="/content/lara_fowler.jpg"
-    sx={{ ml: 1 }}
-  />
+<Avatar
+size={24}
+alt="Lara Fowler's avatar"
+src="/content/lara_fowler.jpg"
+sx={{ ml: 1 }}
+/>
 )
 
 export default props => <Story color="brown" {...props} />
@@ -63,29 +63,28 @@ This initial forum will help set the stage for promoting policies and practices 
 ### All are welcome to attend
 
 <Grid
-  columns={[null, 2]}
-  gap={[0, 3]}
-  sx={{ mt: 3, mb: [4, 5], alignItems: 'end' }}
->
-  <CompactFeature
+columns={[null, 2]}
+gap={[0, 3]}
+sx={{ mt: 3, mb: [4, 5], alignItems: 'end' }}>
+<CompactFeature
     icon={Flag}
     color="green"
     name="Community members"
     desc="Residents & people who work here"
-  />
-  <CompactFeature
+/>
+<CompactFeature
     icon={Award}
     color="yellow"
     name="Local government"
     desc="Elected officials"
   />
-  <CompactFeature
+<CompactFeature
     icon={Building}
     color="blue"
     name="Students"
     desc="Penn State & SCASD"
   />
-  <CompactFeature icon={Shop} color="pink" name="Business owners" />
+<CompactFeature icon={Shop} color="pink" name="Business owners" />
 </Grid>
 
 ## Agenda <CalendarRange />
@@ -116,6 +115,6 @@ Fowler at <lbf10@psu.edu>.
 
 Subject to our [Code of Conduct](/conduct).
 
-<NavCard color="green" icon={ClipboardData}>
+<NavCard color="green" icon={ClipboardData} to="/survey">
   Take the survey
 </NavCard>

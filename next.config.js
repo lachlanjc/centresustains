@@ -4,6 +4,11 @@ module.exports = withMDX({
   async redirects() {
     return [
       {
+        source: '/survey',
+        destination: 'https://www.surveymonkey.com/r/CRPAplan',
+        permanent: false
+      },
+      {
         source: '/card.jpg',
         destination: '/cards/default.jpg',
         permanent: true

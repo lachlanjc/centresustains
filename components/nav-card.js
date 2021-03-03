@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Box, Flex } from 'theme-ui'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
 import { colors } from '../lib/theme'
+import { trackGoal } from 'fathom-client'
 
 const NavCard = ({
   to = '/',
@@ -17,6 +18,10 @@ const NavCard = ({
       className="nav-card"
       style={{ '--card-color': colors[color] }}
       {...props}
+      target={to === '/survey' ? '_blank' : undefined}
+      onClick={() => {
+        if (to === '/survey') trackGoal('HEE53JFH', 0)
+      }}
       sx={{
         alignItems: 'center',
         justifyContent: 'space-between',

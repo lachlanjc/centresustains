@@ -1,5 +1,6 @@
 import { Flex, Text } from 'theme-ui'
 import Link from 'next/link'
+import { trackGoal } from 'fathom-client'
 
 const CTA = ({
   primary = [],
@@ -19,7 +20,14 @@ const CTA = ({
       <Text
         as="a"
         variant="buttons.primary"
-        target={primary[0].startsWith('http') ? '_blank' : '_self'}
+        target={
+          primary[0].startsWith('http') || primary[0] === '/survey'
+            ? '_blank'
+            : undefined
+        }
+        onClick={() => {
+          if (primary[0] === '/survey') trackGoal('HEE53JFH', 0)
+        }}
         sx={{
           fontSize: 2,
           border: '3px solid',

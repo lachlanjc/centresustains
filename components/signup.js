@@ -81,8 +81,7 @@ const Signup = () => {
       }}
     >
       <Heading as="h2" variant="subheadline" mt={0}>
-        Get an email when{' '}
-        {pathname === '/forum' ? 'event registration' : 'the survey'} opens
+        Get an email when event registration opens
       </Heading>
       {done ? (
         <Grid
@@ -147,29 +146,28 @@ const Signup = () => {
           </Text>
         </Alert>
       )}
-      {!done &&
-        !error && (
-          <Flex
-            as="footer"
-            sx={{
-              mt: 3,
-              alignItems: 'center',
-              flexWrap: 'wrap'
-            }}
-          >
-            <Avatar
-              size={48}
-              alt="Pam's avatar"
-              src="/tag/pam_adams.jpg"
-              sx={{ pr: 2 }}
-            />
-            <Text as="p" variant="caption" pt={[2, 0]}>
-              I’ll send you 4 emails between now & April, unsubscribe any time.
-              <br />
-              I’d love to have you involved. <strong>—Pam</strong>
-            </Text>
-          </Flex>
-        )}
+      {!done && !error && (
+        <Flex
+          as="footer"
+          sx={{
+            mt: 3,
+            alignItems: 'center',
+            flexWrap: 'wrap'
+          }}
+        >
+          <Avatar
+            size={48}
+            alt="Pam's avatar"
+            src="/tag/pam_adams.jpg"
+            sx={{ pr: 2 }}
+          />
+          <Text as="p" variant="caption" pt={[2, 0]}>
+            I’ll send you 3 emails between now & April, unsubscribe any time.
+            <br />
+            I’d love to have you involved. <strong>—Pam</strong>
+          </Text>
+        </Flex>
+      )}
     </Card>
   )
 }

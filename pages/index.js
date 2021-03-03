@@ -42,7 +42,10 @@ const HomePage = () => (
           working&nbsp;on stewardship & climate planning in our community.
         </Text>
         <CTA
-          primary={['/climate', 'Learn about climate']}
+          primary={[
+            'https://www.surveymonkey.com/r/CRPAplan',
+            'Take the survey'
+          ]}
           secondary={['/resources', 'Explore resources']}
           colors={['primary', 'white', 'rgba(255,255,255,0.5)']}
           sx={{ mt: [3, 4], px: 3 }}
