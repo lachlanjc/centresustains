@@ -46,7 +46,7 @@ const HomePage = () => (
             'https://www.surveymonkey.com/r/CRPAplan',
             'Take the survey'
           ]}
-          secondary={['/resources', 'Explore resources']}
+          secondary={['/climate', 'Learn about climate']}
           colors={['primary', 'white', 'rgba(255,255,255,0.5)']}
           sx={{ mt: [3, 4], px: 3 }}
         />
