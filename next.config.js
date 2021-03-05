@@ -9,6 +9,11 @@ module.exports = withMDX({
         permanent: false
       },
       {
+        source: '/survey.',
+        destination: 'https://www.surveymonkey.com/r/CRPAplan',
+        permanent: true
+      },
+      {
         source: '/card.jpg',
         destination: '/cards/default.jpg',
         permanent: true
