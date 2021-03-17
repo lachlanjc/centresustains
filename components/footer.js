@@ -1,6 +1,20 @@
-import { Box, Container } from 'theme-ui'
+import { Box, Container, Flex, Link } from 'theme-ui'
+import { Instagram, Facebook } from 'react-bootstrap-icons'
 import BGImg from './bg-img'
 import Content from './footer.mdx'
+
+const Service = ({ href, service, icon: Icon, ...props }) => (
+  <Link
+    target="_blank"
+    rel="noopener"
+    href={href}
+    title={`Centre Sustains on ${service}`}
+    children={<Icon size={32} />}
+    mx={3}
+    color="white"
+    {...props}
+  />
+)
 
 const Footer = () => (
   <Box
@@ -41,6 +55,18 @@ const Footer = () => (
         }
       }}
     >
+      <Flex sx={{ justifyContent: 'center', alignItems: 'center', mt: 3 }}>
+        <Service
+          href="https://instagram.com/centreregionalplanning"
+          service="Instagram"
+          icon={Instagram}
+        />
+        <Service
+          href="https://facebook.com/centreregionalplanning"
+          service="Facebook"
+          icon={Facebook}
+        />
+      </Flex>
       <Content />
     </Container>
   </Box>
