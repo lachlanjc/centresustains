@@ -27,7 +27,7 @@ const ClimatePage = () => (
     />
     <Box
       as="header"
-      sx={{ position: 'relative', bg: 'secondary', overflow: 'hidden' }}
+      sx={{ position: 'relative', bg: 'slate', overflow: 'hidden' }}
     >
       <BGImg
         src="/photos/airplane_view.jpg"

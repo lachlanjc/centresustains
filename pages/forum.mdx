@@ -1,4 +1,4 @@
-import { Text, Flex, Grid } from 'theme-ui'
+import { Text, Flex, Button, Grid } from 'theme-ui'
 import Meta from '../components/meta'
 import Story from '../components/story'
 import Signup from '../components/signup'
@@ -8,30 +8,30 @@ import NavCard from '../components/nav-card'
 import Feature, { CompactFeature } from '../components/forum/feature'
 import { Timeline, TimelineStep } from '../components/timeline'
 import {
-ChatRightQuote,
-Award,
-Building,
-Flag,
-Shop,
-CalendarRange,
-ClipboardData
+  ChatRightQuote,
+  Award,
+  Building,
+  Flag,
+  Shop,
+  CalendarRange,
+  ClipboardData
 } from 'react-bootstrap-icons'
 import event from '../components/forum/event.json'
 
 export const Lara = () => (
-<Avatar
-size={24}
-alt="Lara Fowler's avatar"
-src="/content/lara_fowler.jpg"
-sx={{ ml: 1 }}
-/>
+  <Avatar
+    size={24}
+    alt="Lara Fowler's avatar"
+    src="/content/lara_fowler.jpg"
+    sx={{ ml: 1 }}
+  />
 )
 
 export default props => <Story color="brown" {...props} />
 
 <Meta
   title="Spring 2021 Climate Forum"
-  description="April 2021, we’re holding an open forum on Zoom for community members to help inform our climate planning & strategies in central Pennsylvania."
+  description="April 13, 2021, we’re holding an open forum on Zoom for community members to help inform our climate planning & strategies in central Pennsylvania."
   image="https://centresustains.com/cards/forum.jpg"
 />
 <script
@@ -44,48 +44,60 @@ export default props => <Story color="brown" {...props} />
 
 ## We’re holding an open forum on Zoom for community members to help inform our climate planning & strategies.
 
-<Flex as="section">
+<Flex as="section" sx={{ alignItems: 'center', mb: [3, 4, 5] }}>
 <Cal month="April" day={13} />
 
 **April 13, 2021**  
 6:30–8:30pm
 
-</Flex>
+<Button
+  as="a"
+  href="/forum-register"
+  target="_blank"
+  rel="noopener"
+  ml="auto"
+  style={{ color: 'white' }}
+>
+  Register now &rarr;
+</Button>
 
-<Signup />
+</Flex>
 
 ## <Text as="span" color="green">Learn</Text> about climate change in our area,<br /><Text as="span" color="brown">discuss</Text>&nbsp;local government’s plans.
 
-We will convene a forum on understanding and managing climate-related risks facing our community so that we are able to increase our resilience. The purpose of this forum is to bring people together to identify issues, think about what the future might look like for Central Pennsylvania, and find common ground solutions.
+We are convening a forum on understanding and managing climate-related risks facing our community, aimed at increasing our resilience. The purpose of this forum is to bring people together to identify issues, think about what the future might look like for Central Pennsylvania, and find common ground solutions.
 
 This initial forum will help set the stage for promoting policies and practices that improve our community, lessen human impacts on the environment, strengthen local economies, and engage community members.
 
 ### All are welcome to attend
 
 <Grid
-columns={[null, 2]}
-gap={[0, 3]}
-sx={{ mt: 3, mb: [4, 5], alignItems: 'end' }}>
-<CompactFeature
+  columns={[null, 2]}
+  gap={[0, 3]}
+  sx={{ mt: 3, mb: [4, 5], alignItems: 'end' }}
+>
+  <CompactFeature
     icon={Flag}
     color="green"
     name="Community members"
     desc="Residents & people who work here"
-/>
-<CompactFeature
+  />
+  <CompactFeature
     icon={Award}
     color="yellow"
     name="Local government"
     desc="Elected officials"
   />
-<CompactFeature
+  <CompactFeature
     icon={Building}
     color="blue"
     name="Students"
     desc="Penn State & SCASD"
   />
-<CompactFeature icon={Shop} color="pink" name="Business owners" />
+  <CompactFeature icon={Shop} color="pink" name="Business owners" />
 </Grid>
+
+<Signup />
 
 ## Agenda <CalendarRange />
 
@@ -109,8 +121,9 @@ sx={{ mt: 3, mb: [4, 5], alignItems: 'end' }}>
 
 This will be a facilitated forum led by Professor Lara Fowler and her law students
 who are enrolled in an environmental mediation course at Penn State Law.
+([Read&nbsp;more here.](/forum-details))
 They will be conducting a series of interviews before the forum;
-if you would like to talk with them, please contact <Lara /> Lara
+if&nbsp;you would like to talk with them, please contact <Lara /> Lara
 Fowler at <lbf10@psu.edu>.
 
 Subject to our [Code of Conduct](/conduct).

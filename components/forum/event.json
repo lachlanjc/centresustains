@@ -30,11 +30,11 @@
   "offers": {
     "@type": "Offer",
     "name": "Free & open to the public",
-    "url": "https://centresustains.com",
+    "url": "https://centresustains.com/forum",
     "price": "0",
     "priceCurrency": "USD",
-    "availability": "https://schema.org/PreOrder",
-    "validFrom": "2021-01-15",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2021-03-18",
     "validThrough": "2021-04-13"
   },
   "performer": {

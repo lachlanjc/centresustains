@@ -81,7 +81,7 @@ const Signup = () => {
       }}
     >
       <Heading as="h2" variant="subheadline" mt={0}>
-        Get an email when event registration opens
+        Sign up for (infrequent) email updates
       </Heading>
       {done ? (
         <Grid
@@ -162,7 +162,7 @@ const Signup = () => {
             sx={{ pr: 2 }}
           />
           <Text as="p" variant="caption" pt={[2, 0]}>
-            I’ll send you 3 emails between now & April, unsubscribe any time.
+            I’ll send you 2 emails between now & April, unsubscribe any time.
             <br />
             I’d love to have you involved. <strong>—Pam</strong>
           </Text>
