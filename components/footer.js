@@ -21,7 +21,7 @@ const Footer = () => (
     as="footer"
     sx={{
       py: [3, 4],
-      bg: 'secondary',
+      bg: 'slate',
       position: 'relative'
     }}
   >

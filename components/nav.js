@@ -1,7 +1,5 @@
 import { useColorMode, Box, Container, IconButton, NavLink } from 'theme-ui'
 import Link from 'next/link'
-import Image from 'next/image'
-import { useRouter } from 'next/router'
 import { MoonStars as Moon } from 'react-bootstrap-icons'
 
 const linkEffect = {
@@ -42,13 +40,19 @@ export const ColorSwitcher = props => {
 }
 
 const Nav = () => {
-  const { pathname } = useRouter()
   const [colorMode] = useColorMode()
   return (
     <Box
       as="nav"
-      variant={'cards.translucent' + (colorMode === 'dark' ? 'Dark' : '')}
-      sx={{ position: 'absolute', top: 0, left: 0, right: 0, py: 2, zIndex: 4 }}
+      sx={{
+        variant: 'cards.translucent' + (colorMode === 'dark' ? 'Dark' : ''),
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        py: 2,
+        zIndex: 4
+      }}
     >
       <Container
         variant="copy"

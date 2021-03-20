@@ -52,6 +52,9 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
           WebkitTapHighlightColor: 'transparent',
           p: {
             variant: 'text.title',
+            maxWidth: 'layoutPlus',
+            mx: 'auto',
+            fontFamily: 'body',
             fontSize: [4, 5, 6],
             lineHeight: ['body', 'caption'],
             textAlign: 'center',
