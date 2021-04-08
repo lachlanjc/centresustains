@@ -15,12 +15,13 @@ module.exports = withMDX({
       },
       {
         source: '/forum-details',
-        destination: 'https://pennstatelaw.psu.edu/events/forum-climate-impacts-centre-region',
+        destination: '/forum',
         permanent: false
       },
       {
         source: '/forum-register',
-        destination: 'https://pennstatelaw.psu.edu/form/addressing-climate-impacts-centre-region-registration',
+        destination:
+          'https://psu.zoom.us/meeting/register/tJ0ucO2orz0uG9YAUgxYrSyKxkoOUfUUlgjS',
         permanent: false
       },
       {
