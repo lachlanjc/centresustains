@@ -46,6 +46,7 @@ export const SectionHeader = ({ color, title, children, ...props }) => (
       details: {
         ml: 0,
         my: [5, 6],
+        listStyle: 'none',
         svg: { color: 'var(--section-color)', verticalAlign: 'middle' },
         summary: {
           outline: 'none',
