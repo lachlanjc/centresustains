@@ -162,9 +162,10 @@ const Signup = () => {
             sx={{ pr: 2 }}
           />
           <Text as="p" variant="caption" pt={[2, 0]}>
-            I’ll send you 2 emails between now & April, unsubscribe any time.
+            I’ll send you an email a few times a year, unsubscribe any time.
             <br />
-            I’d love to have you involved. <strong>—Pam</strong>
+            You’ll be joining over 500 neighbors on the list.{' '}
+            <strong>—Pam</strong>
           </Text>
         </Flex>
       )}

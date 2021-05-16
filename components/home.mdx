@@ -5,7 +5,8 @@ import {
   ChatRightQuote,
   CalendarEvent,
   JournalAlbum,
-  Star
+  Star,
+  PlayCircleFill
 } from 'react-bootstrap-icons'
 import NavCard from './nav-card'
 import Signup from './signup'
@@ -16,22 +17,24 @@ We’re <Link href="/about">[a group of elected officials](/about)</Link>
 in Centre County working with local scientists, engineers, & urban planners
 on pragmatic, fiscally responsible environmental stewardship.
 
-## Take the survey <Star />
+<Signup />
 
-We’re running a survey for 8 weeks on Centre County’s climate adaptation plans.
-We’d love to have you weigh in—whether you live here, work in the area,
-or go to Penn&nbsp;State or State&nbsp;High, we want to hear your opinion.
+## Spring 2021 survey <Star />
 
-<NavCard color="green" icon={ClipboardData} to="/survey">
-  Take the survey
-</NavCard>
+We received 938 responses online, & 494 responses to the mailed survey—thank
+you. We’ll update this page with a summary of the results in the
+coming weeks.
+
+<br />
 
 ## Public forum <ChatRightQuote />
 
-After the survey, on April 13, 2021, we will be running a <Link href="/forum" passHref><a>public forum event</a></Link>
+After the survey, on April 13, 2021, we ran a <Link href="/forum" passHref><a>public forum event</a></Link>
 with elected officials, local residents, & business owners to discuss our plans.
 
-<Signup />
+<NavCard color="aqua" icon={PlayCircleFill} to="/forum">
+  Watch the forum
+</NavCard>
 
 ## Local climate change <JournalAlbum />
 

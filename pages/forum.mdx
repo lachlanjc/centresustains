@@ -1,9 +1,8 @@
-import { Text, Flex, Button, Grid } from 'theme-ui'
+import { Text, Flex, Button, Grid, Box, Embed } from 'theme-ui'
 import Meta from '../components/meta'
 import Story from '../components/story'
 import Signup from '../components/signup'
 import Avatar from '../components/avatar'
-import Cal from '../components/cal'
 import NavCard from '../components/nav-card'
 import Feature, { CompactFeature } from '../components/forum/feature'
 import { Timeline, TimelineStep } from '../components/timeline'
@@ -42,15 +41,18 @@ export default props => <Story color="brown" {...props} />
 
 # <ChatRightQuote />Forum
 
-## We’re holding an open forum on Zoom for community members to help inform our climate planning & strategies.
+## On April 13, we held an open forum on Zoom for community members to help inform our climate planning & strategies.
 
-<Flex as="section" sx={{ alignItems: 'center', mb: [3, 4, 5] }}>
-<Cal month="April" day={13} />
-
-**April 13, 2021**  
-6:30–8:30pm
-
-</Flex>
+<Box mb={4}>
+  <iframe
+    src="https://videoplayer.telvue.com/player/GNduNoua2rBThhw6N4PRP9OCSPf6B2ru/playlists/4811/media/634215?autostart=false&showtabssearch=true&fullscreen=true&jwsource=cl"
+    width="400"
+    height="225"
+    allowFullscreen="true"
+    frameBorder="0"
+    allow="autoplay; fullscreen"
+  />
+</Box>
 
 ## <Text as="span" color="green">Learn</Text> about climate change in our area,<br /><Text as="span" color="brown">discuss</Text>&nbsp;local government’s plans.
 
@@ -116,7 +118,3 @@ if&nbsp;you would like to talk with them, please contact <Lara /> Lara
 Fowler at <lbf10@psu.edu>.
 
 Subject to our [Code of Conduct](/conduct).
-
-<NavCard color="green" icon={ClipboardData} to="/survey">
-  Take the survey
-</NavCard>
