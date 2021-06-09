@@ -101,6 +101,7 @@ const ClimatePage = () => (
           height={2868}
           objectFit="cover"
           layout="responsive"
+          placeholder="blur"
           sizes="33vw"
           priority
         />
@@ -111,6 +112,7 @@ const ClimatePage = () => (
           height={2868}
           objectFit="cover"
           layout="responsive"
+          placeholder="blur"
           sizes="33vw"
         />
         <Image
@@ -120,6 +122,7 @@ const ClimatePage = () => (
           height={2868}
           objectFit="cover"
           layout="responsive"
+          placeholder="blur"
           sizes="33vw"
         />
       </Grid>
@@ -132,6 +135,7 @@ const ClimatePage = () => (
         width={3072}
         height={2048}
         layout="responsive"
+        placeholder="blur"
       />
       <SectionHeader title="Weather" color="aqua" children={<Weather />} />
     </Section>
@@ -144,6 +148,7 @@ const ClimatePage = () => (
           height={3504}
           objectFit="cover"
           layout="responsive"
+          placeholder="blur"
           sizes="33vw"
         />
         <Image
@@ -153,6 +158,7 @@ const ClimatePage = () => (
           height={2868}
           objectFit="cover"
           layout="responsive"
+          placeholder="blur"
           sizes="33vw"
         />
         <Image
@@ -162,6 +168,7 @@ const ClimatePage = () => (
           height={3504}
           objectFit="cover"
           layout="responsive"
+          placeholder="blur"
           sizes="33vw"
         />
       </Grid>
@@ -174,6 +181,7 @@ const ClimatePage = () => (
         width={3072}
         height={2048}
         layout="responsive"
+        placeholder="blur"
       />
       <SectionHeader title="Farms" color="purple" children={<Farms />} />
       <Grid as="footer" columns={2}>
@@ -184,6 +192,7 @@ const ClimatePage = () => (
           height={4368}
           objectFit="cover"
           layout="responsive"
+          placeholder="blur"
           sizes="50vw"
         />
         <Image
@@ -193,6 +202,7 @@ const ClimatePage = () => (
           height={4368}
           objectFit="cover"
           layout="responsive"
+          placeholder="blur"
           sizes="50vw"
         />
       </Grid>

@@ -24,7 +24,13 @@ const File = ({ img, width, height, url, name }) => (
     href={url}
     target="_blank"
   >
-    <Image src={img} alt={`${name} thumbnail `} width={width} height={height} />
+    <Image
+      src={img}
+      alt={`${name} thumbnail `}
+      width={width}
+      height={height}
+      placeholder="blur"
+    />
     <span>{name}</span>
   </Flex>
 )

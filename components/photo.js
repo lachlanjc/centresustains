@@ -26,6 +26,7 @@ const Photo = ({ src, width, height, alt, showAlt = true, ...props }) => {
         layout="responsive"
         objectFit="cover"
         objectPosition="center"
+        placeholder="blur"
       />
       {showAlt && alt && (
         <Text
