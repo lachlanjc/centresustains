@@ -1,4 +1,4 @@
-import { Text, Flex, Button, Grid, Box, Embed } from 'theme-ui'
+import { Text, Flex, Button, Grid, Heading, Embed } from 'theme-ui'
 import Meta from '../components/meta'
 import Story from '../components/story'
 import Signup from '../components/signup'
@@ -41,25 +41,77 @@ export default props => <Story color="brown" {...props} />
 
 # <ChatRightQuote />Forum
 
-## On April 13, we held an open forum on Zoom for community members to help inform our climate planning & strategies.
+## This spring, we held an open forum on Zoom for community members to help inform our climate planning & strategies.
+
+<Grid
+  as="dl"
+  columns={[null, 2]}
+  gap={[0, 3]}
+  sx={{
+    my: [3, 4],
+    alignItems: 'end',
+    dt: {
+      variant: 'text.title',
+      fontFamily: 'body',
+      fontSize: [4, 5]
+    },
+    dd: {
+      color: 'muted',
+      fontWeight: 'bold',
+      mt: 1,
+      ml: 0
+    }
+  }}
+>
+  <div>
+    <dt>April 13</dt>
+    <dd>2021</dd>
+  </div>
+  <div>
+    <dt>150</dt>
+    <dd>participants</dd>
+  </div>
+</Grid>
 
 <Embed
-  sx={{ mb: 4 }}
+  scrolling="no"
   src="https://videoplayer.telvue.com/player/GNduNoua2rBThhw6N4PRP9OCSPf6B2ru/playlists/4811/media/634215?autostart=false&showtabssearch=true&fullscreen=true&jwsource=cl"
 />
+<Text as="p" variant="caption" sx={{ textAlign: 'center', pt: 2 }}>
+  (Skip 24:00–1:17)
+</Text>
 
-## <Text as="span" color="green">Learn</Text> about climate change in our area,<br /><Text as="span" color="brown">discuss</Text>&nbsp;local government’s plans.
+Penn State Law students facilitated small group conversations based around these questions:
 
-We are convening a forum on understanding and managing climate-related risks facing our community, aimed at increasing our resilience. The purpose of this forum is to bring people together to identify issues, think about what the future might look like for Central Pennsylvania, and find common ground solutions.
+<Timeline>
+  <TimelineStep
+    name="What do you see as existing or potential climate impacts in the Centre County region?"
+    color="pink"
+  />
+  <TimelineStep
+    name="What opportunities do you see in addressing or adapting to these impacts?"
+    color="red"
+  />
+  <TimelineStep
+    name="What actions would you like see in this region, and what actions do you want to see your local governmental officials take?"
+    color="brown"
+  />
+  <TimelineStep
+    name="What three messages do you want your facilitators to report back to the broader group involved in this forum?"
+    color="yellow"
+  />
+</Timeline>
 
-This initial forum will help set the stage for promoting policies and practices that improve our community, lessen human impacts on the environment, strengthen local economies, and engage community members.
+During the forum, participants shared their perspectives on the issues or
+challenges they saw affecting this region. They also shared their vision for
+potential action they wanted to see local governments take.
 
-### All are welcome to attend
+Subject to our [Code of Conduct](/conduct).
 
 <Grid
   columns={[null, 2]}
   gap={[0, 3]}
-  sx={{ mt: 3, mb: [4, 5], alignItems: 'end' }}
+  sx={{ mt: 4, mb: [4, 5], alignItems: 'end' }}
 >
   <CompactFeature
     icon={Flag}
@@ -85,30 +137,3 @@ This initial forum will help set the stage for promoting policies and practices 
 <Signup />
 
 ## Agenda <CalendarRange />
-
-<Timeline mt={2}>
-  <TimelineStep
-    name="Welcome, introduction of key climate impacts in the area"
-    duration="30 mins"
-    color="yellow"
-  />
-  <TimelineStep
-    name="Randomly-assigned breakout rooms discuss"
-    duration="1 hour"
-    color="pink"
-  />
-  <TimelineStep
-    name="Sharing out from breakout rooms, conclusion"
-    duration="30 mins"
-    color="brown"
-  />
-</Timeline>
-
-This will be a facilitated forum led by Professor Lara Fowler and her law students
-who are enrolled in an environmental mediation course at Penn State Law.
-([Read&nbsp;more here.](/forum-details))
-They will be conducting a series of interviews before the forum;
-if&nbsp;you would like to talk with them, please contact <Lara /> Lara
-Fowler at <lbf10@psu.edu>.
-
-Subject to our [Code of Conduct](/conduct).

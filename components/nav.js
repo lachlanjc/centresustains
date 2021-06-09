@@ -40,12 +40,12 @@ export const ColorSwitcher = props => {
 }
 
 const Nav = () => {
-  const [colorMode] = useColorMode()
+  const [colorMode = 'dark'] = useColorMode()
   return (
     <Box
       as="nav"
+      variant={'cards.translucent' + (colorMode === 'dark' ? 'Dark' : '')}
       sx={{
-        variant: 'cards.translucent' + (colorMode === 'dark' ? 'Dark' : ''),
         position: 'absolute',
         top: 0,
         left: 0,

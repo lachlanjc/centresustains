@@ -15,10 +15,12 @@ export const TimelineStep = ({ name, duration, color = 'primary' }) => (
       aria-hidden
     />
     <Box>
-      <Text
-        sx={{ color: 'muted', display: 'block', fontSize: 1, pb: 1 }}
-        children={duration}
-      />
+      {duration && (
+        <Text
+          sx={{ color: 'muted', display: 'block', fontSize: 1, pb: 1 }}
+          children={duration}
+        />
+      )}
       <Text as="div" sx={{ color: 'text', fontSize: [2, 3] }} children={name} />
     </Box>
   </Flex>
@@ -31,7 +33,7 @@ export const Timeline = props => (
       flexDirection: 'column',
       lineHeight: 1.125,
       position: 'relative',
-      mb: [3, 4],
+      my: 3,
       ':before': {
         backgroundImage: theme => `linear-gradient(
           to bottom,
