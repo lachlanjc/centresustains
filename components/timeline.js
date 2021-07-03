@@ -5,7 +5,7 @@ export const TimelineStep = ({ name, duration, color = 'primary' }) => (
     sx={{
       alignItems: 'center',
       lineHeight: 'heading',
-      py: 2,
+      py: [2, 3],
       position: 'relative',
       zIndex: 1
     }}
