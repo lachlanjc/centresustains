@@ -5,12 +5,12 @@ module.exports = withMDX({
     return [
       {
         source: '/survey',
-        destination: 'https://www.surveymonkey.com/r/CRPAplan',
+        destination: '/',
         permanent: false
       },
       {
         source: '/survey.',
-        destination: 'https://www.surveymonkey.com/r/CRPAplan',
+        destination: '/',
         permanent: true
       },
       {
@@ -20,8 +20,7 @@ module.exports = withMDX({
       },
       {
         source: '/forum-register',
-        destination:
-          'https://psu.zoom.us/meeting/register/tJ0ucO2orz0uG9YAUgxYrSyKxkoOUfUUlgjS',
+        destination: '/forum',
         permanent: false
       },
       {
