@@ -1465,10 +1465,10 @@ fast-equals@^2.0.0:
   resolved "https://registry.yarnpkg.com/fast-equals/-/fast-equals-2.0.3.tgz#7039b0a039909f345a2ce53f6202a14e5f392efc"
   integrity sha512-0EMw4TTUxsMDpDkCg0rXor2gsg+npVrMIHbEhvD0HZyIhUX6AktC/yasm+qKwfyswd06Qy95ZKk8p2crTo0iPA==
 
-fathom-client@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/fathom-client/-/fathom-client-3.0.0.tgz#409c047cf1e2fea45b148e28d50fcd635e992893"
-  integrity sha512-d0oH2SHWCMIVLbbegB7nBIjSvbqbHrZBZxIOWSVAxlJL/roL0Ah9NNb6rTIcKMlA4gov9AjWQGEcZRzlnGc3XQ==
+fathom-client@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/fathom-client/-/fathom-client-3.1.0.tgz#077c3ed6b1742fc4ebdf4c477595e2f44260ee7b"
+  integrity sha512-HUn4GBC+loLPMxvET4/FxY0nUCczCHXlik3nptQe8UTLnlB89cXHzk4hpNL45BxgePTLNK5bq0Qq/Dk1RFj/og==
 
 fill-range@^7.0.1:
   version "7.0.1"
@@ -2662,10 +2662,10 @@ recharts-scale@^0.4.4:
   dependencies:
     decimal.js-light "^2.4.1"
 
-recharts@^2.0.9:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/recharts/-/recharts-2.0.9.tgz#048068eb01383291104548388712026948275f70"
-  integrity sha512-JNsXE80PuF3hugUCE7JqDOMSvu5xQLxtjOaqFKKZI2pCJ1PVJzhwDv4TWk0nO4AvADbeWzYEHbg8C5Hcrh42UA==
+recharts@^2.0.10:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/recharts/-/recharts-2.0.10.tgz#d5b212b06aeb4ba346c20c6987fe8f9f97d57b4d"
+  integrity sha512-yVIlHXPiSgxg8z+qApVnBcGVCLpluqNbXJenK3jKxsCb/FJzh77wyEztS6kXLXSC1RCZa7UABmBPBhqspMCF+g==
   dependencies:
     "@types/d3-scale" "^3.0.0"
     "@types/d3-shape" "^2.0.0"
