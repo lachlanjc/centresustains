@@ -1,6 +1,7 @@
 import { Box, Container, Flex, Link } from 'theme-ui'
 import { Instagram, Facebook } from 'react-bootstrap-icons'
 import BGImg from './bg-img'
+import img from '../public/content/footer.jpg'
 import Content from './footer.mdx'
 
 const Service = ({ href, service, icon: Icon, ...props }) => (
@@ -26,7 +27,7 @@ const Footer = () => (
     }}
   >
     <BGImg
-      src="/content/footer.jpg"
+      src={img}
       alt="Mount Nittany and skyline of State College houses at sunset"
       width={3405}
       height={1086}

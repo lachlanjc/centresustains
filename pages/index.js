@@ -4,6 +4,7 @@ import SlideUp from '../components/slide-up'
 import CTA from '../components/cta'
 import Story from '../components/story'
 import Home from '../components/home.mdx'
+import banner from '../public/photos/leaves_pano.jpg'
 
 const HomePage = () => (
   <>
@@ -22,10 +23,8 @@ const HomePage = () => (
       }}
     >
       <BGImg
-        src="/photos/leaves_pano.jpg"
+        src={banner}
         alt="Fog over a meadow with a sunlit tree"
-        width={9926}
-        height={4256}
         gradient="rgba(0,0,0,0), rgba(0,0,0,0.625)"
         priority
       />

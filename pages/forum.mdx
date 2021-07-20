@@ -4,6 +4,7 @@ import Story from '../components/story'
 import Signup from '../components/signup'
 import Avatar from '../components/avatar'
 import NavCard from '../components/nav-card'
+import CTA from '../components/cta'
 import Feature, { CompactFeature } from '../components/forum/feature'
 import { Timeline, TimelineStep } from '../components/timeline'
 import {
@@ -77,10 +78,17 @@ export default props => <Story color="aqua" {...props} />
   src="https://videoplayer.telvue.com/player/GNduNoua2rBThhw6N4PRP9OCSPf6B2ru/playlists/4811/media/634215?autostart=false&showtabssearch=true&fullscreen=true&jwsource=cl"
 />
 <Text as="p" variant="caption" sx={{ textAlign: 'center', pt: 2 }}>
-  (Skip 24:00–1:17)
+  (Skip 24:00–1:17:00)
 </Text>
 
-Penn State Law students facilitated small group conversations based around these questions:
+<CTA                                                                             
+  primary={['https://www.crcog.net/vertical/sites/%7B6AD7E2DC-ECE4-41CD-B8E1-BAC6A6336348%7D/uploads/Climate_Forum_Report_Exec_Summary_7.15.21.pdf', 'Read the summary']}
+  secondary={['https://www.crcog.net/vertical/sites/%7B6AD7E2DC-ECE4-41CD-B8E1-BAC6A6336348%7D/uploads/Climate_Forum_Report_7.16.21.pdf', 'Read the full report']}
+  colors={['aqua', 'muted']}
+  sx={{ my: [3, 4], color: 'muted' }}
+/>
+
+Penn State Law students facilitated several small group conversations, based around these questions:
 
 <Timeline>
   <TimelineStep

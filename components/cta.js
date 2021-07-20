@@ -1,6 +1,7 @@
 import { Flex, Text } from 'theme-ui'
 import Link from 'next/link'
-import { trackGoal } from 'fathom-client'
+
+const varExternal = (path, int, ext) => (path.startsWith('http') ? ext : int)
 
 const CTA = ({
   primary = [],
@@ -13,6 +14,7 @@ const CTA = ({
       justifyContent: 'center',
       alignItems: 'center',
       flexWrap: 'wrap',
+      color: colors[1],
       ...sx
     }}
   >
@@ -20,42 +22,35 @@ const CTA = ({
       <Text
         as="a"
         variant="buttons.primary"
-        target={
-          primary[0].startsWith('http') || primary[0] === '/survey'
-            ? '_blank'
-            : undefined
-        }
-        onClick={() => {
-          if (primary[0] === '/survey') trackGoal('HEE53JFH', 0)
-        }}
+        target={varExternal(primary[0], undefined, 'http')}
         sx={{
           fontSize: 2,
           border: '3px solid',
           borderColor: colors[0],
           bg: colors[0],
-          color: 'white',
+          color: 'white !important',
           mr: [0, 3],
           mb: 2
         }}
       >
-        {primary[1]} →
+        {primary[1]} {varExternal(primary[0], '→', '↗')}
       </Text>
     </Link>
     {secondary?.[0] && (
-      <Link href={secondary[0]} prefetch={false} passHref>
+      <Link href={secondary[0]} passHref>
         <Text
           as="a"
           variant="buttons.primary"
-          target={secondary[0].startsWith('http') ? '_blank' : '_self'}
+          target={varExternal(secondary[0], undefined, 'http')}
           sx={{
             fontSize: 1,
-            color: colors[1],
+            color: 'inherit !important',
             border: '3px solid',
             borderColor: colors[2] || colors[1],
             mb: 2
           }}
         >
-          {secondary[1]} →
+          {secondary[1]} {varExternal(primary[0], '→', '↗')}
         </Text>
       </Link>
     )}
