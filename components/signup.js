@@ -164,7 +164,7 @@ const Signup = () => {
           <Text as="p" variant="caption" pt={[2, 0]}>
             I’ll send you an email a few times a year, unsubscribe any time.
             <br />
-            You’ll be joining over 500 neighbors on the list.{' '}
+            You’ll be joining over 800 neighbors on the list.{' '}
             <strong>—Pam</strong>
           </Text>
         </Flex>
