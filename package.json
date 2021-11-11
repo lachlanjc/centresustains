@@ -11,15 +11,15 @@
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^11.0.1",
+    "@next/mdx": "^12.0.3",
     "@rehooks/component-size": "^1.0.3",
-    "fathom-client": "^3.1.0",
+    "fathom-client": "^3.2.0",
     "lodash": "^4.17.21",
-    "next": "^11.0.1",
+    "next": "^12.0.3",
     "react": "^17.0.2",
-    "react-bootstrap-icons": "^1.5.0",
+    "react-bootstrap-icons": "^1.6.1",
     "react-dom": "^17.0.2",
-    "recharts": "^2.0.10",
-    "theme-ui": "0.10.0"
+    "recharts": "^2.1.6",
+    "theme-ui": "0.12.0"
   }
 }
