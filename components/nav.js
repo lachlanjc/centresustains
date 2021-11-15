@@ -1,6 +1,7 @@
 import { useColorMode, Box, Container, IconButton, NavLink } from 'theme-ui'
 import Link from 'next/link'
 import { MoonStars as Moon } from 'react-bootstrap-icons'
+import { useState, useEffect } from 'react'
 
 const linkEffect = {
   borderRadius: 'circle',
@@ -41,10 +42,16 @@ export const ColorSwitcher = props => {
 
 const Nav = () => {
   const [colorMode = 'dark'] = useColorMode()
+  const [variant, setVariant] = useState('cards.translucent')
+  // Hack to force re-rendering when color mode changes
+  useEffect(() => {
+    setVariant('cards.translucent' + (colorMode === 'dark' ? 'Dark' : ''))
+  }, [colorMode])
+
   return (
     <Box
       as="nav"
-      variant={'cards.translucent' + (colorMode === 'dark' ? 'Dark' : '')}
+      variant={variant}
       sx={{
         position: 'absolute',
         top: 0,
