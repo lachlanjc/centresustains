@@ -34,7 +34,7 @@ const BGImg = ({ gradient, ...props }) => (
       bottom: 0,
       zIndex: 0,
       ...gx(gradient),
-      '> div': { height: '100%', width: '100%' },
+      '> span': { height: '100%', width: '100%' },
       '~ *': { position: 'relative' }
     }}
   >
