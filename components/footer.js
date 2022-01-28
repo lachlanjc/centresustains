@@ -23,7 +23,10 @@ const Footer = () => (
     sx={{
       py: [3, 4],
       bg: 'slate',
-      position: 'relative'
+      position: 'relative',
+      figure: {
+        overflowY: 'hidden'
+      }
     }}
   >
     <BGImg
